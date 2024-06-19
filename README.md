@@ -1,14 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Important Links
+
+- **WSL Install (Microsoft)**: [https://learn.microsoft.com/en-us/windows/wsl/install](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+- **fnm (Fast Node Manager)**:
+  - GitHub: [https://github.com/Schniz/fnm](https://github.com/Schniz/fnm)
+  - FreeCodeCamp Article: [https://www.freecodecamp.org/news/fnm-fast-node-manager/](https://www.freecodecamp.org/news/fnm-fast-node-manager/)
+
+- **Bun (Fastest Package Manager for WSL/Linux/MacOS)**:
+  - Official Website: [https://bun.sh/](https://bun.sh/)
+  - GitHub: [https://github.com/oven-sh/bun](https://github.com/oven-sh/bun)
+
+- **pnpm (Best Package Manager for Windows)**:
+  - Official Website: [https://pnpm.io/](https://pnpm.io/)
+  - GitHub: [https://github.com/pnpm/pnpm](https://github.com/pnpm/pnpm)
+
+- **Theo (Youtube)**:
+  - [Youtube](https://www.youtube.com/@t3dotgg)
+  - [Shadcn/ui](https://www.youtube.com/watch?v=AqmMx_JidGo)
+
+- **Fireship (Youtube)**:
+  - [Youtube](https://www.youtube.com/@Fireship)
+  - [Acernity UI](https://www.youtube.com/watch?v=RPa3_AD1_Vs)
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 # or
 bun dev
