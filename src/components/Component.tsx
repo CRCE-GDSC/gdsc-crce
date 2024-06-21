@@ -11,7 +11,9 @@ export default function MyComponent() {
   return (
     <div>
       <p>State: {state}</p>
-      <button onClick={handleClick}>Click me</button>
+      <button onClick={handleClick} className="text-xl text-red-500">
+        Click me
+      </button>
     </div>
   )
 }
