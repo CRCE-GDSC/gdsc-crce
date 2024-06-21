@@ -56,8 +56,8 @@ export const EvervaultCard = ({
               <Image
                 src={imgsrc}
                 alt="GDSC LOGO"
-                width={300}
-                height={500}
+                width={200}
+                height={200}
               />
             </span>
           </div>
