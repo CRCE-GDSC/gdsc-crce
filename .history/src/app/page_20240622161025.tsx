@@ -13,7 +13,7 @@ export default async function Home() {
             Under Construction
           </h1>
           <p className="mt-4 text-center text-lg text-gray-600">
-            Hey! Stay tuned for something amazing!
+            Stay tuned for something amazing!
           </p>
         </div>
       </div>
