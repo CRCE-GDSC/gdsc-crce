@@ -1,6 +1,7 @@
 'use server'
 import Image from 'next/image'
 import MyComponent from '@components/Component'
+import Footer from '@components/Footer'
 export default async function Home() {
   const delay = async (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms))
@@ -18,6 +19,7 @@ export default async function Home() {
         </div>
       </div>
       <MyComponent />
+      <Footer />
     </main>
   )
 }
