@@ -1,10 +1,6 @@
 'use server'
 import Image from 'next/image'
-import { Theme } from '@radix-ui/themes'
-import MainComponent from '@/components/MainComponent'
-
 import MyComponent from '@components/Component'
-import Footer from '@components/Footer'
 export default async function Home() {
   const delay = async (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms))
@@ -17,15 +13,11 @@ export default async function Home() {
             Under Construction
           </h1>
           <p className="mt-4 text-center text-lg text-gray-600">
-            Hey! Stay tuned for something amazing!
+            Stay tuned for something amazing!
           </p>
         </div>
       </div>
-          <Theme appearance='dark' >
-      <MainComponent />
-    </Theme>
       <MyComponent />
-      <Footer />
     </main>
   )
 }

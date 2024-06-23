@@ -1,5 +1,4 @@
 'use client'
-import { useState } from 'react'
 import { EvervaultCard, Icon } from './uif/evervault-card'
 import { BentoCard, BentoGrid } from './uif/bento-grid'
 import { DividerHorizontalIcon, GlobeIcon } from '@radix-ui/react-icons/dist'
@@ -38,6 +37,7 @@ export default function MyComponent() {
           <BentoCard key={feature.name} {...feature} />
         ))}
       </BentoGrid>
+
     </div>
   )
 }
