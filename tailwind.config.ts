@@ -35,3 +35,5 @@ function addVariablesForColors({ addBase, theme }: any) {
     ':root': newVars,
   })
 }
+
+// tailwind.config.js

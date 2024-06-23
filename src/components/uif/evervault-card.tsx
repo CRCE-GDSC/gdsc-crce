@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import { useMotionValue } from 'framer-motion'
 import React, { useState, useEffect } from 'react'
@@ -7,11 +8,11 @@ import { cn } from '../../lib/utils'
 
 export const EvervaultCard = ({
   text,
- imgsrc,
+  imgsrc,
   className,
 }: {
   text?: string
-  imgsrc?: any 
+  imgsrc?: any
   className?: string
 }) => {
   let mouseX = useMotionValue(0)
@@ -20,7 +21,7 @@ export const EvervaultCard = ({
   const [randomString, setRandomString] = useState('')
 
   useEffect(() => {
-    let str = generateRandomString(1500)
+    let str = generateRandomString(2000)
     setRandomString(str)
   }, [])
 
@@ -29,7 +30,7 @@ export const EvervaultCard = ({
     mouseX.set(clientX - left)
     mouseY.set(clientY - top)
 
-    const str = generateRandomString(1600)
+    const str = generateRandomString(2000)
     setRandomString(str)
   }
 
@@ -50,15 +51,18 @@ export const EvervaultCard = ({
           randomString={randomString}
         />
         <div className="relative z-10 flex items-center justify-center">
-          <div className="relative flex h-max w-max items-center justify-center rounded-full text-4xl ">
-            <div className="absolute h-full w-full rounded-full  blur-sm dark:bg-black/[0.8]" />
-            <span className="z-30 text-black dark:text-white">
-              <Image
-                src={imgsrc}
-                alt="GDSC LOGO"
-                width={200}
-                height={200}
-              />
+          <div className="relative flex h-max w-max items-center justify-center rounded-full text-4xl">
+            <div className="absolute h-full w-full rounded-full bg-black/[0.8] blur-sm" />
+            <span className="z-30 text-black text-white">
+              <div className="m-2 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                <Image
+                  src={imgsrc}
+                  alt="GDSC LOGO"
+                  width={500}
+                  height={600}
+                  className="h-auto w-full object-cover" // Make image responsive
+                />
+              </div>
             </span>
           </div>
         </div>
@@ -95,7 +99,6 @@ const characters =
 export const generateRandomString = (length: number) => {
   let result = ''
   for (let i = 0; i < length; i++) {
-    
     result += characters.charAt(Math.floor(Math.random() * characters.length))
   }
   return result
