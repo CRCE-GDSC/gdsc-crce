@@ -8,7 +8,7 @@ import { features } from '@/data/PastEvents'
 export default function MainComponent() {
   return (
 <div>
-          <BentoGrid className="">
+          <BentoGrid className=" h-screen">
               {features.map((feature) => (
                   <BentoCard key={feature.name} {...feature} />
               ))}

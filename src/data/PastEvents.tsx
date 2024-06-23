@@ -15,7 +15,7 @@ export const features = [
         <img src="/ideation.jpg" alt="" />
       </div>
     ),
-    className: ' auto-rows-auto col-span-4 lg:col-span-1',
+    className: ' auto-rows-auto  col-span-4 lg:col-span-1',
   },
   {
     Icon: GlobeIcon,
