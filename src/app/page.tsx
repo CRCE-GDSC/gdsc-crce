@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { Theme } from '@radix-ui/themes'
 import MainComponent from '@/components/MainComponent'
 
-import MyComponent from '@components/Component'
-import Footer from '@components/Footer'
+import MyComponent from '@/components/Component'
+import Footer from '@/components/Footer'
 export default async function Home() {
   const delay = async (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms))
@@ -21,9 +21,9 @@ export default async function Home() {
           </p>
         </div>
       </div>
-          <Theme appearance='dark' >
-      <MainComponent />
-    </Theme>
+      <Theme appearance="dark">
+        <MainComponent />
+      </Theme>
       <MyComponent />
       <Footer />
     </main>
