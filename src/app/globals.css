@@ -15,18 +15,15 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
 body {
-  background: #000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  display: flex;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
-
-
 
 @layer utilities {
   .text-balance {
@@ -49,7 +46,7 @@ body {
 /* Sidebar */
 
 .background {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -116,6 +113,7 @@ li {
   left: 0;
   bottom: 0;
   width: 100vh;
+}
 @keyframes bounce {
   0%,
   100% {
