@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import { Theme } from '@radix-ui/themes'
 import MainComponent from '@/components/MainComponent'
+import React from "react";
+
 
 import MyComponent from '@/components/Component'
 import Footer from '@/components/Footer'
@@ -10,6 +12,7 @@ export default async function Home() {
     new Promise((resolve) => setTimeout(resolve, ms))
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
+
     <main className="flex min-h-screen flex-col items-center justify-between p-14">
       <div className="flex h-screen min-w-full items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
         <div className="rounded-lg bg-white p-8 shadow-lg hover:shadow-xl">
