@@ -174,3 +174,8 @@ body {
 .animate-bounce-reverse {
   animation: bounce-reverse 1s infinite;
 }
+
+.vertical-timeline-element-icon {
+    display: grid;
+    place-items: center;
+}
