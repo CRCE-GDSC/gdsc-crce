@@ -32,7 +32,7 @@ interface MenuItemProps {
 
 export const MenuItem: React.FC<MenuItemProps> = ({ i }) => {
   return (
-    <motion.li variants={variants} whileTap={{ scale: 0.95 }}>
+    <motion.li variants={variants} whileTap={{ scale: 0.95 }} className="Li">
       <div className="text-placeholder">{buttons[i]}</div>
     </motion.li>
   )

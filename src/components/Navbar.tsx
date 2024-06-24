@@ -5,10 +5,10 @@ import { Asset } from 'next/font/google'
 
 const Navbar = () => {
   return (
-    <header className="body-font bg-gray-900 text-gray-400">
+    <header className="bg-gray-900 text-gray-400 sticky top-0 z-50 ">
       <div className="container mx-auto flex flex-col flex-wrap items-center p-4 md:flex-row">
         <Link
-          className="title-font mb-4 flex items-center font-medium text-white md:mb-0"
+          className="mb-4 flex items-center font-medium text-white md:mb-0"
           href="/"
         >
           <Image
@@ -28,37 +28,37 @@ const Navbar = () => {
         </Link>
         <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
           <Link
-            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent"
+            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent "
             href="#"
           >
             Home
           </Link>
           <Link
-            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent"
+            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent "
             href="#"
           >
             About Us
           </Link>
           <Link
-            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent"
+            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent "
             href="#"
           >
             What We Do
           </Link>
           <Link
-            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent"
+            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent "
             href="#"
           >
             Events
           </Link>
           <Link
-            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent"
+            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent "
             href="#"
           >
             Our Team
           </Link>
           <Link
-            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent"
+            className="gradient-background nav-text mr-5 duration-75 ease-in-out hover:scale-110 hover:text-transparent "
             href="#"
           >
             Contact Us
