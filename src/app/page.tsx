@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Theme } from '@radix-ui/themes'
 import MainComponent from '@/components/MainComponent'
 import React from 'react'
-import Aboutus from '@/components/Aboutus'
+
 import MyComponent from '@/components/Component'
 import Footer from '@/components/Footer'
 
@@ -25,9 +25,7 @@ export default async function Home() {
           </p>
         </div>
       </div>
-      <Theme appearance="dark">
-        <MainComponent />
-      </Theme>
+      <Theme appearance="dark"></Theme>
       <MyComponent />
       <Aboutus />
 
