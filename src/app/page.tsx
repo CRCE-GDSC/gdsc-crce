@@ -1,7 +1,7 @@
 'use server'
 import Image from 'next/image'
 import { Theme } from '@radix-ui/themes'
-import MainComponent from '@/components/MainComponent'
+import Event from '@/components/Events'
 import React from 'react'
 
 import MyComponent from '@/components/Component'
@@ -28,7 +28,8 @@ export default async function Home() {
             </div>
           </div>
           <div className='m-4 p-2 w-screen'> main component
-          <MainComponent />
+          {/* event component has bento grid for past and upcoming events*/}
+          <Event />
           </div>
         </Theme>
       </main>

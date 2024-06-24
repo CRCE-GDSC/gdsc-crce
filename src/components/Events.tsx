@@ -6,7 +6,7 @@ import { GlobeIcon } from '@radix-ui/react-icons'
 import { features , events , MarqeeEvents } from '@/data/PastEvents'
 import Marquee from './ui/marqee'
 
-export default function MainComponent() {
+export default function Events() {
   return (
 
     <div className="m-2 p-2">
