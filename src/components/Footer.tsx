@@ -4,62 +4,18 @@ const Footer = () => {
   return (
     <div>
       <footer className="text-base-content gap-2 p-11">
-        <div className="grid grid-cols-1 md:grid-cols-4">
-          <div className="mr-2 max-w-[350px] py-3">
-            <h2 className="text-lg font-semibold uppercase text-white">
-              GDSC Community
-            </h2>
-            <p className="text-normal text-gray-100">
-              Helping students to bridge the gap between theory and practice. By
-              joining a GDSC, students grow their knowledge in a peer-to-peer
-              learning environment and build solutions for local businesses and
-              their community.
-            </p>
-          </div>
-          <div className="py-3 lg:ml-10">
-            <span className="text-lg font-semibold uppercase text-white">
-              Useful Links
-            </span>
-            <div className="grid">
-              <a className="text-slate-100 hover:underline" href="/">
-                Home
-              </a>
-              <a className="text-slate-100 hover:underline" href="#events">
-                Events
-              </a>
-              <a className="text-slate-100 hover:underline" href="#team">
-                Our Team
-              </a>
-              <a
-                className="text-slate-100 hover:underline"
-                href="https://developers.google.com/community-guidelines"
-              >
-                Community Guidelines
-              </a>
-            </div>
-          </div>
+        <div className="mr-2 py-3">
+          <h2 className="mb-4 text-3xl font-semibold uppercase text-white">
+            GDSC Community
+          </h2>
+          <p className="text-normal text-gray-400">
+            Helping students to bridge the gap between theory and practice. By
+            joining a GDSC, students grow their knowledge in a peer-to-peer
+            learning environment and build solutions for local businesses and
+            their community.
+          </p>
+
           <div className="py-3">
-            <span className="text-lg font-semibold uppercase text-white">
-              Contact Us
-            </span>
-            <p className="mb-2 text-gray-100">
-              Fr. Conceicao Rodrigues College Of Engineering Bandra (W),
-              Mumbai-400051 Maharashtra, India
-            </p>
-            <div className="grid grid-cols-1 px-2">
-              <span className="text-gray-100">
-                <strong className="text-white">Phone : </strong>+91 9769406063
-              </span>
-              <span className="text-gray-100">
-                <strong className="text-white">Email : </strong>
-                crcegdsc@gmail.com
-              </span>
-            </div>
-          </div>
-          <div className="py-3 md:pl-10">
-            <span className="text-lg font-semibold uppercase text-white">
-              Social
-            </span>
             <div className="flex flex-row" id="foot">
               <a
                 className="p-3"
@@ -107,6 +63,52 @@ const Footer = () => {
                   <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
                 </svg>
               </a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto my-4 mb-10 w-1/2 border-b border-gray-500"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="py-3">
+            <div className="pb-3 text-lg font-semibold uppercase text-white">
+              Useful Links
+            </div>
+            <div className="grid">
+              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:underline">
+                {' '}
+                <a href="/">Home </a>
+              </div>
+              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:underline">
+                {' '}
+                <a href="#events">Events</a>
+              </div>
+              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:underline">
+                {' '}
+                <a href="#team">Our Team</a>
+              </div>
+              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:underline">
+                <a href="https://developers.google.com/community-guidelines">
+                  Community Guidelines
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="py-3">
+            <div className="pb-3 text-lg font-semibold uppercase text-white">
+              Contact Us
+            </div>
+            <div className="mb-2 pb-2 text-gray-500">
+              Fr. Conceicao Rodrigues College Of Engineering Bandra (W),
+              Mumbai-400051 Maharashtra, India
+            </div>
+            <div className="grid grid-cols-1">
+              <span className="text-gray-500">
+                <strong className="text-gray-500">Phone : </strong>+91
+                9769406063
+              </span>
+              <span className="text-gray-500">
+                <strong className="text-gray-500">Email : </strong>
+                crcegdsc@gmail.com
+              </span>
             </div>
           </div>
         </div>
