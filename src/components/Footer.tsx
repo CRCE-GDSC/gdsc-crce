@@ -66,7 +66,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="mx-auto my-4 mb-10 w-1/2 border-b border-gray-500"></div>
+        <div className="mx-auto my-4 mb-10 w-1/2 border-b border-gray-500"></div>
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="py-3">
             <div className="pb-3 text-lg font-semibold uppercase text-white">
