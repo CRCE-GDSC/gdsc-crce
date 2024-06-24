@@ -1,10 +1,7 @@
 'use server'
-import Image from 'next/image'
 import { Theme } from '@radix-ui/themes'
 import Event from '@/components/Events'
 import React from 'react'
-
-import MyComponent from '@/components/Component'
 import Footer from '@/components/Footer'
 import Sidebar from '@/components/sidebar/Sidebar'
 export default async function Home() {
@@ -12,11 +9,10 @@ export default async function Home() {
     new Promise((resolve) => setTimeout(resolve, ms))
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
-    <div className="flex max-h-screen flex-col items-center justify-between p-4 ">
+    <div className="flex max-h-screen flex-col items-center justify-between p-4">
       <main className="flex-grow">
         <Sidebar />
         <Theme appearance="dark">
-          
           <div className="flex h-screen min-w-full items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
             <div className="rounded-lg bg-white p-8 shadow-lg hover:shadow-xl">
               <h1 className="text-center text-5xl font-extrabold text-gray-800">
@@ -27,13 +23,15 @@ export default async function Home() {
               </p>
             </div>
           </div>
-          <div className='m-4 p-2 w-screen'> main component
-          {/* event component has bento grid for past and upcoming events*/}
-          <Event />
+          <div className="m-4 w-screen p-2">
+            {' '}
+            main component
+            {/* event component has bento grid for past and upcoming events*/}
+            <Event />
           </div>
         </Theme>
       </main>
-      <div >
+      <div>
         <Footer />
       </div>
     </div>

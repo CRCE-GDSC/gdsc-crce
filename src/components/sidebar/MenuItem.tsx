@@ -26,7 +26,11 @@ const buttons = [
   'Our Team',
   'Contact Us',
 ]
-export const MenuItem = ({ i }) => {
+interface MenuItemProps {
+  i: number // Explicitly type the 'i' parameter
+}
+
+export const MenuItem: React.FC<MenuItemProps> = ({ i }) => {
   return (
     <motion.li variants={variants} whileTap={{ scale: 0.95 }}>
       <div className="text-placeholder">{buttons[i]}</div>
