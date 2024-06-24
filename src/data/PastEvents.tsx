@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { GlobeIcon } from '@radix-ui/react-icons'
 import {EvervaultCard} from  '../components/ui/evervault'
+//import { Button } from '@radix-ui/themes'
 
 
 export const features = [
@@ -60,7 +61,8 @@ export const features = [
 
 export const events = [
   {
-    Icon: GlobeIcon,
+    Icon: () => ( <img src="/gdsc-f.png" alt="GDSC CRCE" className="h-auto w-4" /> ),
+    
     name: 'Event 1',
     description: 'hey there',
     href: '/',
@@ -77,7 +79,7 @@ export const events = [
     className: ' h-fit',
   },
   {
-    Icon: GlobeIcon,
+    Icon: () => ( <img src="/gdsc-f.png" alt="GDSC CRCE" className="h-auto w-4" /> ),
     name: 'Event 2',
     description: 'in Samwaad',
     href: '/',
@@ -94,7 +96,7 @@ export const events = [
     className: '',
   },
   {
-    Icon: GlobeIcon,
+    Icon: () => ( <img src="/gdsc-f.png" alt="GDSC CRCE" className="h-auto w-4" /> ),
     name: 'Event 3',
     description: 'in Samwaad',
     href: '/',
@@ -112,7 +114,7 @@ export const events = [
       '',
   },
   {
-    Icon: GlobeIcon,
+    Icon: () => ( <img src="/gdsc-f.png" alt="GDSC CRCE" className="h-auto w-4" /> ),
     name: 'Event 4',
     description: 'in Samwaad',
     href: '/',

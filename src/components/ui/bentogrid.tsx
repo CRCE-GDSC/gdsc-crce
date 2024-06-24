@@ -44,7 +44,7 @@ const BentoCard = ({
   <div
     key={name}
     className={cn(
-      ' w-auto group relative flex h-auto min-w-min max-w-xs flex-col justify-between overflow-hidden rounded-xl',
+      'group relative flex h-auto w-auto min-w-min max-w-xs flex-col justify-between overflow-hidden rounded-xl',
       // light styles max-w-xs col-span-4
       //'bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]',
       // dark styles
@@ -68,7 +68,7 @@ const BentoCard = ({
         variant="ghost"
         asChild
         size="2" //size="sm"
-        className="pointer-events-auto"
+        className="pointer-events-auto flex items-center"
       >
         <a href={href} className="text-gray-50">
           {cta}
