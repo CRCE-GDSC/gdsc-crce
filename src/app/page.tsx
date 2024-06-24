@@ -12,7 +12,7 @@ export default async function Home() {
     new Promise((resolve) => setTimeout(resolve, ms))
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
-    <div className="flex max-h-screen flex-col items-center justify-between ">
+    <div className="flex max-h-screen flex-col items-center justify-between p-4 ">
       <main className="flex-grow">
         <Sidebar />
         <Theme appearance="dark">
@@ -27,7 +27,7 @@ export default async function Home() {
               </p>
             </div>
           </div>
-          <div > main component
+          <div className='m-4 p-2 w-screen'> main component
           <MainComponent />
           </div>
         </Theme>
