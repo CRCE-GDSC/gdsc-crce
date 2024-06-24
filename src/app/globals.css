@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
- --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -114,6 +114,35 @@ body {
   bottom: 0;
   width: 100vw;
 }
+
+/* What we do */
+
+ .box:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  background: #007bff;
+  /* background: linear-gradient(to right,#74ebd5,#99f2c8 ); */
+
+  color: white;
+}
+
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translate3d(0,100%,0)
+  }
+
+  to {
+      opacity: 1;
+      transform: none
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp
+}
+
 @keyframes bounce {
   0%,
   100% {

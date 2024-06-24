@@ -4,14 +4,18 @@ import Event from '@/components/Events'
 import React from 'react'
 import Footer from '@/components/Footer'
 import Sidebar from '@/components/sidebar/Sidebar'
+import Navbar from '@/components/Navbar'
+import WhatWeDo from '@/components/WhatWeDo'
 export default async function Home() {
   const delay = async (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms))
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
-    <div className="flex max-h-screen flex-col items-center justify-between p-4">
+    <div className="flex max-h-screen flex-col items-center justify-between ">
       <main className="flex-grow">
-        <Sidebar />
+        {/* <Sidebar /> */}
+        <Navbar />
+        {/* <WhatWeDo /> */}
         <Theme appearance="dark">
           <div className="flex h-screen min-w-full items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
             <div className="rounded-lg bg-white p-8 shadow-lg hover:shadow-xl">
