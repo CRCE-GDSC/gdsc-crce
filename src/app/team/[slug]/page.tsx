@@ -1,9 +1,10 @@
 
 
 'use server'
-import DotPattern from '@components/ui/dot-pattern'
-import { cn } from '@lib/utils'
+
 import TeamView from '@/components/TeamView'
+import DotPattern from '@/components/ui/dot-pattern'
+import { cn } from '@/lib/utils'
 export default async function Home({ params }: { params: { slug: string } }) {
   const delay = async (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms))

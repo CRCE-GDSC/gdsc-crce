@@ -1,21 +1,73 @@
-
 "use client"
 
-import { Dock, DockIcon } from '@components/ui/dock'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { BackgroundGradient } from './ui/background-gradient'
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BackgroundGradient } from './ui/background-gradient';
+import AnimatedGradientText from './ui/animated-gradient-text';
+import { cn } from '@/lib/utils';
+import { Dock, DockIcon } from './ui/dock';
+;
 
 export default function TeamView() {
-  const [selectedMember, setSelectedMember] = useState()
+  const [selectedMember, setSelectedMember] = useState(1);
+  const [isSeniorVisible, setIsSeniorVisible] = useState(false);
+  const [selectedPositionIndex, setSelectedPositionIndex] = useState(1);
+  const [direction, setDirection] = useState(0);
 
-  useEffect(() => { console.log(selectedMember) }, [selectedMember])
+  const positions = ["Tech Associates", "GDSC Associates", "Graphic Associates"];
 
-  const data = [1, 2, 3, 4, 5]
+  const handleToggle = () => {
+    setIsSeniorVisible(!isSeniorVisible);
+  };
+
+  const handleChevronClick = (newDirection) => {
+    setDirection(newDirection);
+    setSelectedPositionIndex((prevIndex) => {
+      if (newDirection === 1) {
+        return (prevIndex + 1) % positions.length;
+      } else {
+        return (prevIndex - 1 + positions.length) % positions.length;
+      }
+    });
+  };
+
+  useEffect(() => {
+    console.log(selectedMember);
+  }, [selectedMember]);
+
+  const data = [1, 2, 3, 4, 5];
 
   return (
     <div className="flex flex-col flex-1 items-center justify-between gap-8">
+      <div className='mt-2 flex gap-4 justify-center items-center'>
+        <AnimatedGradientText>
+          <span
+            className={cn(
+              `inline text-4xl font-semibold animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent transition-colors duration-500 ${isSeniorVisible ? 'text-gray-700' : ''}`,
+            )}
+          >
+            Junior
+          </span>
+        </AnimatedGradientText>
+
+        <div>
+          <label className="inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="" className="sr-only peer" onChange={handleToggle} />
+            <div className="relative w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
+          </label>
+        </div>
+
+        <AnimatedGradientText>
+          <span
+            className={cn(
+              `inline text-4xl font-semibold animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent transition-colors duration-500 ${isSeniorVisible ? '' : 'text-gray-700'}`,
+            )}
+          >
+            Senior
+          </span>
+        </AnimatedGradientText>
+      </div>
       <div className='flex-1 flex justify-center items-center '>
         <AnimatePresence mode='wait'>
           {selectedMember && (
@@ -31,10 +83,12 @@ export default function TeamView() {
                   <div className="flex justify-end px-4 pt-4">
 
                     <div className="flex flex-col items-center pb-10">
-                      <img className="w-44 h-24 mb-3 aspect-square rounded-full shadow-lg" src="/gdsc-f.png" alt="Bonnie image" />
+                      <img className="w-44 h-44 object-contain mb-3 aspect-auto border border-gray-500 rounded-full shadow-lg" src="/gdsc-f.png" alt="Bonnie image" />
                       <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{selectedMember}</h5>
                       <span className="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
-                      <div className="flex mt-4 md:mt-6">
+                      <div className="flex gap-4 mt-4 md:mt-6">
+                        <span>fhsef</span>
+                        <span>fhsef</span>
                       </div>
                     </div>
                   </div>
@@ -46,9 +100,9 @@ export default function TeamView() {
       </div>
       <div className='flex flex-col items-center justify-center gap-4'>
         <div className='flex gap-4 flex-row'>
-          <ChevronLeft color='white' size={26} />
-          <span className="text-xl font-semibold">GDSC Associate</span>
-          <ChevronRight color='white' size={26} />
+          <ChevronLeft color='white' size={26} onClick={() => handleChevronClick(-1)} />
+          <span className="text-xl font-semibold">{positions[selectedPositionIndex]}</span>
+          <ChevronRight color='white' size={26} onClick={() => handleChevronClick(1)} />
         </div>
         <Dock>
           {data.map((item, index) => (
@@ -59,6 +113,5 @@ export default function TeamView() {
         </Dock>
       </div>
     </div>
-  )
+  );
 }
-
