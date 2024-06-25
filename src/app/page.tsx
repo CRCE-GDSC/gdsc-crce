@@ -6,6 +6,8 @@ import Sidebar from '@/components/sidebar/Sidebar'
 import Events from '@/components/Events'
 import Navbar from '@/components/Navbar'
 import WhatWeDo from '@/components/WhatWeDo'
+import Aboutus from '@/components/Aboutus'
+import { SignupFormDemo } from '@/components/contactuss'
 
 export default async function Home() {
   const delay = async (ms: number) =>
@@ -33,6 +35,8 @@ export default async function Home() {
             <Events />
           </div>
         </Theme>
+        <Aboutus />
+        <SignupFormDemo />
       </main>
       <div>
         <Footer />
