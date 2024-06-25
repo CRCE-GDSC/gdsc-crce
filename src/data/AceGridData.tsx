@@ -7,7 +7,7 @@ import {
   IconSignature,
   IconTableColumn,
 } from '@tabler/icons-react'
-// import GDSC from '@/components/ui/GDSCIcon'
+import GDSC from '@/components/ui/GDSCIcon'
 
 const Skeleton = () => (
   <div className="flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-900 dark:to-neutral-800"></div>
@@ -17,7 +17,7 @@ export const items = [
     title: 'The Event 1',
     description: 'Explore the birth of groundbreaking ideas and inventions.',
     header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <GDSC height={4} width={4} className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'The Digital Revolution',
