@@ -5,7 +5,7 @@ import { Asset } from 'next/font/google'
 
 const Navbar = () => {
   return (
-    <header className="bg-gray-900 text-gray-400 sticky top-0 z-50 ">
+    <header className="bg-gray-900 text-gray-400 sticky top-[1rem] z-50 rounded-full mx-4 px-5 dark:drop-shadow-md">
       <div className="container mx-auto flex flex-col flex-wrap items-center p-4 md:flex-row">
         <Link
           className="mb-4 flex items-center font-medium text-white md:mb-0"

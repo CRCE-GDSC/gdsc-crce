@@ -136,7 +136,7 @@ body {
 }
 
 .moveLeft {
-  animation: moveLeft 400ms linear;
+  animation: moveLeft linear;
   animation-timeline: view();
   animation-range-start: 100px;
   animation-range-end: 50vh;
@@ -151,7 +151,7 @@ body {
 }
 
 .moveRight {
-  animation: moveRight 400ms linear;
+  animation: moveRight linear;
   animation-timeline: view();
   animation-range-start: 100px;
   animation-range-end: 50vh;
@@ -170,7 +170,7 @@ body {
 .fadeInOut {
   scale: 0;
   visibility: hidden;
-  animation: fadeInOut 400ms linear;
+  animation: fadeInOut linear;
   animation-timeline: view();
   animation-range-start: 100px;
   animation-range-end: 50vh;
