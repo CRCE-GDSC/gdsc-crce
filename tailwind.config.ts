@@ -19,6 +19,7 @@ export default {
         'meteor-effect': 'meteor 5s linear infinite',
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+        gradient: "gradient 8s linear infinite",
       },
       keyframes: {
         meteor: {
@@ -36,6 +37,11 @@ export default {
         'marquee-vertical': {
           from: { transform: 'translateY(0)' },
           to: { transform: 'translateY(calc(-100% - var(--gap)))' },
+        },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
         },
       },
       backgroundImage: {

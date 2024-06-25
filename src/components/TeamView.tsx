@@ -7,18 +7,27 @@ import { BackgroundGradient } from './ui/background-gradient';
 import AnimatedGradientText from './ui/animated-gradient-text';
 import { cn } from '@/lib/utils';
 import { Dock, DockIcon } from './ui/dock';
+import { type } from 'os';
+import { getTeam2024Data } from '@/data/Teamdata';
 ;
 
-export default function TeamView() {
+export default function TeamView(props) {
   const [selectedMember, setSelectedMember] = useState(1);
   const [isSeniorVisible, setIsSeniorVisible] = useState(false);
   const [selectedPositionIndex, setSelectedPositionIndex] = useState(1);
   const [direction, setDirection] = useState(0);
-
-  const positions = ["Tech Associates", "GDSC Associates", "Graphic Associates"];
+  const [positions, setPosition] = useState(["Tech Associates", "GDSC Associates", "Graphic Associates"])
+  const [teamData, setTeamData] = useState(null)
+  const [positionWithKey, setPositionWithKey] = useState({})
 
   const handleToggle = () => {
     setIsSeniorVisible(!isSeniorVisible);
+    if (isSeniorVisible) {
+      setPosition(["Management Team", "Core Team", "Advisors"])
+    }
+    else {
+      setPosition(["Tech Associates", "GDSC Associates", "Graphic Associates"])
+    }
   };
 
   const handleChevronClick = (newDirection) => {
@@ -33,10 +42,11 @@ export default function TeamView() {
   };
 
   useEffect(() => {
-    console.log(selectedMember);
-  }, [selectedMember]);
+    if (props.type === "Team2024") {
+      setTeamData(getTeam2024Data(isSeniorVisible))
+    }
+  }, [isSeniorVisible]);
 
-  const data = [1, 2, 3, 4, 5];
 
   return (
     <div className="flex flex-col flex-1 items-center justify-between gap-8">
@@ -54,7 +64,7 @@ export default function TeamView() {
         <div>
           <label className="inline-flex items-center cursor-pointer">
             <input type="checkbox" value="" className="sr-only peer" onChange={handleToggle} />
-            <div className="relative w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
+            <div className="relative w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[4px] after:bg-white after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
           </label>
         </div>
 
@@ -105,7 +115,7 @@ export default function TeamView() {
           <ChevronRight color='white' size={26} onClick={() => handleChevronClick(1)} />
         </div>
         <Dock>
-          {data.map((item, index) => (
+          {teamData[selectedPositionIndex]?.map((item, index) => (
             <DockIcon key={index} item={item} setSelectedMember={setSelectedMember} className='p-2'>
               <img src="/gdsc-f.png" />
             </DockIcon>

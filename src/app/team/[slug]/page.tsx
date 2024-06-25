@@ -15,7 +15,7 @@ export default async function Home({ params }: { params: { slug: string } }) {
         <h1 className='font-semibold text-4xl md:text-6xl' >GDSC {params.slug.replace("%20", " ")}</h1>
         <h4 className='text-gray-200 text-2xl'>Meet Our Team</h4>
       </div>
-      <TeamView />
+      <TeamView type={params.slug.replace("%20", "")} />
 
       <DotPattern
         className={cn(
