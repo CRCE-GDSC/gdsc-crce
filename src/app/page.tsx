@@ -16,7 +16,7 @@ export default async function Home() {
       <main className="flex-grow">
         {/* <Sidebar /> */}
         <Navbar />
-        {/* <WhatWeDo /> */}
+        <WhatWeDo />
         <Theme appearance="dark">
           <div className="flex h-screen min-w-full items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
             <div className="rounded-lg bg-white p-8 shadow-lg hover:shadow-xl">
