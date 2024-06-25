@@ -26,7 +26,12 @@ export default function Events() {
       </BentoGrid>
       <p> past events marqee</p>
       <div className="bg-background relative flex h-full w-auto flex-col items-center justify-center overflow-hidden rounded-lg border py-20 md:shadow-xl">
-        <Marquee pauseOnHover className="[--duration:30s]">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {MarqeeEvents.map((event) => (
+            <BentoCard key={event.name} {...event} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:20s]">
           {MarqeeEvents.map((event) => (
             <BentoCard key={event.name} {...event} />
           ))}
