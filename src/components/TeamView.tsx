@@ -17,7 +17,7 @@ export default function TeamView(props) {
   const [selectedPositionIndex, setSelectedPositionIndex] = useState(1);
   const [direction, setDirection] = useState(0);
   const [positions, setPosition] = useState(["Tech Associates", "GDSC Associates", "Graphic Associates"])
-  const [teamData, setTeamData] = useState(null)
+  const [teamData, setTeamData] = useState<number[][]>([[]])
   const [positionWithKey, setPositionWithKey] = useState({})
 
   const handleToggle = () => {
