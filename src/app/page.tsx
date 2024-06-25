@@ -23,11 +23,11 @@ export default async function Home() {
           </div>
 
           <WhatWeDo />
-          {/* <div className="m-4 w-screen p-2">
-            <Events />
-          </div> */}
-
           <Aboutus />
+          <div className="m-4 w-screen p-2">
+            <Events />
+          </div>
+
           <SignupFormDemo />
           <Footer />
         </Theme>
