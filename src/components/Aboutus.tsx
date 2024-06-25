@@ -43,6 +43,7 @@ const Aboutus = () => {
               provides development, mobile &amp; web development skills for
               students, towards employability.
             </p>
+            <Meteors number={5} />
           </div>
           <div className="d-shadow-green feature-card transform overflow-hidden p-5 shadow-lg shadow-green-900/50 transition-transform duration-300 hover:-translate-y-3">
             <div className="mx-4 mb-4 flex h-10 w-10 items-center justify-center rounded-full">
@@ -69,6 +70,7 @@ const Aboutus = () => {
               technology and inspire them to be world className developers and
               change makers.
             </p>
+            <Meteors number={5} />
           </div>
           <div className="d-shadow-red feature-card transform overflow-hidden p-5 shadow-lg shadow-red-900/50 transition-transform duration-300 hover:-translate-y-3">
             <div className="mx-4 mb-4 flex h-10 w-10 items-center justify-center rounded-full">
@@ -97,9 +99,9 @@ const Aboutus = () => {
               including faculty members who want to learn development skills
               &amp; work to solve real-life problems.
             </p>
+            <Meteors number={5} />
           </div>
         </div>
-        <Meteors number={20} />
       </div>
     </div>
   )
