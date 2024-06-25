@@ -1,6 +1,7 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { Meteors } from './Meteors'
+import Image from 'next/image'
 
 const Aboutus = () => {
   return (
@@ -9,10 +10,24 @@ const Aboutus = () => {
         className="container mx-auto mt-8 scroll-mt-96 p-4 max-sm:mt-0 xl:py-16"
         id="about"
       >
-        <div className="flex justify-center">
-          <h3 className="x-shadow-yellow text-white-500 mb-6 w-auto items-center justify-center px-4 py-3 text-center text-5xl font-bold max-lg:text-4xl max-md:text-4xl max-sm:mt-0 max-sm:text-3xl">
+        <div className="flex items-center justify-center">
+          <Image
+            src="/assets/gdsc_logo_left.png"
+            height={50}
+            width={50}
+            alt="left_logo"
+            className="moveLeft z-10 translate-x-[125px]"
+          />
+          <h3 className="fadeInOut x-shadow-yellow text-white-500 mx-0 w-auto items-center justify-center px-0 py-3 text-center text-5xl font-bold max-lg:text-4xl max-md:text-4xl max-sm:mt-0 max-sm:text-3xl">
             ABOUT US
           </h3>
+          <Image
+            src="/assets/gdsc_logo_right.png"
+            height={52}
+            width={52}
+            alt="right_logo"
+            className="moveRight z-10 -translate-x-[125px]"
+          />
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 max-sm:px-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">

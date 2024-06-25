@@ -17,9 +17,10 @@ export default async function Home() {
   return (
     <div className="flex max-h-screen flex-col items-center justify-between px-4">
       <main className="flex-grow">
-        {/* <Sidebar /> */}
+       
 
-        <Theme appearance="dark">
+        <Theme appearance="dark"> 
+          {/* <Sidebar /> */}
           <Navbar />
           <div className="h-screen">
             <Hero />

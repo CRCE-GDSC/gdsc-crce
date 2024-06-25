@@ -13,18 +13,18 @@ const WhatWeDo = () => {
             height={50}
             width={50}
             alt="left_logo"
-            className="moveLeft z-10 translate-x-10"
+            className="moveLeft z-10 translate-x-[105px]"
           />
-          <h2 className="title fadeInOut">What we do</h2>
+          <h2 className="title fadeInOut">WHAT WE DO</h2>
           <Image
             src="/assets/gdsc_logo_right.png"
-            height={50}
-            width={50}
+            height={52}
+            width={52}
             alt="right_logo"
-            className="moveRight z-10 -translate-x-10"
+            className="moveRight z-10 -translate-x-[105px]"
           />
         </div>
-        <p className="text-center">
+        <p className="comtainer mx-80 text-center">
           GDSC CRCE boasts of a multifaceted community with members from various
           disciplines working together. By joining GDSC CRCE students get to
           work with an exceptionally skilled group of developers, connect with
@@ -32,7 +32,7 @@ const WhatWeDo = () => {
           many more.
         </p>
       </div>
-      <div className="flex w-screen justify-around">
+      <div className="w-screen">
         <StickyScrollComponent />
       </div>
     </section>

@@ -130,51 +130,54 @@ body {
 }
 
 @keyframes moveLeft {
-  0% {
-  }
-
-  100% {
+  to {
     transform: translateX(-10);
   }
 }
 
 .moveLeft {
-  animation: moveLeft 400ms ease-in;
+  animation: moveLeft 400ms linear;
+  animation-timeline: view();
+  animation-range-start: 100px;
+  animation-range-end: 50vh;
   animation-fill-mode: forwards;
 }
 
 @keyframes moveRight {
-  0% {
-  }
 
-  100% {
+  to {
     transform: translateX(10);
   }
 }
 
 .moveRight {
-  animation: moveRight 400ms ease-in;
+  animation: moveRight 400ms linear;
+  animation-timeline: view();
+  animation-range-start: 100px;
+  animation-range-end: 50vh;
   animation-fill-mode: forwards;
 }
 
 @keyframes fadeInOut {
-  0% {
-    scale: 0;
-  }
 
-  100% {
+  to {
+    visibility: visible;
     width: fit-content;
     scale: 1;
   }
 }
 
 .fadeInOut {
-  animation: fadeInOut 400ms ease-in-out;
+  scale: 0;
+  visibility: hidden;
+  animation: fadeInOut 400ms linear;
+  animation-timeline: view();
+  animation-range-start: 100px;
+  animation-range-end: 50vh;
   animation-fill-mode: forwards;
 }
 
 .title {
-  width: fit-content;
   font-size: xx-large;
 }
 
