@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -7,27 +7,20 @@ import { BackgroundGradient } from './ui/background-gradient';
 import AnimatedGradientText from './ui/animated-gradient-text';
 import { cn } from '@/lib/utils';
 import { Dock, DockIcon } from './ui/dock';
-import { type } from 'os';
 import { getTeam2024Data } from '@/data/Teamdata';
-;
 
 export default function TeamView(props) {
   const [selectedMember, setSelectedMember] = useState(1);
   const [isSeniorVisible, setIsSeniorVisible] = useState(false);
-  const [selectedPositionIndex, setSelectedPositionIndex] = useState(1);
+  const [selectedPositionIndex, setSelectedPositionIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [positions, setPosition] = useState(["Tech Associates", "GDSC Associates", "Graphic Associates"])
-  const [teamData, setTeamData] = useState<number[][]>([[]])
-  const [positionWithKey, setPositionWithKey] = useState({})
+  const [positions, setPositions] = useState(["Tech Associates", "GDSC Associates", "Graphic Associates"]);
+  const [teamData, setTeamData] = useState<number[][]>([]);
+  const [positionWithKey, setPositionWithKey] = useState({});
 
   const handleToggle = () => {
     setIsSeniorVisible(!isSeniorVisible);
-    if (isSeniorVisible) {
-      setPosition(["Management Team", "Core Team", "Advisors"])
-    }
-    else {
-      setPosition(["Tech Associates", "GDSC Associates", "Graphic Associates"])
-    }
+
   };
 
   const handleChevronClick = (newDirection) => {
@@ -43,10 +36,18 @@ export default function TeamView(props) {
 
   useEffect(() => {
     if (props.type === "Team2024") {
-      setTeamData(getTeam2024Data(isSeniorVisible))
+      setTeamData(getTeam2024Data(isSeniorVisible));
+    }
+  }, [props.type, isSeniorVisible]);
+
+  useEffect(() => {
+    setTeamData(getTeam2024Data(isSeniorVisible));
+    if (isSeniorVisible) {
+      setPositions(["Management Team", "Core Team", "Advisors"]);
+    } else {
+      setPositions(["Tech Associates", "GDSC Associates", "Graphic Associates"]);
     }
   }, [isSeniorVisible]);
-
 
   return (
     <div className="flex flex-col flex-1 items-center justify-between gap-8">
