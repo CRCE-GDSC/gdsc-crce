@@ -75,11 +75,11 @@ export default function Events() {
           alt="left_logo"
           className="moveLeft z-10 translate-x-[105px]"
         />
-        <h2 className="title fadeInOut">Past Events </h2>
+        <h2 className="title fadeInOut">Past Events</h2>
         <Image
           src="/assets/gdsc_logo_right.png"
-          height={52}
-          width={52}
+          height={50}
+          width={50}
           alt="right_logo"
           className="moveRight z-10 -translate-x-[105px]"
         />
