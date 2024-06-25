@@ -52,11 +52,13 @@ body {
   bottom: 0;
   width: 100vw;
   background: #00000075;
+  z-index: 1000;
 }
 
 #three-lines {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(220deg)
     brightness(101%) contrast(101%);
+    z-index: 2000;
 }
 
 #side-button {
@@ -76,6 +78,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 }
 
 .Ul,
@@ -105,9 +108,11 @@ body {
   height: 20px;
   flex: 1;
   color: transparent;
+  z-index: 1000;
 }
 
 #Nav {
+  z-index: 1000;
   position: absolute;
   top: 0;
   left: 0;

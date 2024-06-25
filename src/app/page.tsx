@@ -2,7 +2,6 @@
 import { Theme } from '@radix-ui/themes'
 import React from 'react'
 import Footer from '@/components/Footer'
-import Sidebar from '@/components/sidebar/Sidebar'
 import Events from '@/components/Events'
 import Navbar from '@/components/Navbar'
 import WhatWeDo from '@/components/WhatWeDo'
@@ -17,27 +16,22 @@ export default async function Home() {
   return (
     <div className="flex max-h-screen flex-col items-center justify-between px-4">
       <main className="flex-grow">
-       
-
-        <Theme appearance="dark"> 
-          {/* <Sidebar /> */}
+        <Theme appearance="dark">
           <Navbar />
           <div className="h-screen">
             <Hero />
           </div>
 
           <WhatWeDo />
-          <div className="m-4 w-screen p-2">
-            {' '}
+          {/* <div className="m-4 w-screen p-2">
             <Events />
-          </div>
+          </div> */}
+
+          <Aboutus />
+          <SignupFormDemo />
+          <Footer />
         </Theme>
-        <Aboutus />
-        <SignupFormDemo />
       </main>
-      <div>
-        <Footer />
-      </div>
     </div>
   )
 }

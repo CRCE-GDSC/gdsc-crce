@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 const SideHeader = () => {
   return (
-    <header className="body-font w-screen bg-gray-900 text-gray-400">
-      <div className="container mx-auto items-center flex flex-col flex-wrap p-4 md:flex-row">
+    <div className=" bg-gray-900 text-gray-400">
+      <div className="container justify-center mx-auto items-center flex flex-col flex-wrap p-4 md:flex-row">
         <Link
-          className="title-font mb-0 flex items-center font-medium text-white md:mb-0"
+          className=" mb-0 flex text-white md:mb-0"
           href="/"
         >
           <Image
@@ -41,7 +41,7 @@ const SideHeader = () => {
           </svg>
         </button> */}
       </div>
-    </header>
+    </div>
   )
 }
 
