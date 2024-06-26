@@ -21,13 +21,9 @@ export default async function Home() {
           <div className="h-screen">
             <Hero />
           </div>
-
-          <WhatWeDo />
           <Aboutus />
-          <div className="m-4 w-screen p-2">
+          <WhatWeDo />
             <Events />
-          </div>
-
           <SignupFormDemo />
           <Footer />
         </Theme>

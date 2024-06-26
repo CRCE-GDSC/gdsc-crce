@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 export default function Events() {
   return (
-    <div className="m-2 p-2">
+    <div className="m-2 p-2 w-screen">
       <div className="flex items-center justify-center">
         <Image
           src="/assets/gdsc_logo_left.png"
