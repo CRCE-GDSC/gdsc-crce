@@ -3,12 +3,11 @@ import { useState } from 'react'
 import { BentoCard, BentoGrid } from './ui/bentogrid'
 import { Button } from '@radix-ui/themes'
 
-import { events , MarqeeEvents } from '@/data/PastEvents'
+import { events, MarqeeEvents } from '@/data/PastEvents'
 import Marquee from './ui/marqee'
-import { AceGrid,AceGridCard } from './ui/ace-grid'
+import { AceGrid, AceGridCard } from './ui/ace-grid'
 import { items } from '@/data/AceGridData'
 import Image from 'next/image'
-
 
 export default function Events() {
   return (
@@ -19,15 +18,15 @@ export default function Events() {
           height={50}
           width={50}
           alt="left_logo"
-          className="moveLeft z-10 translate-x-[105px]"
+          className="moveLeft z-10 translate-x-[155px]"
         />
-        <h2 className="title fadeInOut">Upcoming Events</h2>
+        <h2 className="title fadeInOut">UPCOMING EVENTS</h2>
         <Image
           src="/assets/gdsc_logo_right.png"
           height={52}
           width={52}
           alt="right_logo"
-          className="moveRight z-10 -translate-x-[105px]"
+          className="moveRight z-10 -translate-x-[155px]"
         />
       </div>
       <BentoGrid className="grid gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -35,7 +34,6 @@ export default function Events() {
           <BentoCard key={event.name} {...event} />
         ))}
       </BentoGrid>
-      
 
       {/* past events marqee */}
       <div className="flex items-center justify-center">
@@ -44,15 +42,15 @@ export default function Events() {
           height={50}
           width={50}
           alt="left_logo"
-          className="moveLeft z-10 translate-x-[105px]"
+          className="moveLeft z-10 translate-x-[127px]"
         />
-        <h2 className="title fadeInOut">Event Gallery</h2>
+        <h2 className="title fadeInOut">EVENT GALLERY</h2>
         <Image
           src="/assets/gdsc_logo_right.png"
           height={52}
           width={52}
           alt="right_logo"
-          className="moveRight z-10 -translate-x-[105px]"
+          className="moveRight z-10 -translate-x-[127px]"
         />
       </div>
       <div className="bg-background relative flex h-full w-auto flex-col items-center justify-center overflow-hidden rounded-lg py-20 md:shadow-xl">
@@ -73,15 +71,15 @@ export default function Events() {
           height={50}
           width={50}
           alt="left_logo"
-          className="moveLeft z-10 translate-x-[105px]"
+          className="moveLeft z-10 translate-x-[107px]"
         />
-        <h2 className="title fadeInOut">Past Events</h2>
+        <h2 className="title fadeInOut">PAST EVENTS</h2>
         <Image
           src="/assets/gdsc_logo_right.png"
           height={50}
           width={50}
           alt="right_logo"
-          className="moveRight z-10 -translate-x-[105px]"
+          className="moveRight z-10 -translate-x-[107px]"
         />
       </div>
       <div>
