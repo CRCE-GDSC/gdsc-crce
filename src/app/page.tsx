@@ -14,7 +14,7 @@ export default async function Home() {
     new Promise((resolve) => setTimeout(resolve, ms))
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
-    <div className="flex max-h-screen flex-col items-center justify-between px-4">
+    <div className="flex max-h-screen flex-col items-center justify-between">
       <main className="flex-grow">
         <Theme appearance="dark">
           <Navbar />

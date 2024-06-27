@@ -5,7 +5,7 @@ import { StickyScrollComponent } from './StickyScrollComponent'
 
 const WhatWeDo = () => {
   return (
-    <section className='container' id="WwD">
+    <section className='container pb-10' id="WwD">
       <div>
         <div className="flex items-center justify-center">
           <Image

@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const NavbarDesktop = () => {
   return (
-    <header className="bg-gray-900 text-gray-400 sticky top-0 z-50 px-5 dark:drop-shadow-md">
-      <div className="container justify-center mx-auto flex flex-col flex-wrap items-center p-2 md:flex-row md:justify-center xl:justify-between md:p-4  " >
+    <header className=" bg-slate-950 text-gray-400 sticky top-0 z-50 px-5 ">
+      <div className="container justify-center mx-auto flex flex-col flex-wrap items-center px-2 md:flex-row md:justify-center xl:justify-between md:p-4  " >
         <Link
           className="mb-4 flex items-center font-medium text-white md:mb-0 md:pl-4 "
           href="/"

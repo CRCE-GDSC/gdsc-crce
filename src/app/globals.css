@@ -43,6 +43,10 @@ body {
   line-height: 1.4rem;
 }
 
+.shadow-nav {
+  box-shadow: 2px 2px 4px;
+}
+
 /* Sidebar */
 
 .background {
@@ -143,8 +147,8 @@ body {
 .moveLeft {
   animation: moveLeft linear;
   animation-timeline: view();
-  animation-range-start: 100px;
-  animation-range-end: 50vh;
+  animation-range-start: cover 43px;
+  animation-range-end: 37vh;
   animation-fill-mode: forwards;
 }
 
@@ -158,8 +162,8 @@ body {
 .moveRight {
   animation: moveRight linear;
   animation-timeline: view();
-  animation-range-start: 100px;
-  animation-range-end: 50vh;
+  animation-range-start: cover 43px;
+  animation-range-end: 37vh;
   animation-fill-mode: forwards;
 }
 
@@ -177,8 +181,8 @@ body {
   visibility: hidden;
   animation: fadeInOut linear;
   animation-timeline: view();
-  animation-range-start: 100px;
-  animation-range-end: 50vh;
+  animation-range-start: cover 43px;
+  animation-range-end: 37vh;
   animation-fill-mode: forwards;
 }
 

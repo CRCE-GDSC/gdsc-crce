@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Aboutus = () => {
   return (
-    <div>
+    <div className='pb-20'>
       <div
         className="container mx-auto mt-8 scroll-mt-96 p-4 max-sm:mt-0 xl:py-16"
         id="about"
@@ -30,7 +30,7 @@ const Aboutus = () => {
           />
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 max-sm:px-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+        <div className="mt-28 grid grid-cols-1 gap-5 max-sm:px-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
           <div className="feature-card d-shadow-blue transform overflow-hidden p-5 shadow-lg shadow-blue-900/50 transition-transform duration-300 hover:-translate-y-3">
             <div className="mx-4 mb-4 flex h-10 w-10 items-center justify-center rounded-full">
               <svg
