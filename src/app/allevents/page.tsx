@@ -1,5 +1,6 @@
 'use server'
-import Events from '@/components/Events'
+import { Theme } from '@radix-ui/themes'
+import AllEvents from '@/components/allevents'
 import RootLayout from '../layout'
 
 export default async function Home({
@@ -20,7 +21,7 @@ export default async function Home({
   return (
       <main className=" flex flex-col max-h-screen justify-between p-6">
         <div className="h-screen">
-          <Events />
+          <Allevents/>
         </div>
       </main>
    

@@ -1,7 +1,7 @@
 import { AceGrid, AceGridCard } from './ui/ace-grid'
 import { Allitems } from '@/data/AceGridData'
 
-export default function AllEvents() {
+const AllEvents = () => {
   return (
     <div className="m-2 p-2">
       <div className="flex items-center justify-center">
@@ -16,3 +16,4 @@ export default function AllEvents() {
     </div>
   )
 }
+export default AllEvents
