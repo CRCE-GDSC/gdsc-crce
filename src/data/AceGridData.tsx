@@ -79,7 +79,7 @@ export const items = [
 export const Allitems = [
   {
     key: '1',
-    title: 'The Event 1',
+    title: 'The Future Forge',
     description: 'Rsvp for this Event now!',
 
     image: (
@@ -89,7 +89,7 @@ export const Allitems = [
         className="h-auto w-full rounded-2xl"
       />
     ),
-    href: '/',
+    href: '/allevents/thefutureforge',
     cta: 'Register now!',
   },
   { key: '2',

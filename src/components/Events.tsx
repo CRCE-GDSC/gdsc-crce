@@ -110,7 +110,7 @@ export default function Events() {
             size="2"
             className="pointer-events-auto flex w-fit items-center rounded-2xl border border-neutral-600 p-2 transition-all duration-300 ease-in-out hover:-translate-y-3 hover:bg-neutral-800 hover:shadow-md"
             onClick={() => {
-              console.log('View All Events')
+              window.open('/allevents',)
             }}
           >
             <p className="flex items-center">

@@ -23,7 +23,7 @@ export default async function Home() {
           </div>
           <Aboutus />
           <WhatWeDo />
-            <Events />
+          <Events />
           <SignupFormDemo />
           <Footer />
         </Theme>
