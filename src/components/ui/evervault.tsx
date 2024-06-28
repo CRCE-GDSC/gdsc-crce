@@ -44,11 +44,11 @@ export const EvervaultCard = ({
         onMouseMove={onMouseMove}
         className="group/card relative flex h-full w-full items-center justify-center overflow-hidden rounded-3xl bg-transparent"
       >
-        <CardPattern
+        {/* <CardPattern
           mouseX={mouseX}
           mouseY={mouseY}
           randomString={randomString}
-        />
+        /> */}
         <div className="relative z-10 flex items-center justify-center">
           <div className="relative flex h-44 w-44 items-center justify-center rounded-full text-4xl font-bold text-white">
             <div className="absolute h-full w-full rounded-full  blur-sm bg-black/[0.8]" />

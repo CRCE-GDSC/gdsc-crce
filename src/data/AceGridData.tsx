@@ -1,40 +1,20 @@
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from '@tabler/icons-react'
-import Image from 'next/image'
+import { title } from "process"
 
-
-const Skeleton = () => (
-  <div className="flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800"></div>
-)
+/* eslint-disable @next/next/no-img-element */
 export const items = [
   {
     title: 'The Event 1',
     description: 'Rsvp for this Event now!',
 
     image: (
-      //<Image src="/postman_event_poster.webp"  alt="" className="rounded-2xl" />
       <img
-        src="/postman_event_poster.webp"
+        src="/event_assests/GDSC_Future-Forge.jpg"
         alt=""
         className="h-auto w-full rounded-2xl"
       />
     ),
     href: '/',
     cta: 'Register now!',
-    icon: (
-      <IconFileBroken
-        height={4}
-        width={4}
-        className="h-4 w-4 text-neutral-500"
-      />
-    ),
   },
   {
     title: 'Event 2',
@@ -49,7 +29,6 @@ export const items = [
     ),
     href: '/',
     cta: 'Register now!',
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'Event 3',
@@ -64,7 +43,6 @@ export const items = [
     ),
     href: '/',
     cta: 'Register now!',
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'Event 4',
@@ -79,7 +57,6 @@ export const items = [
     ),
     href: '/',
     cta: 'Register now!',
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: 'Event 5',
@@ -94,11 +71,30 @@ export const items = [
     ),
     href: '/',
     cta: 'Register now!',
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
   },
+]
+
+
+// all items for alll events
+export const Allitems = [
   {
-    title: 'Event 6',
-    description: 'Experience the thrill of bringing ideas to life.',
+    key: '1',
+    title: 'The Event 1',
+    description: 'Rsvp for this Event now!',
+
+    image: (
+      <img
+        src="/event_assests/GDSC_Future-Forge.jpg"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+  { key: '2',
+    title: 'Event 2',
+    description: 'Rsvp now!.',
 
     image: (
       <img
@@ -109,21 +105,121 @@ export const items = [
     ),
     href: '/',
     cta: 'Register now!',
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: 'The Spirit of Adventure',
-    description: 'Embark on exciting journeys and thrilling discoveries.',
+    key: '3',
+    title: 'Event 3',
+    description: 'Rsvp now!.',
 
     image: (
       <img
         src="/postman_event_poster.webp"
         alt=""
-        className="h-full w-full rounded-2xl"
+        className="h-auto w-full rounded-2xl"
       />
     ),
     href: '/',
     cta: 'Register now!',
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
+  {
+    key: '4',
+    title: 'Event 4',
+    description: 'Rsvp now!.',
+
+    image: (
+      <img
+        src="/postman_event_poster.webp"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+  {
+    key: '5',
+    title: 'Event 5',
+    description: 'Join the quest for understanding and enlightenment.',
+
+    image: (
+      <img
+        src="/postman_event_poster.webp"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+  {
+    key: '6',
+    title: 'Event 6',
+    description: 'Join the quest for understanding and enlightenment.',
+    image: (
+      <img
+        src="/postman_event_poster.webp"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+  {
+    key: '7',
+    title: 'Event 7',
+    description: 'Join the quest for understanding and enlightenment.',
+    image: (
+      <img
+        src="/postman_event_poster.webp"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+  {
+    key: '8',
+    title: 'Event 8',
+    description: 'Join the quest for understanding and enlightenment.',
+    image: (
+      <img
+        src="/postman_event_poster.webp"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+  {
+    key: '9',
+    title: 'Event 9',
+    description: 'Join the quest for understanding and enlightenment.',
+    image: (
+      <img
+        src="/postman_event_poster.webp"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+  {
+    key: '10',
+    title: 'Event 10',
+    description: 'Join the quest for understanding and enlightenment.',
+    image: (
+      <img
+        src="/postman_event_poster.webp"
+        alt=""
+        className="h-auto w-full rounded-2xl"
+      />
+    ),
+    href: '/',
+    cta: 'Register now!',
+  },
+
 ]
