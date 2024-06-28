@@ -21,7 +21,7 @@ export default async function Home({
   return (
       <main className=" flex flex-col max-h-screen justify-between p-6">
         <div className="h-screen">
-          <Allevents/>
+          <AllEvents/>
         </div>
       </main>
    
