@@ -19,7 +19,8 @@ export default {
         'meteor-effect': 'meteor 5s linear infinite',
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-        gradient: "gradient 8s linear infinite",
+        gradient: 'gradient 8s linear infinite',
+        gradientText: 'gradientText 14s linear infinite',
       },
       keyframes: {
         meteor: {
@@ -30,6 +31,12 @@ export default {
             opacity: '0',
           },
         },
+        gradientText: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+
         marquee: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - var(--gap)))' },
@@ -40,7 +47,7 @@ export default {
         },
         gradient: {
           to: {
-            backgroundPosition: "var(--bg-size) 0",
+            backgroundPosition: 'var(--bg-size) 0',
           },
         },
       },

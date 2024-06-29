@@ -29,19 +29,11 @@ const Hero = () => {
   const opacityG = useTransform(scrollYProgress, [0.35, 0.5], [1, 0])
   const xTransformG = useTransform(scrollYProgress, [0.35, 0.5], ['0%', '100%'])
 
-  // Move images and text to the right based on scroll progress
   const xTransformImages = useTransform(
     scrollYProgress,
     [0.3, 0.5],
     ['0px', '200px']
   )
-  const xTransformText = useTransform(
-    scrollYProgress,
-    [0.2, 0.5],
-    ['0px', '200px']
-  )
-
-  // Responsive transforms
   const xTransformImagesMd = useTransform(
     scrollYProgress,
     [0.2, 0.5],
@@ -52,6 +44,30 @@ const Hero = () => {
     [0.2, 0.5],
     ['0px', '80px']
   )
+  const xTransformText = useTransform(
+    scrollYProgress,
+    [0.2, 0.5],
+    ['0px', '200px']
+  )
+
+  // Outward fade and scale effect for images
+  const xTransformImagesOut = useTransform(
+    scrollYProgress,
+    [0.5, 0.8],
+    ['0px', '200px']
+  )
+  const xTransformImagesOutMd = useTransform(
+    scrollYProgress,
+    [0.5, 0.8],
+    ['0px', '150px']
+  )
+  const xTransformImagesOutSm = useTransform(
+    scrollYProgress,
+    [0.5, 0.8],
+    ['0px', '100px']
+  )
+  const opacityImagesOut = useTransform(scrollYProgress, [0.5, 0.8], [1, 0])
+  const scaleImagesOut = useTransform(scrollYProgress, [0.5, 0.8], [1, 1.5])
 
   useEffect(() => {
     scrollYProgress.onChange((v) => console.log('Scroll progress:', v))
@@ -59,14 +75,18 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="mt-[-80px] flex min-h-screen items-center justify-center overflow-y-auto"
+      className="mt-[-80px] flex min-h-dvh items-center justify-center overflow-y-auto bg-white md:min-h-screen"
       ref={ref}
       style={{ y: yTransform }}
     >
       <div className="flex w-1/5 items-center">
         <motion.div
-          style={{ x: xTransformImages }}
-          className="sm:hidden md:hidden lg:block"
+          style={{
+            x: xTransformImages,
+            scale: scaleImagesOut,
+            opacity: opacityImagesOut,
+          }}
+          className="hidden lg:block"
         >
           <Image
             src="/gdsc-fl.png"
@@ -76,8 +96,12 @@ const Hero = () => {
           />
         </motion.div>
         <motion.div
-          style={{ x: xTransformImagesMd }}
-          className="sm:hidden md:block lg:hidden"
+          style={{
+            x: xTransformImagesMd,
+            scale: scaleImagesOut,
+            opacity: opacityImagesOut,
+          }}
+          className="hidden md:block lg:hidden"
         >
           <Image
             src="/gdsc-fl.png"
@@ -87,8 +111,12 @@ const Hero = () => {
           />
         </motion.div>
         <motion.div
-          style={{ x: xTransformImagesSm }}
-          className="sm:block md:hidden lg:hidden"
+          style={{
+            x: xTransformImagesSm,
+            scale: scaleImagesOut,
+            opacity: opacityImagesOut,
+          }}
+          className="block md:hidden"
         >
           <Image
             src="/gdsc-fl.png"
@@ -100,8 +128,12 @@ const Hero = () => {
       </div>
       <div className="flex w-1/5 items-center">
         <motion.div
-          style={{ x: xTransformImages }}
-          className="sm:hidden md:hidden lg:block"
+          style={{
+            x: xTransformImages,
+            scale: scaleImagesOut,
+            opacity: opacityImagesOut,
+          }}
+          className="hidden lg:block"
         >
           <Image
             src="/gdsc-fr.png"
@@ -111,8 +143,12 @@ const Hero = () => {
           />
         </motion.div>
         <motion.div
-          style={{ x: xTransformImagesMd }}
-          className="sm:hidden md:block lg:hidden"
+          style={{
+            x: xTransformImagesMd,
+            scale: scaleImagesOut,
+            opacity: opacityImagesOut,
+          }}
+          className="hidden md:block lg:hidden"
         >
           <Image
             src="/gdsc-fr.png"
@@ -122,8 +158,12 @@ const Hero = () => {
           />
         </motion.div>
         <motion.div
-          style={{ x: xTransformImagesSm }}
-          className="sm:block md:hidden lg:hidden"
+          style={{
+            x: xTransformImagesSm,
+            scale: scaleImagesOut,
+            opacity: opacityImagesOut,
+          }}
+          className="block md:hidden"
         >
           <Image
             src="/gdsc-fr.png"
@@ -133,7 +173,7 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className="xl:text-11xl ml-2 flex space-x-2 bg-gradient-to-r from-[#e94337] via-[#4385f5] to-[#0e9e58] bg-clip-text text-6xl font-bold text-transparent md:text-8xl lg:text-9xl">
+      <div className="xl:text-12xl gradient-text animate-gradientText ml-2 flex space-x-2 text-6xl font-bold text-transparent md:text-8xl lg:text-9xl">
         <motion.span style={{ opacity: opacityG, x: xTransformG }}>
           G
         </motion.span>

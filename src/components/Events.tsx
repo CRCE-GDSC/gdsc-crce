@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 export default function Events() {
   return (
-    <div className="m-2 p-2 w-screen">
+    <div className="m-2 w-screen">
       <div className="flex items-center justify-center">
         <Image
           src="/assets/gdsc_logo_left.png"
@@ -110,7 +110,7 @@ export default function Events() {
             size="2"
             className="pointer-events-auto flex w-fit items-center rounded-2xl border border-neutral-600 p-2 transition-all duration-300 ease-in-out hover:-translate-y-3 hover:bg-neutral-800 hover:shadow-md"
             onClick={() => {
-              window.open('/allevents',)
+              window.open('/allevents')
             }}
           >
             <p className="flex items-center">

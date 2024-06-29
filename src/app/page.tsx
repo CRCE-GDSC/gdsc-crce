@@ -16,11 +16,8 @@ export default async function Home() {
   return (
     <div className="flex max-h-screen flex-col items-center justify-between">
       <main className="flex-grow">
-        <Theme appearance="dark">
-          <Navbar />
-          <div className="h-screen">
-            <Hero />
-          </div>
+        <Theme appearance="light">
+          <Hero />
           <Aboutus />
           <WhatWeDo />
           <Events />
