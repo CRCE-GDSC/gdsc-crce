@@ -178,16 +178,16 @@ body {
   background: linear-gradient(
     to right,
     #e84335,
-    /* Red */ #d32f2f,
-    /* Darker Red */ #4385f5,
-    /* Blue */ #76c043,
-    /* Green */ #004ba0,
-    /* Darker Blue */ #109e59,
-    /* Dark Green */ #007ac1 /* Lighter Blue */
+    #d32f2f,
+    #4385f5,
+    #76c043,
+    #004ba0,
+    #109e59,
+    #007ac1
   );
-  background-size: 300% 300%;
+  background-size: 1000% 1000%;
   background-clip: text;
-  color: transparent; /* This is needed to see the gradient in the text */
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }

@@ -3,6 +3,8 @@
 import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import AnimatedGradientHero from './ui/animated-gradient-hero'
+import { cn } from '@/lib/utils'
 
 const Hero = () => {
   const ref = useRef(null)
@@ -50,22 +52,38 @@ const Hero = () => {
     ['0px', '200px']
   )
 
-  // Outward fade and scale effect for images
-  const xTransformImagesOut = useTransform(
+  const xTransformImagesOutLeft = useTransform(
+    scrollYProgress,
+    [0.5, 0.8],
+    ['0px', '-200px']
+  )
+  const xTransformImagesOutLeftMd = useTransform(
+    scrollYProgress,
+    [0.5, 0.8],
+    ['0px', '-150px']
+  )
+  const xTransformImagesOutLeftSm = useTransform(
+    scrollYProgress,
+    [0.5, 0.8],
+    ['0px', '-100px']
+  )
+
+  const xTransformImagesOutRight = useTransform(
     scrollYProgress,
     [0.5, 0.8],
     ['0px', '200px']
   )
-  const xTransformImagesOutMd = useTransform(
+  const xTransformImagesOutRightMd = useTransform(
     scrollYProgress,
     [0.5, 0.8],
     ['0px', '150px']
   )
-  const xTransformImagesOutSm = useTransform(
+  const xTransformImagesOutRightSm = useTransform(
     scrollYProgress,
     [0.5, 0.8],
     ['0px', '100px']
   )
+
   const opacityImagesOut = useTransform(scrollYProgress, [0.5, 0.8], [1, 0])
   const scaleImagesOut = useTransform(scrollYProgress, [0.5, 0.8], [1, 1.5])
 
@@ -88,12 +106,20 @@ const Hero = () => {
           }}
           className="hidden lg:block"
         >
-          <Image
-            src="/gdsc-fl.png"
-            alt="gdsc-logo"
-            width={5000}
-            height={5000}
-          />
+          <motion.div
+            style={{
+              x: xTransformImagesOutLeft,
+              scale: scaleImagesOut,
+              opacity: opacityImagesOut,
+            }}
+          >
+            <Image
+              src="/gdsc-fl.png"
+              alt="gdsc-logo"
+              width={5000}
+              height={5000}
+            />
+          </motion.div>
         </motion.div>
         <motion.div
           style={{
@@ -103,12 +129,20 @@ const Hero = () => {
           }}
           className="hidden md:block lg:hidden"
         >
-          <Image
-            src="/gdsc-fl.png"
-            alt="gdsc-logo"
-            width={5000}
-            height={5000}
-          />
+          <motion.div
+            style={{
+              x: xTransformImagesOutLeftMd,
+              scale: scaleImagesOut,
+              opacity: opacityImagesOut,
+            }}
+          >
+            <Image
+              src="/gdsc-fl.png"
+              alt="gdsc-logo"
+              width={5000}
+              height={5000}
+            />
+          </motion.div>
         </motion.div>
         <motion.div
           style={{
@@ -118,12 +152,20 @@ const Hero = () => {
           }}
           className="block md:hidden"
         >
-          <Image
-            src="/gdsc-fl.png"
-            alt="gdsc-logo"
-            width={5000}
-            height={5000}
-          />
+          <motion.div
+            style={{
+              x: xTransformImagesOutLeftSm,
+              scale: scaleImagesOut,
+              opacity: opacityImagesOut,
+            }}
+          >
+            <Image
+              src="/gdsc-fl.png"
+              alt="gdsc-logo"
+              width={5000}
+              height={5000}
+            />
+          </motion.div>
         </motion.div>
       </div>
       <div className="flex w-1/5 items-center">
@@ -135,12 +177,20 @@ const Hero = () => {
           }}
           className="hidden lg:block"
         >
-          <Image
-            src="/gdsc-fr.png"
-            alt="gdsc-logo"
-            width={5000}
-            height={5000}
-          />
+          <motion.div
+            style={{
+              x: xTransformImagesOutRight,
+              scale: scaleImagesOut,
+              opacity: opacityImagesOut,
+            }}
+          >
+            <Image
+              src="/gdsc-fr.png"
+              alt="gdsc-logo"
+              width={5000}
+              height={5000}
+            />
+          </motion.div>
         </motion.div>
         <motion.div
           style={{
@@ -150,12 +200,20 @@ const Hero = () => {
           }}
           className="hidden md:block lg:hidden"
         >
-          <Image
-            src="/gdsc-fr.png"
-            alt="gdsc-logo"
-            width={5000}
-            height={5000}
-          />
+          <motion.div
+            style={{
+              x: xTransformImagesOutRightMd,
+              scale: scaleImagesOut,
+              opacity: opacityImagesOut,
+            }}
+          >
+            <Image
+              src="/gdsc-fr.png"
+              alt="gdsc-logo"
+              width={5000}
+              height={5000}
+            />
+          </motion.div>
         </motion.div>
         <motion.div
           style={{
@@ -165,27 +223,43 @@ const Hero = () => {
           }}
           className="block md:hidden"
         >
-          <Image
-            src="/gdsc-fr.png"
-            alt="gdsc-logo"
-            width={5000}
-            height={5000}
-          />
+          <motion.div
+            style={{
+              x: xTransformImagesOutRightSm,
+              scale: scaleImagesOut,
+              opacity: opacityImagesOut,
+            }}
+          >
+            <Image
+              src="/gdsc-fr.png"
+              alt="gdsc-logo"
+              width={5000}
+              height={5000}
+            />
+          </motion.div>
         </motion.div>
       </div>
-      <div className="xl:text-12xl gradient-text animate-gradientText ml-2 flex space-x-2 text-6xl font-bold text-transparent md:text-8xl lg:text-9xl">
-        <motion.span style={{ opacity: opacityG, x: xTransformG }}>
-          G
-        </motion.span>
-        <motion.span style={{ opacity: opacityD, x: xTransformD }}>
-          D
-        </motion.span>
-        <motion.span style={{ opacity: opacityS, x: xTransformS }}>
-          S
-        </motion.span>
-        <motion.span style={{ opacity: opacityC, x: xTransformC }}>
-          C
-        </motion.span>
+      <div className="ml-2 flex space-x-2 text-6xl font-bold text-black md:text-8xl lg:text-9xl">
+        <AnimatedGradientHero>
+          <div
+            className={cn(
+              `inline animate-gradient bg-gradient-to-r from-[#4385f5] via-[#e04033] to-[#903de3] bg-[length:var(--bg-size)_100%] bg-clip-text font-semibold text-transparent transition-colors duration-500`
+            )}
+          >
+            <motion.span style={{ opacity: opacityG, x: xTransformG }}>
+              G
+            </motion.span>
+            <motion.span style={{ opacity: opacityD, x: xTransformD }}>
+              D
+            </motion.span>
+            <motion.span style={{ opacity: opacityS, x: xTransformS }}>
+              S
+            </motion.span>
+            <motion.span style={{ opacity: opacityC, x: xTransformC }}>
+              C
+            </motion.span>
+          </div>
+        </AnimatedGradientHero>
       </div>
     </motion.div>
   )
