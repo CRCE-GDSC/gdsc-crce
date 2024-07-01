@@ -51,7 +51,7 @@ const InteractiveCircle: React.FC = () => {
     if (containerRef.current) {
       const containerTop = containerRef.current.offsetTop;
       const scrollTo = containerTop + (index / (points.length - 1)) * (containerRef.current.offsetHeight - window.innerHeight);
-      window.scrollTo({ top: scrollTo, behavior: 'smooth' });
+      window.scrollTo({ top: scrollTo });
     }
   };
 
@@ -78,8 +78,8 @@ const InteractiveCircle: React.FC = () => {
                 }}
                 onClick={() => handlePointClick(index)}
               >
-                <div className={`w-4 h-4 rounded-full ${activePoint === index ? 'bg-blue-500' : 'bg-gray-400'}`} />
-                <div className={`absolute ${isMobile ? 'left-6 top-0' : `${x > 0 ? 'left-full ml-2' : 'right-full mr-2'} top-1/2`} transform ${isMobile ? '-translate-y-1/2' : '-translate-y-1/2'} bg-white p-2 rounded shadow-md z-10 whitespace-nowrap ${activePoint === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+                <div className={`w-4 h-4 rounded-full ${activePoint === index ? 'bg-blue-500' : 'bg-gray-400'} `} />
+                <div className={`absolute ${isMobile ? 'left-3 top-0' : `${x > 0 ? 'left-full ml-2' : 'right-full mr-2'} top-1/2`} transform ${isMobile ? '-translate-y-1/2' : '-translate-y-1/2'} bg-white p-2 rounded shadow-md z-10 whitespace-nowrap ${activePoint === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 md:hover:opacity-20`}>
                   <p className="text-lg font-semibold invert">{point.text}</p>
                 </div>
               </div>
@@ -106,9 +106,12 @@ const InteractiveCircle: React.FC = () => {
                 alt={points[activePoint].text}
                 layout="fill"
                 objectFit="contain"
+                unoptimized
               />
             </div>
+            
           </div>
+          
         )}
       </div>
     </div>
