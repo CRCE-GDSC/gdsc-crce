@@ -27,7 +27,7 @@ const Aboutus = () => {
               height={52}
               width={52}
               alt="right_logo"
-              className="moveRight z-50 translate-x-[125px]"
+              className="moveRight z-50 -translate-x-[125px]"
             />
           </div>
 

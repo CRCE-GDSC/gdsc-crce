@@ -18,11 +18,13 @@ export default async function Home() {
       <main className="flex-grow">
         <Theme appearance="light">
           <Hero />
+  
           <Aboutus />
-          <WhatWeDo />
+    
           <Events />
           <SignupFormDemo />
           <Footer />
+          <WhatWeDo />
         </Theme>
       </main>
     </div>
