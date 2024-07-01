@@ -18,10 +18,8 @@ export default async function Home() {
       <main className="flex-grow">
         <Theme appearance="light">
           <Hero />
-  
           <Aboutus />
-    
-          <Events />
+          {/* <Events /> */}
           <SignupFormDemo />
           <Footer />
           <WhatWeDo />
