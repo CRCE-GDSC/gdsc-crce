@@ -24,14 +24,14 @@ const WhatWeDo = () => {
             className="moveRight z-10 -translate-x-[105px]"
           />
         </div>
-        <p className="text-center text-wrap md:invisible visible">
+        <p className="text-center px-5 text-wrap md:invisible visible">
                 GDSC CRCE boasts of a multifaceted community with members from
                 various disciplines working together. By joining GDSC CRCE
                 students get to work with an exceptionally skilled group of
                 developers, connect with developers around the world, make
                 projects,organized workshops and many more.
               </p>
-        <div className=" flex">
+        <div className=" md:flex">
             <div className=" min-h-screen pl-40">
               <InteractiveCircle />
             </div>

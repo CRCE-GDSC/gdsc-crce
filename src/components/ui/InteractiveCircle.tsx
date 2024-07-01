@@ -56,11 +56,11 @@ const InteractiveCircle: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="relative" style={{ height: `${(points.length + 1) * 100}vh` }}>
-      <div ref={circleRef} className="sticky top-0 w-full h-screen flex items-center justify-center">
+    <div ref={containerRef} className="relative " style={{ height: `${(points.length + 1) * 100}vh` }}>
+      <div ref={circleRef} className="sticky top-0 -translate-x-16 -translate-y-32 md:translate-y-0 md:translate-x-0  w-full h-screen flex items-center justify-center">
         <div className={`relative ${isMobile ? 'w-full h-full flex' : 'w-[40rem] h-[40rem] rounded-full border-2 border-gray-300'}`}>
           {isMobile && (
-            <div className="w-px bg-gray-300 h-1/2 absolute left-4 top-1/4" />
+            <div className="w-px bg-gray-300 h-1/2 absolute left-3 top-1/4" />
           )}
           {points.map((point, index) => {
             const angle = (360 / points.length) * index - 90; // Start from top (90 degrees)
@@ -79,20 +79,21 @@ const InteractiveCircle: React.FC = () => {
                 onClick={() => handlePointClick(index)}
               >
                 <div className={`w-4 h-4 rounded-full ${activePoint === index ? 'bg-blue-500' : 'bg-gray-400'} `} />
-                <div className={`absolute ${isMobile ? 'left-3 top-0' : `${x > 0 ? 'left-full ml-2' : 'right-full mr-2'} top-1/2`} transform ${isMobile ? '-translate-y-1/2' : '-translate-y-1/2'} bg-white p-2 rounded shadow-md z-10 whitespace-nowrap ${activePoint === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 md:hover:opacity-20`}>
+                <div className={`absolute ${isMobile ? 'left-6 top-1' : `${x > 0 ? 'left-full ml-2' : 'right-full mr-2'} top-1/2`} transform ${isMobile ? '-translate-y-1/2' : '-translate-y-1/2'} bg-white p-2 rounded shadow-md z-10 whitespace-nowrap ${activePoint === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 md:hover:opacity-20`}>
                   <p className="text-lg font-semibold invert">{point.text}</p>
                 </div>
               </div>
             );
           })}
           {isMobile && (
-            <div className="w-1/2 ml-32 flex items-center justify-center">
-              <div className="relative w-full h-full">
+            <div className="w-screen  flex items-center justify-center">
+              <div className="relative ml-20 w-1/2 h-full">
                 <Image
                   src={points[activePoint].image}
                   alt={points[activePoint].text}
                   layout="fill"
                   objectFit="contain"
+                  unoptimized
                 />
               </div>
             </div>
