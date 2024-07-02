@@ -28,7 +28,7 @@ export function CanvasRevealEffectDemo() {
               [139, 92, 246],
             ]}
             opacities={[0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 1]}
-            dotSize={4}
+            dotSize={2}
           />
         </Card>
         <Card
@@ -46,7 +46,7 @@ export function CanvasRevealEffectDemo() {
               [139, 92, 246],
             ]}
             opacities={[0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 1]}
-            dotSize={4}
+            dotSize={3}
           />
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 bg-black/50 [mask-image:radial-gradient(400px_at_center,white,transparent)] dark:bg-black/90" />
@@ -66,7 +66,7 @@ export function CanvasRevealEffectDemo() {
               [139, 92, 246],
             ]}
             opacities={[0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 1]}
-            dotSize={4}
+            dotSize={2}
           />
         </Card>
       </div>

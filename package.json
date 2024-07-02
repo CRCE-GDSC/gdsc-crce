@@ -15,13 +15,14 @@
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/themes": "^3.1.1",
+    "@react-three/fiber": "^8.16.8",
     "@tabler/icons-react": "^3.6.0",
     "add": "^2.0.6",
     "button": "^1.1.1",
     "calendar": "^0.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.11",
+    "framer-motion": "^11.2.12",
     "lucide-react": "^0.396.0",
     "next": "14.2.4",
     "react": "^18",
@@ -30,7 +31,8 @@
     "react-svg": "^16.1.34",
     "react-vertical-timeline-component": "^3.6.0",
     "shadcn-ui": "^0.8.0",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "three": "^0.166.1"
   },
   "devDependencies": {
     "@types/node": "^20",
