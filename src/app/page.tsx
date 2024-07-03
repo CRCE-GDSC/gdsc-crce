@@ -3,7 +3,7 @@ import { Theme } from '@radix-ui/themes'
 import React from 'react'
 import { CanvasRevealEffectDemo } from '@/components/aboutuss'
 
-import Navbar from '@/components/sidebar/Sidebar'
+import Navbar from '@/components/Navbar'
 import WhatWeDo from '@/components/WhatWeDo'
 import Footerr from '@/components/footerr'
 import StackedCards from '@/components/Component'
@@ -19,12 +19,12 @@ export default async function Home() {
     <div className="flex min-h-screen w-fit flex-col items-center justify-center">
       <main className="flex-grow">
         <Theme appearance="dark">
-          {/* <Navbar /> */}
+          <Navbar />
           <Hero />
 
           <WhatWeDo />
           <CanvasRevealEffectDemo />
-          <StackedCards />
+          {/* <StackedCards /> */}
           <Footerr />
         </Theme>
      </main>

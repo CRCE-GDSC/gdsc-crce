@@ -35,12 +35,12 @@ export default function StackedCards(): JSX.Element {
           containerClassName="w-96 h-96 shadow-lg px-10 mr-10 ml-3 "
           leftButton={
             <button className="rounded-lg bg-black p-2 text-white">
-              <img src="/gdsc-fl.png" height={15} width={18} alt="" />
+              <Image src="/gdsc-fl.png" height={15} width={18} alt="" />
             </button>
           }
           rightButton={
             <button className="rounded-lg bg-black p-2 text-white">
-              <img src="/gdsc-fr.png" height={15} width={18} alt="" />
+              <Image src="/gdsc-fr.png" height={15} width={18} alt="" />
             </button>
           }
         >
