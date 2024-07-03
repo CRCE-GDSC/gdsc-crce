@@ -2,7 +2,8 @@
 import React from 'react'
 import { StackedCarousel } from 'react-stacked-carousel'
 import 'react-stacked-carousel/dist/index.css'
-import { AceGridCard } from './ui/ace-grid'
+import { ArrowRightIcon } from '@radix-ui/react-icons'
+import { Button } from '@radix-ui/themes'
 
 import Image from 'next/image'
 
@@ -100,6 +101,22 @@ export default function StackedCards(): JSX.Element {
             width={200}
           />
         </StackedCarousel>
+      </div>
+      <div className="mx-[45%] p-4">
+        <Button
+          variant="ghost"
+          asChild
+          size="2"
+          className="pointer-events-auto flex w-fit items-center rounded-2xl border border-neutral-600 p-2 transition-all duration-300 ease-in-out hover:-translate-y-3 hover:bg-neutral-800 hover:shadow-md"
+          onClick={() => {
+            window.open('/allevents')
+          }}
+        >
+          <p className="flex items-center">
+            View All Events
+            <ArrowRightIcon className="ml-2 h-6 w-7" />
+          </p>
+        </Button>
       </div>
     </div>
   )
