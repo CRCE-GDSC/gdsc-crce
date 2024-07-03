@@ -60,47 +60,82 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${hasScrolled ? (visible ? 'translate-y-0' : '-translate-y-full') : '-translate-y-full'}`}>
-        <div className="bg-black border-2 border-white rounded-lg shadow-lg mx-4 my-2 transition-all duration-300 ease-in-out hover:shadow-xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-20">
+      <nav
+        className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ease-in-out ${hasScrolled ? (visible ? 'translate-y-0' : '-translate-y-full') : '-translate-y-full'}`}
+      >
+        <div className="mx-4 my-2 rounded-lg border-2 border-white bg-black shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-20 items-center justify-between">
               <div className="flex-shrink-0">
                 <Link href="/">
-                  <Image 
-                    src="/gdsc_logo.png" 
-                    alt="Google Developer Student Clubs Logo" 
-                    width={180} 
-                    height={45} 
-                    className="rounded-sm"
+                  <Image
+                    src="/gdsc_logo.png"
+                    alt="Google Developer Student Clubs Logo"
+                    width={400}
+                    height={45}
+                    sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, (max-width: 1200px) 60vw, 40vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxWidth: '400px',
+                      minWidth: '250px',
+                      '@media (min-width: 1024px) and (max-width: 1200px)': {
+                        maxWidth: '350px',
+                      },
+                    }}
                   />
                 </Link>
               </div>
-              <div className="hidden md:block">
+              <div className="hidden lg:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium transition-colors duration-200"
+                      className="rounded-md px-3 py-2 text-lg font-medium text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white"
                     >
                       {item.name}
                     </Link>
                   ))}
                 </div>
               </div>
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 >
                   <span className="sr-only">Open main menu</span>
                   {isOpen ? (
-                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   ) : (
-                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
                     </svg>
                   )}
                 </button>
@@ -109,35 +144,35 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
-      
+
       {/* Full-screen overlay */}
-      <div 
+      <div
         className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ease-in-out ${
-          isOpen ? 'opacity-50' : 'opacity-0 pointer-events-none'
-        }`} 
+          isOpen ? 'opacity-50' : 'pointer-events-none opacity-0'
+        }`}
         onClick={() => setIsOpen(false)}
       />
 
       {/* Mobile menu */}
-      <div 
+      <div
         className={`fixed inset-x-0 top-24 z-50 transition-all duration-300 ease-in-out ${
-          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
-        <div 
-          className={`bg-black border-2 border-white rounded-lg shadow-lg mx-4 transition-all duration-300 ease-in-out overflow-hidden ${
+        <div
+          className={`mx-4 overflow-hidden rounded-lg border-2 border-white bg-black shadow-lg transition-all duration-300 ease-in-out ${
             isOpen ? 'max-h-[calc(100vh-7rem)]' : 'max-h-0'
-          }`} 
+          }`}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="px-4 pt-5 pb-4 sm:px-6">
+          <div className="px-4 pb-4 pt-5 sm:px-6">
             <div className="mt-6">
               <nav className="grid gap-y-8">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg font-medium transition-colors duration-200"
+                    className="rounded-md px-3 py-2 text-lg font-medium text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
