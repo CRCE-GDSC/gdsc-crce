@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export default function StackedCards(): JSX.Element {
   return (
-    <div className="mb-10">
+    <div className="">
       <div className="flex items-center justify-center">
         <Image
           src="/assets/gdsc_logo_left.png"
@@ -35,12 +35,12 @@ export default function StackedCards(): JSX.Element {
           containerClassName="w-[400px] h-[600px] shadow-lg px-10 mr-10 ml-3 "
           leftButton={
             <button className="rounded-lg bg-black p-2 text-white">
-              <img src="/gdsc-fl.png" height={} width={18} alt="" />
+              <img src="/gdsc-fl.png" height={25} width={25} alt="left" />
             </button>
           }
           rightButton={
             <button className="rounded-lg bg-black p-2 text-white">
-              <img src="/gdsc-fr.png" height={} width={18} alt="" />
+              <img src="/gdsc-fr.png" height={25} width={25} alt="right" />
             </button>
           }
         >
