@@ -36,7 +36,7 @@ export const AceGridCard = ({
   title?: string | ReactNode
   description?: string | ReactNode
 
-  image?: ReactNode
+  image?: string
   icon?: ReactNode
   href?: string
   cta?: string
@@ -47,18 +47,17 @@ export const AceGridCard = ({
         'group/bento light:shadow-input light:border-transparent light:bg-white row-span-1 flex flex-col justify-between space-y-4 overflow-hidden rounded-xl border border-white/[0.2] bg-black p-4 shadow-none transition duration-200 hover:shadow-xl',
         className
       )}
+      style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundClip: 'border-box'}}
     >
-      <div className="flex h-full min-h-[10rem] w-full flex-1 rounded-xl">
-        {image}
-      </div>
+    
 
       <div className="bottom-0 z-10 translate-y-10 transform-gpu transition-all duration-200 group-hover/bento:translate-y-0 group-hover/bento:opacity-100">
         <div className="pb-6">
           {icon}
-          <div className="light:text-neutral-600 mb-2 font-sans font-bold text-neutral-200">
+          <div className="light:text-neutral-600 mb-2 font-sans font-bold text-neutral-800">
             {title}
           </div>
-          <div className="light:text-neutral-600 font-sans text-xs font-normal text-neutral-300">
+          <div className="light:text-neutral-600 font-sans text-xs font-normal text-neutral-800">
             {description}
           </div>
         </div>

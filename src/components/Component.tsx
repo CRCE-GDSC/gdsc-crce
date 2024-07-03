@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export default function StackedCards(): JSX.Element {
   return (
-    <div className="mb-10">
+    <div className="">
       <div className="flex items-center justify-center">
         <Image
           src="/assets/gdsc_logo_left.png"
@@ -27,20 +27,20 @@ export default function StackedCards(): JSX.Element {
           className="moveRight z-10 -translate-x-[100px]"
         />
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex h-screen w-full items-center justify-center">
         <StackedCarousel
           autoRotate={false}
           showSummary={false}
-          cardClassName="w-auto h-96 bg-neutral-900 rounded-xl shadow-lg p-4 m-4"
-          containerClassName="w-96 h-96 shadow-lg px-10 mr-10 ml-3 "
+          cardClassName="w-[400px] h-[600px] bg-neutral-900 rounded-xl shadow-lg p-4 m-4"
+          containerClassName="w-[400px] h-[600px] shadow-lg px-10 mr-10 ml-3 "
           leftButton={
             <button className="rounded-lg bg-black p-2 text-white">
-              <Image src="/gdsc-fl.png" height={15} width={18} alt="" />
+              <img src="/gdsc-fl.png" height={25} width={25} alt="left" />
             </button>
           }
           rightButton={
             <button className="rounded-lg bg-black p-2 text-white">
-              <Image src="/gdsc-fr.png" height={15} width={18} alt="" />
+              <img src="/gdsc-fr.png" height={15} width={18} alt="" />
             </button>
           }
         >
@@ -48,57 +48,57 @@ export default function StackedCards(): JSX.Element {
             key="Image1"
             src="/mathday.jpeg"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
           <Image
             key="Image2"
             src="/mathday.jpeg"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
           <Image
             key="Image3"
             src="/mathday.jpeg"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
           <Image
             key="Image4"
             src="/mathday.jpeg"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
           <Image
             key="Image5"
             src="/postman_event_poster.webp"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
           <Image
             key="Image6"
             src="/ideation.jpg"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
           <Image
             key="Image7"
             src="/Bit-N-Build.jpg"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
           <Image
             key="Image8"
             src="/HackOver3.0.jpg"
             alt="events"
-            height={200}
-            width={200}
+            height={500}
+            width={500}
           />
         </StackedCarousel>
       </div>
