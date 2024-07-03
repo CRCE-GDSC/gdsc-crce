@@ -1,195 +1,88 @@
 'use client'
-import { EvervaultCard, Icon } from './uif/evervault-card'
-import { BentoCard, BentoGrid } from './uif/bento-grid'
-import { DividerHorizontalIcon, GlobeIcon } from '@radix-ui/react-icons/dist'
-import BentoCardSingle from './uif/bento-card'
+import React from 'react'
+import { StackedCarousel } from 'react-stacked-carousel'
+import 'react-stacked-carousel/dist/index.css'
+import { AceGridCard } from './ui/ace-grid'
 
-export default function MyComponent() {
+import Image from 'next/image'
+
+export default function StackedCards(): JSX.Element {
   return (
-    <div>
-      <div className="items start > * px-space-x-6 > * m-2 m-8 flex max-w-min flex-row space-x-2 rounded-3xl bg-gray-900 p-6">
-        <div className="relative m-2 mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 px-1">
-          <EvervaultCard imgsrc="/postman_event_poster.webp" />
-        </div>
-        <div className="relative m-2 mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 px-1">
-          <EvervaultCard imgsrc="/gdsc-f.png" />
-        </div>
-        <div className="relative m-2 mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 px-1">
-          <EvervaultCard imgsrc="/gdsc-f.png" />
-        </div>
-      </div>
-
-      {/* <div className="items start > * px-space-x-6 > * m-2 m-8 flex max-w-min flex-row space-x-2 rounded-3xl bg-gray-900 p-6">
-        { events.map((event)=>( 
-        <><div className="relative m-2 mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 px-1">
-            <BentoCardSingle key={event.name} {...event} />
-          </div><div className="relative m-2 mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 px-1">
-              <BentoCardSingle key={event.name} {...event} />
-            </div><div className="relative m-2 mx-auto flex h-[20rem] max-w-sm flex-col items-start p-4 px-1">
-              <BentoCardSingle key={event.name} {...event} />
-            </div>
-        </>
-        )) }
-      </div> */}
-
-      <BentoGrid className="lg:grid-rows-4">
-        {features.map((feature) => (
-          <BentoCard key={feature.name} {...feature} />
-        ))}
-      </BentoGrid>
-
+    <div className="mb-10">
+      <h3 className="ml-[36%] text-slate-300">Upcoming Events</h3>
+      <StackedCarousel
+        autoRotate={false}
+        showSummary={false}
+        cardClassName="w-auto h-96 bg-neutral-900 rounded-xl shadow-lg p-4 m-4"
+        containerClassName="w-96 h-96 shadow-lg px-10 mr-10 ml-3 "
+        leftButton={
+          <button className="rounded-lg bg-black p-2 text-white">
+            <img src="/gdsc-fl.png" height={15} width={18} alt="" />
+          </button>
+        }
+        rightButton={
+          <button className="rounded-lg bg-black p-2 text-white">
+            <img src="/gdsc-fr.png" height={15} width={18} alt="" />
+          </button>
+        }
+      >
+        <Image
+          key="Image1"
+          src="/mathday.jpeg"
+          alt="events"
+          height={200}
+          width={200}
+        />
+        <Image
+          key="Image2"
+          src="/mathday.jpeg"
+          alt="events"
+          height={200}
+          width={200}
+        />
+        <Image
+          key="Image3"
+          src="/mathday.jpeg"
+          alt="events"
+          height={200}
+          width={200}
+        />
+        <Image
+          key="Image4"
+          src="/mathday.jpeg"
+          alt="events"
+          height={200}
+          width={200}
+        />
+        <Image
+          key="Image5"
+          src="/postman_event_poster.webp"
+          alt="events"
+          height={200}
+          width={200}
+        />
+        <Image
+          key="Image6"
+          src="/ideation.jpg"
+          alt="events"
+          height={200}
+          width={200}
+        />
+        <Image
+          key="Image7"
+          src="/Bit-N-Build.jpg"
+          alt="events"
+          height={200}
+          width={200}
+        />
+        <Image
+          key="Image8"
+          src="/HackOver3.0.jpg"
+          alt="events"
+          height={200}
+          width={200}
+        />
+      </StackedCarousel>
     </div>
   )
 }
-
-const features = [
-  {
-    Icon: GlobeIcon,
-    name: 'Event 1',
-    description: 'in seminar hall',
-    href: '/',
-    cta: 'RSVP now!',
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard imgsrc="/gdsc-f.png" className="h-[800px]" />
-      </div>
-    ),
-    className: 'lg:row-start-1 lg:row-end-3 lg:col-start-2 lg:col-end-3',
-  },
-  {
-    Icon: GlobeIcon,
-    name: 'event 2',
-    description: 'in Samwaad',
-    href: '/',
-    cta: 'RSVP now!',
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="h-[700px]"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3',
-  },
-  {
-    Icon: GlobeIcon,
-    name: 'event 3',
-    description: 'in seminar hall',
-    href: '/',
-    cta: 'Register now!',
-    background: (
-      <div className="m-2 p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="h-screen"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5',
-  },
-  {
-    Icon: GlobeIcon,
-    name: 'Event 4',
-    description: 'in Samwaad',
-    href: '/',
-    cta: 'Register now!',
-    // eslint-disable-next-line @next/next/no-img-element
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="max-h-screen"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2',
-  },
-  {
-    Icon: GlobeIcon,
-    name: 'Event 5',
-    description: 'in seminar hall',
-    href: '/',
-    cta: 'Learn more',
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="h-[200px]"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4',
-  },
-  {
-    Icon: GlobeIcon,
-    name: 'Event 6',
-    description: 'in Samwaad',
-    href: '/',
-    cta: 'Register now!',
-    // eslint-disable-next-line @next/next/no-img-element
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="h-[200px]"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-3 lg:col-end-3 lg:row-start-4 lg:row-end-5',
-  },
-]
-
-const events = [
-  {
-    Icon: GlobeIcon,
-    name: 'Event 1',
-    description: <div className=""> heyy </div>,
-    href: '/',
-    cta: 'Register now!',
-    // eslint-disable-next-line @next/next/no-img-element
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="h-[200px]"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-1',
-  },
-  {
-    Icon: GlobeIcon,
-    name: 'Event 2',
-    description: 'in Samwaad',
-    href: '/',
-    cta: 'Register now!',
-    // eslint-disable-next-line @next/next/no-img-element
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="h-[200px]"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-1',
-  },
-  {
-    Icon: GlobeIcon,
-    name: 'Event 3',
-    description: 'in Samwaad',
-    href: '/',
-    cta: 'Register now!',
-    // eslint-disable-next-line @next/next/no-img-element
-    background: (
-      <div className="m-2 h-fit p-2">
-        <EvervaultCard
-          imgsrc="/postman_event_poster.webp"
-          className="h-[200px]"
-        />
-      </div>
-    ),
-    className: 'lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-1',
-  },
-]

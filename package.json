@@ -28,6 +28,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "react-stacked-carousel": "^1.1.4",
     "react-svg": "^16.1.34",
     "react-vertical-timeline-component": "^3.6.0",
     "shadcn-ui": "^0.8.0",
