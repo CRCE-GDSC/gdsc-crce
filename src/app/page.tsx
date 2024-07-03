@@ -1,11 +1,12 @@
 'use server'
 import { Theme } from '@radix-ui/themes'
 import React from 'react'
-import Footer from '@/components/Footer'
+import { CanvasRevealEffectDemo } from '@/components/aboutuss'
 import Events from '@/components/Events'
 import Navbar from '@/components/sidebar/Sidebar'
 import WhatWeDo from '@/components/WhatWeDo'
-import Aboutus from '@/components/Aboutus'
+import Footerr from '@/components/footerr'
+
 import { SignupFormDemo } from '@/components/contactuss'
 import Hero from '@/components/Hero'
 
@@ -19,12 +20,10 @@ export default async function Home() {
         <Theme appearance="light">
           {/* <Navbar /> */}
           <Hero />
-          <Aboutus />
-          {/* <Events /> */}
-          <SignupFormDemo />
-          <Footer />
-          <WhatWeDo />
 
+          <WhatWeDo />
+          <CanvasRevealEffectDemo />
+          <Footerr />
         </Theme>
      </main>
     </div> 
