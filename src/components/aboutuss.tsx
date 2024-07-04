@@ -129,9 +129,9 @@ const AceternityIcon1 = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
       ></path>
     </svg>
@@ -147,9 +147,9 @@ const AceternityIcon2 = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M22 12h-4l-3 9L9 3l-3 9H2"
       ></path>
     </svg>
@@ -166,9 +166,9 @@ const AceternityIcon3 = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M13 10V3L4 14h7v7l9-11h-7z"
       ></path>
     </svg>

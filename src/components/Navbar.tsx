@@ -58,15 +58,7 @@ const Navbar: React.FC = () => {
                     width={400}
                     height={45}
                     sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, (max-width: 1200px) 60vw, 40vw"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      maxWidth: '400px',
-                      minWidth: '250px',
-                      '@media (min-width: 1024px) and (max-width: 1200px)': {
-                        maxWidth: '350px',
-                      },
-                    }}
+                    className="h-auto w-full min-w-[250px] max-w-[400px] lg:max-w-[350px]"
                   />
                 </Link>
               </div>
