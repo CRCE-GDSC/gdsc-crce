@@ -25,7 +25,7 @@ const InteractiveCircle: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 900)
+      setIsMobile(window.innerWidth < 1024)
     }
     handleResize()
     window.addEventListener('resize', handleResize)

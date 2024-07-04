@@ -21,11 +21,11 @@ export default async function Home() {
       <main className="flex-grow">
         <Theme appearance="dark">
           <Navbar />
-          <Hero />
+          {/* <Hero /> */}
           <WhatWeDo />
           <SparklesPreview />
           <CanvasRevealEffectDemo />
-          <div className="mt-10 p-1"></div>
+          {/* <div className="mt-10 p-1"></div> */}
           <Footerr />
         </Theme>
       </main>

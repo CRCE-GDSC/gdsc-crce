@@ -10,7 +10,7 @@ const navItems = [
   { name: 'What We Do', href: '/services' },
   { name: 'Events', href: '/portfolio' },
   { name: 'Our Team', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Contact Us', href: '/contact' },
 ]
 
 const Navbar: React.FC = () => {
@@ -45,13 +45,13 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`text-center fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ease-in-out ${hasScrolled ? (visible ? 'translate-y-0' : '-translate-y-full') : '-translate-y-full'}`}
+        className={`fixed left-0 right-0 top-0 z-50 text-center transition-transform duration-300 ease-in-out ${hasScrolled ? (visible ? 'translate-y-0' : '-translate-y-full') : '-translate-y-full'}`}
       >
         <div className="mx-4 my-2 rounded-lg border-2 border-white bg-black shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-20 items-center justify-between">
               <div className="flex-shrink-0">
-                <Link href="/">
+                <Link href="/" className="">
                   <Image
                     src="/gdsc_logo.png"
                     alt="Google Developer Student Clubs Logo"
@@ -62,13 +62,13 @@ const Navbar: React.FC = () => {
                   />
                 </Link>
               </div>
-              <div className="hidden lg:block text-center">
+              <div className="hidden text-center lg:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="rounded-md px-3 py-2 text-lg text-center font-medium text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-center text-lg font-medium text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white"
                     >
                       {item.name}
                     </Link>
