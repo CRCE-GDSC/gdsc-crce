@@ -4,7 +4,7 @@ import { Allitems } from '@/data/AceGridData'
 
 const AllEvents = () => {
   return (
-    <div className="mx-[15%] max-w-7xl flex-row items-center justify-center p-[2]">
+    <div className="mx-[15%] max-w-7xl flex-row items-center justify-center p-[2px]">
       <div className="flex items-center justify-center">
         <img src="/gdsc-fl.png" alt="" width={50} />
         <h2 className="title fadeInOut">All Events</h2>

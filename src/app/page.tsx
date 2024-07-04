@@ -6,7 +6,7 @@ import { CanvasRevealEffectDemo } from '@/components/aboutuss'
 import Navbar from '@/components/Navbar'
 import WhatWeDo from '@/components/WhatWeDo'
 import Footerr from '@/components/footerr'
-import StackedCards from '@/components/Component'
+import Carousel from '@/components/final_c'
 
 import { SparklesPreview } from '@/components/titleaboutsus'
 import { SignupFormDemo } from '@/components/contactuss'
@@ -22,11 +22,10 @@ export default async function Home() {
         <Theme appearance="dark">
           <Navbar />
           <Hero />
-
           <WhatWeDo />
           <SparklesPreview />
           <CanvasRevealEffectDemo />
-          {/* <StackedCards /> */}
+          <Carousel/>
           <Footerr />
         </Theme>
       </main>

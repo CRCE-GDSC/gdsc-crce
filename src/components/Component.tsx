@@ -40,7 +40,7 @@ export default function StackedCards(): JSX.Element {
           }
           rightButton={
             <button className="rounded-lg bg-black p-2 text-white">
-              <img src="/gdsc-fr.png" height={15} width={18} alt="" />
+              <img src="/gdsc-fr.png" height={15} width={25} alt="" />
             </button>
           }
         >
