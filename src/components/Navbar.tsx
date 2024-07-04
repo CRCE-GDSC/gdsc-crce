@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ease-in-out ${hasScrolled ? (visible ? 'translate-y-0' : '-translate-y-full') : '-translate-y-full'}`}
+        className={`text-center fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ease-in-out ${hasScrolled ? (visible ? 'translate-y-0' : '-translate-y-full') : '-translate-y-full'}`}
       >
         <div className="mx-4 my-2 rounded-lg border-2 border-white bg-black shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -62,13 +62,13 @@ const Navbar: React.FC = () => {
                   />
                 </Link>
               </div>
-              <div className="hidden lg:block">
+              <div className="hidden lg:block text-center">
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="rounded-md px-3 py-2 text-lg font-medium text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white"
+                      className="rounded-md px-3 py-2 text-lg text-center font-medium text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white"
                     >
                       {item.name}
                     </Link>
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
         >
           <div className="px-4 pb-4 pt-5 sm:px-6">
             <div className="mt-6">
-              <nav className="grid gap-y-8">
+              <nav className="grid gap-y-8 text-center">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
