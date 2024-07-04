@@ -7,12 +7,8 @@ import { CanvasRevealEffect } from './canvasreveal'
 export function CanvasRevealEffectDemo() {
   return (
     <>
-      <div>
-        <h3 className="x-shadow-yellow mt-15 mx-10 flex w-auto items-center justify-center px-0 py-3 text-center text-5xl font-bold text-white max-lg:text-4xl max-md:text-4xl max-sm:mt-0 max-sm:text-3xl">
-          ABOUT US
-        </h3>
-      </div>
-      <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 bg-black px-8 py-20 lg:flex-row">
+      <div></div>
+      <div className="mx-auto mb-10 flex w-full select-none flex-col items-center justify-center gap-4 bg-black px-8 pt-5 lg:flex-row">
         <Card
           title="The GDSC program is a grassroots channel through which Google
                 provides development, mobile &amp; web development skills for
@@ -46,7 +42,7 @@ export function CanvasRevealEffectDemo() {
               [139, 92, 246],
             ]}
             opacities={[0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 1]}
-            dotSize={3}
+            dotSize={2}
           />
           {/* Radial gradient for the cute fade */}
           <div className="absolute inset-0 bg-black/50 [mask-image:radial-gradient(400px_at_center,white,transparent)] dark:bg-black/90" />
@@ -90,7 +86,7 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group/canvas-card relative mx-auto flex h-[30rem] w-full max-w-sm items-center justify-center rounded-2xl border border-white/[2] p-4"
+      className="group/canvas-card relative mx-auto flex h-[30rem] w-full max-w-sm items-center justify-center rounded-xl border border-white/[2] p-4"
     >
       <AnimatePresence>
         {hovered && (

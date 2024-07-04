@@ -8,6 +8,7 @@ import WhatWeDo from '@/components/WhatWeDo'
 import Footerr from '@/components/footerr'
 import StackedCards from '@/components/Component'
 
+import { SparklesPreview } from '@/components/titleaboutsus'
 import { SignupFormDemo } from '@/components/contactuss'
 import Hero from '@/components/Hero'
 
@@ -23,6 +24,7 @@ export default async function Home() {
           <Hero />
 
           <WhatWeDo />
+          <SparklesPreview />
           <CanvasRevealEffectDemo />
           {/* <StackedCards /> */}
           <Footerr />
