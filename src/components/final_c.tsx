@@ -25,8 +25,8 @@ const Carousel: React.FC = () => {
       justifyContent: 'center',
       color: '#fff',
       fontSize: pos === 0 ? '16px' : '0px',
-      width: '300px',
-      height: '500px',
+      width: '150px',
+      height: '250px',
       borderRadius: '12px',
       boxShadow: '0px 2px 8px 0px rgba(50, 50, 50, 0.5)',
       position: 'absolute',
@@ -67,40 +67,42 @@ const Carousel: React.FC = () => {
   }
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        width: '100%',
-        height: '100%',
-        alignItems: 'center',
-        fontFamily: 'Arial',
-        transform: 'scale(1.5)',
-        transformOrigin: 'center',
-      }}
-    >
-      <ul
+    <div className='h-auto w-full' >
+      <div
         style={{
           display: 'flex',
-          listStyle: 'none',
-          position: 'relative',
           width: '100%',
-          height: '500px',
-          justifyContent: 'center',
-          perspective: '300px',
-          padding: 0,
-          margin: 0,
+          height: '100%',
+          alignItems: 'center',
+          fontFamily: 'Arial',
+          transform: 'scale(1.5)',
+          transformOrigin: 'center',
         }}
       >
-        {items.map((item, index) => (
-          <li
-            key={index}
-            style={getItemStyle(index)}
-            onClick={() => handleClick(index)}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+        <ul
+          style={{
+            display: 'flex',
+            listStyle: 'none',
+            position: 'relative',
+            width: '200%',
+            height: '500px',
+            justifyContent: 'center',
+            perspective: '300px',
+            padding: 0,
+            margin: 0,
+          }}
+        >
+          {items.map((item, index) => (
+            <li
+              key={index}
+              style={getItemStyle(index)}
+              onClick={() => handleClick(index)}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
