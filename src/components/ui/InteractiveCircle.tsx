@@ -107,7 +107,7 @@ const InteractiveCircle: React.FC = () => {
             )
           })}
           {isMobile && (
-            <div className="flex w-screen items-center justify-center">
+            <div className="flex w-fit items-center justify-center">
               <div className="relative ml-20 h-full w-1/2">
                 <Image
                   src={points[activePoint].image}
