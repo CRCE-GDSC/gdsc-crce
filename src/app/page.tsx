@@ -27,7 +27,7 @@ export default async function Home() {
           {/* <StackedCards /> */}
           <Footerr />
         </Theme>
-     </main>
-    </div> 
+      </main>
+    </div>
   )
 }
