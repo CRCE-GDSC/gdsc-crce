@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
 
-  const items = [1, 2, 3, 4, 5]
+  const items = ['', '', '', '', '']
 
   const getImageUrl = (index: number) => {
     const images = [
@@ -19,44 +19,19 @@ const Carousel: React.FC = () => {
 
   const getItemStyle = (itemPos: number) => {
     const pos = ((itemPos - activePos + 5) % 5) - 2
-    const baseStyle: React.CSSProperties = {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: '#fff',
-      fontSize: pos === 0 ? '16px' : '0px',
-      width: '150px',
-      height: '250px',
-      borderRadius: '12px',
-      boxShadow: '0px 2px 8px 0px rgba(50, 50, 50, 0.5)',
-      position: 'absolute',
-      transition: 'all 0.3s ease-in',
-      backgroundImage: getImageUrl(itemPos),
-      backgroundSize: 'cover', // Ensure the image covers the item
-      backgroundPosition: 'center', // Center the background image
-    }
+    const baseStyle = `flex items-center justify-center text-white font-normal transition-all duration-300 ease-in bg-cover bg-center relative ${
+      pos === 0 ? 'text-base z-50' : 'text-0'
+    } w-72 h-screen border border-white rounded-lg shadow-md`
 
     switch (pos) {
       case 0:
-        return { ...baseStyle, zIndex: 5 }
+        return `${baseStyle}`
       case -1:
       case 1:
-        return {
-          ...baseStyle,
-          opacity: 0.7,
-          filter: 'blur(1px) grayscale(10%)',
-          transform: `translateX(${pos * 40}%) scale(0.9)`,
-          zIndex: 4,
-        }
+        return `${baseStyle} opacity-70 blur-sm grayscale-10 scale-90 z-40`
       case -2:
       case 2:
-        return {
-          ...baseStyle,
-          opacity: 0.4,
-          filter: 'blur(3px) grayscale(20%)',
-          transform: `translateX(${pos * 35}%) scale(0.8)`,
-          zIndex: 3,
-        }
+        return `${baseStyle} opacity-40 blur-lg grayscale-20 scale-80 z-30`
       default:
         return baseStyle
     }
@@ -67,41 +42,46 @@ const Carousel: React.FC = () => {
   }
 
   return (
-    <div className='h-auto w-full' >
-      <div
-        style={{
-          display: 'flex',
-          width: '100%',
-          height: '100%',
-          alignItems: 'center',
-          fontFamily: 'Arial',
-          transform: 'scale(1.5)',
-          transformOrigin: 'center',
-        }}
-      >
-        <ul
-          style={{
-            display: 'flex',
-            listStyle: 'none',
-            position: 'relative',
-            width: '200%',
-            height: '500px',
-            justifyContent: 'center',
-            perspective: '300px',
-            padding: 0,
-            margin: 0,
-          }}
-        >
-          {items.map((item, index) => (
-            <li
-              key={index}
-              style={getItemStyle(index)}
-              onClick={() => handleClick(index)}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+    <div className="h-auto w-full">
+      <h1 className="my-8 text-center text-2xl text-white">Our Events</h1>
+      <div className="flex flex-row items-center justify-center">
+        <div className="overflow-hidden">
+          <button
+            onClick={() =>
+              setActivePos((prevPos) =>
+                prevPos === 0 ? items.length - 1 : prevPos - 1
+              )
+            }
+            className="relative cursor-pointer rounded-full border border-gray-400 bg-transparent p-2"
+          >
+            <img src="gdsc-fl.png" alt="" className="h-10 w-10" />
+          </button>
+        </div>
+        <div className="flex h-full w-3/4 scale-150 items-center border-2 border-white font-sans">
+          <ul className="h-125 perspective-300 relative m-0 flex w-full list-none justify-center p-0">
+            {items.map((item, index) => (
+              <li
+                key={index}
+                className={`${getItemStyle(index)} bg-[${getImageUrl(index)}]`}
+                onClick={() => handleClick(index)}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <button
+            onClick={() =>
+              setActivePos((prevPos) =>
+                prevPos === items.length - 1 ? 0 : prevPos + 1
+              )
+            }
+            className="relative cursor-pointer rounded-full border border-gray-400 bg-transparent p-2"
+          >
+            <img src="gdsc-fr.png" alt="" className="h-10 w-10" />
+          </button>
+        </div>
       </div>
     </div>
   )
