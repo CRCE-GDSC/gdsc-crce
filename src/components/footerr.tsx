@@ -57,7 +57,7 @@ const Footerr = () => {
             <h2 className="py-1 text-gray-500">crcegdsc@gmail.com</h2>
           </div>
           <div className="flex flex-row py-4" id="foot">
-            <div className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40">
+            <div className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40 hover:bg-blue-300">
               <a
                 className=""
                 href="https://www.instagram.com/gdsc_crce/"
@@ -74,7 +74,7 @@ const Footerr = () => {
                 </svg>
               </a>
             </div>
-            <div className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40">
+            <div className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40 hover:bg-blue-300">
               <a
                 className=""
                 href="https://www.linkedin.com/company/gdsc-crce/mycompany/"
@@ -90,18 +90,36 @@ const Footerr = () => {
                 </svg>
               </a>
             </div>
+            <div className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40 hover:bg-blue-300">
+              <a
+                className=""
+                href="https://twitter.com/gdsc_crce"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30px"
+                  height="auto"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M 2.3671875 3 L 9.4628906 13.140625 L 2.7402344 21 L 5.3808594 21 L 10.644531 14.830078 L 14.960938 21 L 21.871094 21 L 14.449219 10.375 L 20.740234 3 L 18.140625 3 L 13.271484 8.6875 L 9.2988281 3 L 2.3671875 3 z M 6.2070312 5 L 8.2558594 5 L 18.033203 19 L 16.001953 19 L 6.2070312 5 z"
+                  />{' '}
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div className="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.4410136005313!2d72.81818181433687!3d19.04433805791724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9410830616d%3A0x111b63353dbbce01!2sFr.%20Conceicao%20Rodrigues%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1660900113753!5m2!1sen!2sin"
-            style={{ filter: "grayscale(1) contrast(0.9) opacity(0.7)" }}
             width="100%"
             height="200px"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="mb-5 mt-10 flex items-start justify-start  rounded-3xl"
-          />
+            className="mb-5 mt-10 flex items-start justify-start rounded-3xl"
+          ></iframe>
         </div>
       </div>
     </div>
