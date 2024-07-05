@@ -1,6 +1,7 @@
-'use client'
+
 import React from 'react'
 import { SparklesCore } from './sparkles'
+import Title from './Title'
 
 export function SparklesPreview() {
   return (
@@ -16,9 +17,7 @@ export function SparklesPreview() {
           particleColor="#FFFFFF"
         />
       </div>
-      <h1 className="relative z-20 pt-10 text-center text-4xl font-semibold text-white md:text-7xl lg:text-6xl">
-        ABOUT US
-      </h1>
+      <Title>ABOUT US</Title>
     </div>
   )
 }

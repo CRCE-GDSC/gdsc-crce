@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar'
 import WhatWeDo from '@/components/WhatWeDo'
 import Footerr from '@/components/footerr'
 import Carousel from '@/components/final_c'
+import Title from '@/components/Title'
 
 import { SparklesPreview } from '@/components/titleaboutsus'
 import { SignupFormDemo } from '@/components/contactuss'
@@ -22,9 +23,9 @@ export default async function Home() {
         <Theme appearance="dark">
           <Navbar />
           {/* <Hero /> */}
-          <WhatWeDo />
           <SparklesPreview />
           <CanvasRevealEffectDemo />
+          <WhatWeDo />
           {/* <div className="mt-10 p-1"></div> */}
           <Footerr />
         </Theme>
