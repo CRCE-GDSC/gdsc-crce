@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
@@ -8,11 +9,11 @@ const Carousel: React.FC = () => {
 
   const getImageUrl = (index: number) => {
     const images = [
-      'url("/mathday.jpeg")',
-      'url("/ideation.jpg")',
-      'url("/postman_event_poster.webp")',
-      'url("/HackOver3.0.jpg")',
-      'url("/Bit-N-Build.jpg")',
+      '/mathday.jpeg',
+      '/ideation.jpg',
+      '/postman_event_poster.webp',
+      '/HackOver3.0.jpg',
+      '/Bit-N-Build.jpg',
     ]
     return images[index % images.length]
   }
@@ -24,17 +25,16 @@ const Carousel: React.FC = () => {
       alignItems: 'center',
       justifyContent: 'center',
       color: '#fff',
-      fontSize: pos === 0 ? '16px' : '0px', // Dynamic font size
-      width: '30vw', // Responsive width
-      height: '70vh', // Responsive height
+      fontSize: pos === 0 ? '16px' : '0px',
+      width: '30vw',
+      height: '70vh',
       borderColor: '#ffffff',
       borderRadius: '10px',
-      
       boxShadow: '0px 2px 8px 0px rgba(50, 50, 50, 0.5)',
       position: 'absolute',
       transition: 'all 0.3s ease-in',
-      backgroundImage: getImageUrl(itemPos),
-      backgroundSize: 'cover', // Updated to auto for responsiveness
+      backgroundImage: `url(${getImageUrl(itemPos)})`,
+      backgroundSize: 'cover',
       backgroundPosition: 'center',
     }
 
@@ -64,80 +64,23 @@ const Carousel: React.FC = () => {
     }
   }
 
-  const handleClick = (newPos: number) => {
-    setActivePos(newPos)
-  }
-
   return (
-    <div className="flex h-auto w-full flex-col items-center justify-center">
-      <h1
-        style={{
-          textAlign: 'center',
-          fontSize: '2rem',
-          margin: '4rem 0',
-          color: '#fff',
-        }}
-      >
-        Our Events
-      </h1>
-      <div className="flex flex-row items-center justify-center">
+    <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden">
+      <h1 className="my-16 text-center text-4xl text-white">Our Events</h1>
+      <div className="relative flex w-full flex-row items-center justify-center">
         <button
           onClick={() =>
-            setActivePos((prevPos: number) =>
+            setActivePos((prevPos) =>
               prevPos === 0 ? items.length - 1 : prevPos - 1
             )
           }
-          style={{
-            position: 'absolute',
-            left: '10px', // Adjusted position to the left
-            background: 'none',
-            border: 'none', // Updated for a cleaner look
-            cursor: 'pointer',
-            padding: '10px',
-          }}
+          className="absolute left-0 z-10 cursor-pointer border-none bg-transparent p-2"
         >
-          <img
-            src="gdsc-fl.png"
-            alt=""
-            style={{ height: '40px', width: '40px' }}
-          />
+          <Image src="/gdsc-fl.png" alt="Previous" width={40} height={40} />
         </button>
-        <div
-          style={{
-            margin: '0 auto', // Added margin auto to center the carousel
-            padding: '10px',
-            paddingTop: '10px',
-            position: 'relative',
-           // Added margin to the left
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              width: '70%', // Responsive width
-              height: '70vh', // Responsive height
-              alignItems: 'center',
-              justifyContent: 'center', // Added to center the carousel horizontally
-              fontFamily: 'Arial',
-              transform: 'scale(1)', // Corrected typo + added scale1 instead of 1.5
-              transformOrigin: 'center',
-
-              margin: '0 auto', // Added margin auto to center the carousel
-            }}
-          >
-            <ul
-              style={{
-                display: 'flex',
-                listStyle: 'none',
-                position: 'relative',
-                width: '200%', // Adjusted for responsiveness
-                height: '100%', // Consider making this responsive
-                justifyContent: 'center',
-                perspective: '300px',
-                padding: 0,
-                margin: 0,
-              }}
-            >
+        <div className="w-full">
+          <div className="flex h-[70vh] w-full items-center justify-center font-sans">
+            <ul className="perspective-300 relative m-0 flex h-full w-full list-none justify-center p-0">
               {items.map((item, index) => (
                 <li key={index} style={getItemStyle(index)}>
                   {item}
@@ -148,27 +91,17 @@ const Carousel: React.FC = () => {
         </div>
         <button
           onClick={() =>
-            setActivePos((prevPos: number) =>
+            setActivePos((prevPos) =>
               prevPos === items.length - 1 ? 0 : prevPos + 1
             )
           }
-          style={{
-            position: 'absolute',
-            right: '10px', // Adjusted position to the right
-            background: 'none',
-            border: 'none', // Updated for a cleaner look
-            cursor: 'pointer',
-            padding: '10px',
-          }}
+          className="absolute right-0 z-10 cursor-pointer border-none bg-transparent p-2"
         >
-          <img
-            src="gdsc-fr.png"
-            alt=""
-            style={{ height: '40px', width: '40px' }}
-          />
+          <Image src="/gdsc-fr.png" alt="Next" width={40} height={40} />
         </button>
       </div>
     </div>
   )
 }
+
 export default Carousel
