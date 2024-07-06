@@ -25,12 +25,11 @@ const Carousel: React.FC = () => {
       justifyContent: 'center',
       color: '#fff',
       fontSize: pos === 0 ? '16px' : '0px', // Dynamic font size
-      width: '40vw', // Responsive width
-      height: '80vh', // Responsive height
+      width: '30vw', // Responsive width
+      height: '70vh', // Responsive height
       borderColor: '#ffffff',
       borderRadius: '10px',
-      padding: '10px',
-      margin: '10px',
+      
       boxShadow: '0px 2px 8px 0px rgba(50, 50, 50, 0.5)',
       position: 'absolute',
       transition: 'all 0.3s ease-in',
@@ -75,7 +74,7 @@ const Carousel: React.FC = () => {
         style={{
           textAlign: 'center',
           fontSize: '2rem',
-          margin: '2rem 0',
+          margin: '4rem 0',
           color: '#fff',
         }}
       >
@@ -109,7 +108,7 @@ const Carousel: React.FC = () => {
             padding: '10px',
             paddingTop: '10px',
             position: 'relative',
-            marginLeft: '30vw', // Added margin to the left
+           // Added margin to the left
           }}
         >
           <div
