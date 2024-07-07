@@ -68,6 +68,7 @@ const Navbar: React.FC = () => {
                     height={45}
                     sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, (max-width: 1200px) 60vw, 40vw"
                     className="h-auto w-full min-w-[250px] max-w-[400px] lg:max-w-[350px]"
+                    quality={100}
                   />
                 </Link>
               </div>
@@ -105,7 +106,7 @@ const Navbar: React.FC = () => {
               {/* Mobile menu and dark mode toggle */}
               <div className="flex items-center lg:hidden">
                 {/* Dark mode toggle for mobile */}
-                <button onClick={toggleDarkMode} className="p-2 mr-2">
+                <button onClick={toggleDarkMode} className="p-2">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                     {isDarkMode ? (
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
