@@ -20,7 +20,6 @@ export default async function Home() {
   return (
     <div className="flex min-h-screen w-fit flex-col items-center justify-center">
       <main className="flex-grow">
-        <Theme appearance="dark">
           <Navbar />
           {/* <Hero /> */}
           <SparklesPreview />
@@ -28,7 +27,6 @@ export default async function Home() {
           <WhatWeDo />
           <Carousel />
           <Footerr />
-        </Theme>
       </main>
     </div>
   )
