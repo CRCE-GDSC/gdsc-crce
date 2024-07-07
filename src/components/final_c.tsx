@@ -1,11 +1,9 @@
-'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Title from './Title'
 
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
-
   const items = ['', '', '', '', '']
 
   const getImageUrl = (index: number) => {
@@ -29,11 +27,10 @@ const Carousel: React.FC = () => {
       fontSize: pos === 0 ? '16px' : '0px',
       width: '30vw',
       height: '70vh',
-      borderColor: '#ffffff',
       borderRadius: '10px',
-      boxShadow: '0px 2px 8px 0px rgba(50, 50, 50, 0.5)',
+      boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.5)',
       position: 'absolute',
-      transition: 'all 0.3s ease-in',
+      transition: 'all 0.5s ease-in-out',
       backgroundImage: `url(${getImageUrl(itemPos)})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -47,8 +44,8 @@ const Carousel: React.FC = () => {
         return {
           ...baseStyle,
           opacity: 0.7,
-          filter: 'blur(1px) grayscale(10%)',
-          transform: `translateX(${pos * 40}%) scale(0.9)`,
+          filter: 'blur(2px) brightness(70%)',
+          transform: `translateX(${pos * 40}%) scale(0.85)`,
           zIndex: 4,
         }
       case -2:
@@ -56,8 +53,8 @@ const Carousel: React.FC = () => {
         return {
           ...baseStyle,
           opacity: 0.4,
-          filter: 'blur(3px) grayscale(20%)',
-          transform: `translateX(${pos * 35}%) scale(0.8)`,
+          filter: 'blur(4px) brightness(50%)',
+          transform: `translateX(${pos * 35}%) scale(0.7)`,
           zIndex: 3,
         }
       default:
@@ -66,9 +63,9 @@ const Carousel: React.FC = () => {
   }
 
   return (
-    <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden">
+    <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-gray-900 text-white dark:bg-gray-800">
       <h1 className="my-16 text-center">
-        <Title>Our Events</Title>{' '}
+        <Title>Our Events</Title>
       </h1>
       <div className="relative flex w-full flex-row items-center justify-center">
         <button
@@ -77,15 +74,25 @@ const Carousel: React.FC = () => {
               prevPos === 0 ? items.length - 1 : prevPos - 1
             )
           }
-          className="absolute left-0 z-10 cursor-pointer border-none bg-transparent p-2"
+          className="absolute left-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-700"
         >
-          <Image src="/gdsc-fl.png" alt="Previous" width={40} height={40} />
+          <Image
+            src="/gdsc-fl.png"
+            alt="Previous"
+            width={40}
+            height={40}
+            className="invert"
+          />
         </button>
         <div className="w-full">
           <div className="flex h-[70vh] w-full items-center justify-center font-sans">
             <ul className="perspective-300 relative m-0 flex h-full w-full list-none justify-center p-0">
               {items.map((item, index) => (
-                <li key={index} style={getItemStyle(index)}>
+                <li
+                  key={index}
+                  style={getItemStyle(index)}
+                  className="overflow-hidden rounded-lg"
+                >
                   {item}
                 </li>
               ))}
@@ -98,9 +105,15 @@ const Carousel: React.FC = () => {
               prevPos === items.length - 1 ? 0 : prevPos + 1
             )
           }
-          className="absolute right-0 z-10 cursor-pointer border-none bg-transparent p-2"
+          className="absolute right-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-700"
         >
-          <Image src="/gdsc-fr.png" alt="Next" width={40} height={40} />
+          <Image
+            src="/gdsc-fr.png"
+            alt="Next"
+            width={40}
+            height={40}
+            className="invert"
+          />
         </button>
       </div>
     </div>
