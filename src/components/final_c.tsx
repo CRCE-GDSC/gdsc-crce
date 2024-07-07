@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Title from './Title'
 
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
@@ -66,7 +67,9 @@ const Carousel: React.FC = () => {
 
   return (
     <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden">
-      <h1 className="my-16 text-center text-4xl text-white">Our Events</h1>
+      <h1 className="my-16 text-center">
+        <Title>Our Events</Title>{' '}
+      </h1>
       <div className="relative flex w-full flex-row items-center justify-center">
         <button
           onClick={() =>

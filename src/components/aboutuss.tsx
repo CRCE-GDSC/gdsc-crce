@@ -101,7 +101,7 @@ const Card = ({
       </AnimatePresence>
 
       <div className="relative z-20">
-        <div className="mt-15 mx-auto flex w-full items-center justify-center text-center transition duration-200 group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0">
+        <div className="mt-15 mx-auto flex w-full items-center justify-center text-center">
           {icon}
         </div>
         <div className="mx-auto mt-10 flex w-full items-center justify-center text-center text-2xl font-semibold transition duration-200 group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0">
@@ -125,9 +125,9 @@ const AceternityIcon1 = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
         d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
       ></path>
     </svg>
@@ -143,9 +143,9 @@ const AceternityIcon2 = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
         d="M22 12h-4l-3 9L9 3l-3 9H2"
       ></path>
     </svg>
@@ -162,9 +162,9 @@ const AceternityIcon3 = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
         d="M13 10V3L4 14h7v7l9-11h-7z"
       ></path>
     </svg>

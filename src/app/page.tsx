@@ -25,6 +25,7 @@ export default async function Home() {
           {/* <Hero /> */}
           <SparklesPreview />
           <CanvasRevealEffectDemo />
+          <WhatWeDo />
           <Carousel />
           <Footerr />
         </Theme>
