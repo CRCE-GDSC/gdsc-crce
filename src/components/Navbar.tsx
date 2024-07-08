@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useTheme } from "next-themes"
+import { useTheme } from 'next-themes'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -48,9 +48,9 @@ const Navbar: React.FC = () => {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
     if (isDarkMode) {
-      setTheme("light")
+      setTheme('light')
     } else {
-      setTheme("dark")
+      setTheme('dark')
     }
     // Add logic here to actually change the theme
   }
@@ -59,35 +59,48 @@ const Navbar: React.FC = () => {
     <>
       <nav
         className={`fixed left-0 right-0 top-0 z-50 text-center transition-transform duration-300 ease-in-out ${
-          hasScrolled ? (visible ? 'translate-y-0' : '-translate-y-full') : '-translate-y-full'
+          hasScrolled
+            ? visible
+              ? 'translate-y-0'
+              : '-translate-y-full'
+            : '-translate-y-full'
         }`}
       >
-        <div className={`mx-4 my-2 rounded-full border-2 ${isDarkMode ? 'border-gray-700 bg-black' : 'border-gray-200 bg-white'} shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl`}>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div
+          className={`mx-4 my-2 rounded-full border-2 ${isDarkMode ? 'border-gray-700 bg-black' : 'border-gray-200 bg-white'} shadow-vn transition-all duration-300 ease-in-out hover:shadow-xl`}
+        >
+          <div className="vn:px-8 mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex h-20 items-center justify-between">
               {/* Logo */}
-              <div className="flex flex-shrink-0 items-center lg:flex-1">
-                <Link href="/" className="flex justify-center lg:justify-start">
+              <div className="vn:flex-1 flex flex-shrink items-center">
+                <Link href="/" className="vn:justify-start flex justify-center">
                   <Image
                     src="/gdsc_logo.png"
                     alt="Google Developer Student Clubs Logo"
-                    width={400}
-                    height={45}
-                    sizes="(max-width: 480px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, (max-width: 1200px) 60vw, 40vw"
-                    className="h-auto w-full min-w-[250px] max-w-[400px] lg:max-w-[350px]"
+                    width={100000}
+                    height={100000}
+                    className="max-h-[50%] w-full min-w-[180px] max-w-[450px] hidden dark:block"
+                    quality={100}
+                  />
+                  <Image
+                    src="/gdsc_logo_black.png"
+                    alt="Google Developer Student Clubs Logo"
+                    width={100000}
+                    height={100000}
+                    className=" max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:hidden "
                     quality={100}
                   />
                 </Link>
               </div>
 
               {/* Desktop navigation */}
-              <div className="hidden lg:block">
+              <div className="vn:block hidden">
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`rounded-md px-3 py-2 text-center text-lg font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white ${
+                      className={`text-vn rounded-md px-3 py-2 text-center font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white ${
                         isDarkMode ? 'text-white' : 'text-black'
                       }`}
                     >
@@ -98,27 +111,59 @@ const Navbar: React.FC = () => {
               </div>
 
               {/* Dark mode toggle for desktop */}
-              <div className="hidden lg:block lg:pl-4">
+              <div className="vn:block vn:pl-4 hidden">
                 <button onClick={toggleDarkMode} className="p-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
+                  >
                     {isDarkMode ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
                     ) : (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
                     )}
                   </svg>
                 </button>
               </div>
 
               {/* Mobile menu and dark mode toggle */}
-              <div className="flex items-center lg:hidden">
+              <div className="vn:hidden flex items-center">
                 {/* Dark mode toggle for mobile */}
                 <button onClick={toggleDarkMode} className="p-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
+                  >
                     {isDarkMode ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
                     ) : (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
                     )}
                   </svg>
                 </button>
@@ -127,17 +172,43 @@ const Navbar: React.FC = () => {
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   className={`inline-flex items-center justify-center rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${
-                    isDarkMode ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-gray-200'
+                    isDarkMode
+                      ? 'text-white hover:bg-gray-700'
+                      : 'text-black hover:bg-gray-200'
                   }`}
                 >
                   <span className="sr-only">Open main menu</span>
                   {isOpen ? (
-                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   ) : (
-                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
                     </svg>
                   )}
                 </button>
@@ -164,7 +235,7 @@ const Navbar: React.FC = () => {
         <div
           className={`mx-4 overflow-hidden rounded-3xl border-2 ${
             isDarkMode ? 'border-gray-700 bg-black' : 'border-gray-200 bg-white'
-          } shadow-lg transition-all duration-300 ease-in-out ${
+          } shadow-vn transition-all duration-300 ease-in-out ${
             isOpen ? 'max-h-[calc(100vh-7rem)]' : 'max-h-0'
           }`}
           onClick={(e) => e.stopPropagation()}
@@ -176,7 +247,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`rounded-md px-3 py-2 text-lg font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white ${
+                    className={`text-vn rounded-md px-3 py-2 font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white ${
                       isDarkMode ? 'text-white' : 'text-black'
                     }`}
                     onClick={() => setIsOpen(false)}

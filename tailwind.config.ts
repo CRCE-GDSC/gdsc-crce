@@ -52,6 +52,10 @@ export default {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
+      screens: {
+        'vn': '1195px',
+        // => @media (min-width: 1145px) { ... }
+      }
     },
   },
   plugins: [addVariablesForColors],

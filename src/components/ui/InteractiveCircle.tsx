@@ -64,7 +64,7 @@ const InteractiveCircle: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="relative"
+      className="relative "
       style={{ height: `${points.length * 100}vh` }}
     >
       <div
@@ -72,10 +72,10 @@ const InteractiveCircle: React.FC = () => {
         className="sticky top-0 flex h-screen w-full -translate-x-16 -translate-y-32 items-center justify-center md:translate-x-0 md:translate-y-0"
       >
         <div
-          className={`relative ${isMobile ? 'flex h-full w-full' : 'h-[40rem] w-[40rem] rounded-full border-2 border-gray-300'}`}
+          className={`relative ${isMobile ? 'flex h-full w-full' : 'h-[40rem] w-[40rem] rounded-full border-2 border-gray-500'}`}
         >
           {isMobile && (
-            <div className="absolute left-3 top-1/4 h-1/2 w-px bg-gray-300" />
+            <div className="absolute left-3 top-1/4 h-1/2 w-px bg-gray-500" />
           )}
           {points.map((point, index) => {
             const angle = (360 / points.length) * index - 90 // Start from top (90 degrees)
@@ -99,9 +99,9 @@ const InteractiveCircle: React.FC = () => {
                   className={`h-4 w-4 rounded-full ${activePoint === index ? 'bg-blue-500' : 'bg-gray-400'} `}
                 />
                 <div
-                  className={`absolute ${isMobile ? 'left-6 top-1' : `${x > 0 ? 'left-full ml-2' : 'right-full mr-2'} top-1/2`} transform ${isMobile ? '-translate-y-1/2' : '-translate-y-1/2'} z-10 whitespace-nowrap rounded bg-white p-2 shadow-md ${activePoint === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 md:hover:opacity-20`}
+                  className={`absolute ${isMobile ? 'left-6 top-1' : `${x > 0 ? 'left-full ml-2' : 'right-full mr-2'} top-1/2`} transform ${isMobile ? '-translate-y-1/2' : '-translate-y-1/2'} z-10 whitespace-nowrap rounded dark:bg-white bg-gray-900  p-2 shadow-md ${activePoint === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 md:hover:opacity-20`}
                 >
-                  <p className="text-lg font-semibold invert">{point.text}</p>
+                  <p className="text-lg font-semibold dark:text-black text-white">{point.text}</p>
                 </div>
               </div>
             )

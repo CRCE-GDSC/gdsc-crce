@@ -1,12 +1,13 @@
 import * as React from 'react'
 import InteractiveCircle from './ui/InteractiveCircle'
 import Title from './Title'
+
 const WhatWeDo = () => {
   return (
-    <section className="my-28" id="WwD">
+    <section className="my-28 bg-inherit dark:bg-black" id="WwD">
       <div>
         <Title>What We Do</Title>
-        <p className="visible text-wrap px-5 text-center lg:invisible">
+        <p className="visible text-wrap px-5 text-center lg:invisible dark:text-white">
           <span className="font-bold">GDSC CRCE</span> boasts of a multifaceted
           community with members from various disciplines working together. By
           joining <span className="font-bold">GDSC CRCE</span> students get to
@@ -18,7 +19,7 @@ const WhatWeDo = () => {
           <div className="min-h-screen pl-20 md:pl-32">
             <InteractiveCircle />
           </div>
-          <p className="invisible sticky top-0 h-screen text-wrap px-10 pt-[42vh] text-center lg:visible">
+          <p className="invisible sticky top-0 h-screen text-wrap px-10 pt-[42vh] text-center lg:visible dark:text-white">
             <span className="font-bold">GDSC CRCE</span> boasts of a
             multifaceted community with members from various disciplines working
             together. By joining <span className="font-bold">GDSC CRCE</span>{' '}
