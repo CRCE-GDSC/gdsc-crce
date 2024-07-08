@@ -26,8 +26,8 @@ const Carousel: React.FC = () => {
       justifyContent: 'center',
       color: '#fff',
       fontSize: pos === 0 ? '16px' : '0px',
-      width: '30vw',
-      height: '70vh',
+      width: '40vw',
+      height: '50vh',
       borderRadius: '10px',
       boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.5)',
       position: 'absolute',
@@ -64,7 +64,7 @@ const Carousel: React.FC = () => {
   return (
     <section>
       <Title>Our Events</Title>
-      <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-inherit text-gray-900 transition-colors duration-300  dark:text-white">
+      <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-inherit text-gray-900 transition-colors duration-300 dark:text-white">
         <div className="relative flex w-full flex-row items-center justify-center">
           <button
             onClick={() =>
@@ -108,3 +108,4 @@ const Carousel: React.FC = () => {
 }
 
 export default Carousel
+
