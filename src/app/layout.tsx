@@ -4,6 +4,7 @@ import './globals.css'
 import Loading from './loading'
 import Footerr from '@/components/footerr'
 import Navbar from '@/components/Navbar'
+import { ThemeProvider } from "@/components/ThemeProvider"
 import { Suspense } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 // import Navbar from '@components/Navbar'
@@ -29,9 +30,16 @@ export default function RootLayout({
       </head>
       <Suspense fallback={<Loading />}>
         <body className={inter.className}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
           <Navbar />
           {children}
           <Footerr />
+          </ThemeProvider>
         </body>
       </Suspense>
     </html>

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTheme } from "next-themes"
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -18,7 +19,8 @@ const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
+  const { setTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +47,11 @@ const Navbar: React.FC = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
+    if (isDarkMode) {
+      setTheme("light")
+    } else {
+      setTheme("dark")
+    }
     // Add logic here to actually change the theme
   }
 
