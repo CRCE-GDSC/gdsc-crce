@@ -77,16 +77,16 @@ const Navbar: React.FC = () => {
                   <Image
                     src="/gdsc_logo.png"
                     alt="Google Developer Student Clubs Logo"
-                    width={100000}
-                    height={100000}
+                    width={10000}
+                    height={10000}
                     className="max-h-[50%] w-full min-w-[180px] max-w-[450px] hidden dark:block"
                     quality={100}
                   />
                   <Image
                     src="/gdsc_logo_black.png"
                     alt="Google Developer Student Clubs Logo"
-                    width={100000}
-                    height={100000}
+                    width={10000}
+                    height={10000}
                     className=" max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:hidden "
                     quality={100}
                   />

@@ -11,7 +11,7 @@ interface AnimatedTitleProps {
 const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ children }) => {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const [titleWidth, setTitleWidth] = useState(0)
-  const gap = 1 // 3px gap between logo and text
+  const gap = 1 
 
   useEffect(() => {
     if (titleRef.current) {
@@ -22,7 +22,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ children }) => {
   const logoOffset = titleWidth / 2 + gap
 
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center rounded-md bg-transparent dark:bg-black">
+    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center bg-inherit dark:bg-black">
       <div className="absolute inset-0 h-full w-full">
         <SparklesCore
           id="tsparticlesfullpaged"
@@ -52,7 +52,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ children }) => {
         >
           {children}
         </h2>
-        <div className="max-h-[67px] max-w-[67px] -translate-y-[3px]">
+        <div className="max-h-[67px] max-w-[67px] -translate-y-[4px]">
           <Image
             src="/assets/gdsc_logo_right.png"
             height={5000}

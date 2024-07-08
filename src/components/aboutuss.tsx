@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import AnimatedTitle from './animatedTitle'
+import Title from './Title'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { CanvasRevealEffect } from './canvasreveal'
@@ -8,7 +8,7 @@ import { CanvasRevealEffect } from './canvasreveal'
 export function CanvasRevealEffectDemo() {
   return (
     <section>
-      <AnimatedTitle>ABOUT US </AnimatedTitle>
+      <Title>ABOUT US</Title>
       <div className="mx-auto mb-10 flex w-full select-none flex-col items-center justify-center gap-4 bg-black px-8 pt-5 lg:flex-row">
         <Card
           title="The GDSC program is a grassroots channel through which Google

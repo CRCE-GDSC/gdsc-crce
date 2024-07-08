@@ -1,12 +1,12 @@
 import * as React from 'react'
 import InteractiveCircle from './ui/InteractiveCircle'
-import AnimatedTitle from './animatedTitle'
+import Title from './Title'
 
 const WhatWeDo = () => {
   return (
-    <section className="my-28 bg-inherit dark:bg-black" id="WwD">
+    <section className="my-28 bg-inherit" id="WwD">
       <div>
-        <AnimatedTitle>WHAT WE DO</AnimatedTitle>
+        <Title>WHAT WE DO</Title>
         <p className="visible text-wrap px-5 text-center lg:invisible dark:text-white">
           <span className="font-bold">GDSC CRCE</span> boasts of a multifaceted
           community with members from various disciplines working together. By
