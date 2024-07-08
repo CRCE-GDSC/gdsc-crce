@@ -73,9 +73,9 @@ const Carousel: React.FC = () => {
               prevPos === 0 ? items.length - 1 : prevPos - 1
             )
           }
-          className="absolute left-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          className="absolute left-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 md:ml-10"
         >
-          <Image src="/gdsc-fl.png" alt="Previous" width={40} height={40} />
+          <Image src="/gdsc-fl.png" alt="Previous" width={60} height={60} />
         </button>
         <div className="w-full">
           <div className="flex h-[70vh] w-full items-center justify-center font-sans">
@@ -98,9 +98,9 @@ const Carousel: React.FC = () => {
               prevPos === items.length - 1 ? 0 : prevPos + 1
             )
           }
-          className="absolute right-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          className="md:mr2-10 absolute right-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
         >
-          <Image src="/gdsc-fr.png" alt="Next" width={40} height={40} />
+          <Image src="/gdsc-fr.png" alt="Next" width={60} height={60} />
         </button>
       </div>
     </div>
