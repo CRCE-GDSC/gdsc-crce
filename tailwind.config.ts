@@ -59,6 +59,8 @@ export default {
     },
   },
   plugins: [addVariablesForColors],
+  
+  
 } satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {

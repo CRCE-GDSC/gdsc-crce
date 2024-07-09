@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Title from './Title'
-
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -76,7 +75,7 @@ const Carousel: React.FC = () => {
 
   return (
     <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-white">
-      <h1 className=" text-center">
+      <h1 className="text-center">
         <Title>Our Events</Title>
       </h1>
       <div className="relative flex w-full flex-row items-center justify-center">
