@@ -28,7 +28,7 @@ const Title: React.FC<AnimatedTitleProps> = ({ children }) => {
         background="transparent"
         minSize={0.6}
         maxSize={0.9}
-        particleDensity={30}
+        particleDensity={10}
         className="absolute inset-0 hidden h-full w-full dark:block"
         particleColor="#FFFFFF"
       />
@@ -37,7 +37,7 @@ const Title: React.FC<AnimatedTitleProps> = ({ children }) => {
         background="transparent"
         minSize={0.6}
         maxSize={0.8}
-        particleDensity={30}
+        particleDensity={10}
         className="absolute inset-0 h-full w-full dark:hidden"
         particleColor="#000000"
       />
