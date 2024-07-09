@@ -18,7 +18,7 @@ const WhatWeDo = () => {
           </p>
         </div>
 
-        <div className="md:flex pb-0 mb-0 max-h-[5900px]">
+        <div className="md:flex pb-0 mb-0 max-h-[5800px]">
           <div className="min-h-full pl-20 md:pl-72 vn:pl-32 pb-0 mb-0">
             <InteractiveCircle />
           </div>
