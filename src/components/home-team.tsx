@@ -1,4 +1,5 @@
 
+
 "use client";
 import Image from 'next/image'
 
@@ -50,7 +51,7 @@ const people = [
   },
 ];
 
-export function AnimatedTooltipPreview() {
+export function HomeTeam() {
   return (
     <div className="flex flex-col h-[30vh] w-full ">
 
