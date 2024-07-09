@@ -18,7 +18,7 @@ export default async function Home() {
     <div className="flex min-h-screen w-fit flex-col items-center justify-center">
       <div className="h-screen w-full items-center justify-center">
         <Spline
-          scene="/assets/gdsc.splinecode"
+          scene="https://prod.spline.design/Lx4jFWigayr7EvOc/scene.splinecode"
           className="min-h-screen w-full"
         />
       </div>
