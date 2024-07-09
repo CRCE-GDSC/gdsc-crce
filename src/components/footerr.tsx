@@ -106,24 +106,21 @@ const Footerr = () => {
           </div>
         </div>
 
-        <div className="flex flex-row items-center justify-start gap-10 py-6">
-          <div className="flex items-center justify-start">
-            <Image
-              src="/assets/gdsc_logo.png"
-              height={80}
-              width={80}
-              alt="gdsc_logo"
-              className="items-center justify-center"
-            ></Image>
-          </div>
-          <div className="">
-            <h2 className="mt-2 flex items-center justify-center text-xl font-medium dark:text-white md:text-2xl lg:text-3xl">
-              Google Developer Student Clubs
-            </h2>
-            <h4 className="mb-1 flex items-center justify-center text-lg dark:text-white">
-              Fr. Conceicao Rodrigues College of Engineering
-            </h4>
-          </div>
+        <div className="flex flex-row items-center justify-start py-6">
+          <Image
+            src="/gdsc_logo.png"
+            height={10000}
+            width={10000}
+            alt="gdsc_logo"
+            className="hidden dark:block min-w-[180px] max-w-[450px]"
+          />
+          <Image
+            src="/gdsc_logo_black.png"
+            height={10000}
+            width={10000}
+            alt="gdsc_logo"
+            className="dark:hidden min-w-[180px] max-w-[450px]"
+          />
         </div>
       </div>
     </div>
