@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 const Footerr = () => {
   return (
-    <div className="mt-20">
-      <div className="/30 flex-grow bg-gray-200 px-8 pt-14 dark:bg-inherit">
-        <div className="mt- grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+    <div className="mt-20 bg-inherit">
+      <div className="flex-grow px-8 pt-14">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           <div className="lg:mt-8">
             <div className="pb-3 text-lg font-semibold uppercase dark:text-white">
               Useful Links

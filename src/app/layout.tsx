@@ -52,7 +52,7 @@ export default function RootLayout({
               minSize={0.6}
               maxSize={0.8}
               particleDensity={10}
-              className="fixed inset-0 h-full w-full bg-white dark:hidden"
+              className="fixed inset-0 -z-10 h-full w-full bg-white dark:hidden"
               particleColor="#000000"
             />
             <Navbar />
