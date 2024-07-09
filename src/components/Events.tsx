@@ -1,29 +1,32 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import VerticalCarousel from './final_c_mobile'
 import Carousel from './final_c'
 
 function ResponsiveCarousel() {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkIsMobile = () => setIsMobile(window.innerWidth >= 400)
-    checkIsMobile()
-    window.addEventListener('resize', checkIsMobile)
-    return () => window.removeEventListener('resize', checkIsMobile)
-  }, [])
-
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      {isMobile ? <Carousel /> : <VerticalCarousel />}
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <div className="w-full">
+        {/* Hide on small screens, show on large screens and above */}
+        <div className="hidden lg:block">
+          <Carousel />
+        </div>
+
+        {/* Show on small screens, hide on large screens and above */}
+        <div className="lg:hidden">
+          <VerticalCarousel />
+        </div>
+      </div>
+
       <button
-        className="bg-blue-500 hover:bg-blue-700 dark:text-white font-bold py-2 px-4 rounded light:text-black"
+        className="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
         onClick={() => (window.location.href = '/allevents')}
       >
         Go to All Events
       </button>
     </div>
-  );
+  )
 }
 
-export default ResponsiveCarousel;
+export default ResponsiveCarousel
+
