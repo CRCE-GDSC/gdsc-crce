@@ -5,7 +5,7 @@ import Spline from '@splinetool/react-spline'
 import WhatWeDo from '@/components/WhatWeDo'
 import {SparklesCore}  from '../components/sparkles'
 import Carousel from '@/components/final_c'
-import CarouselMobile from '@/components/final_c_mobile'
+import VerticalCarousel from '@/components/final_c_mobile'
 import Hero from '@/components/Hero'
 import Title from '@/components/Title'
 
@@ -44,7 +44,7 @@ export default async function Home() {
         <WhatWeDo />
 
         {/* {typeof window !== 'undefined' && window.innerWidth <= 768 ? <CarouselMobile /> : <Carousel />} */}
-        {/* <CarouselMobile /> */}
+        <VerticalCarousel />
       </main>
     </div>
   )

@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
+import daisyui from 'daisyui'
 
 export default {
   content: [
@@ -58,7 +59,7 @@ export default {
       }
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, daisyui,],
   
   
 } satisfies Config
