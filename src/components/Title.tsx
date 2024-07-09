@@ -9,7 +9,7 @@ interface AnimatedTitleProps {
 }
 
 const Title: React.FC<AnimatedTitleProps> = ({ children }) => {
-  const titleRef = useRef(null)
+  const titleRef = useRef<HTMLHeadingElement | null>(null)
   const [titleWidth, setTitleWidth] = useState(0)
   const gap = 1 // 3px gap between logo and text
 
@@ -22,28 +22,35 @@ const Title: React.FC<AnimatedTitleProps> = ({ children }) => {
   const logoOffset = titleWidth / 2 + gap
 
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center bg-inherit ">
-      <div className="absolute inset-0 h-full w-full">
-        <SparklesCore
-          id="tsparticlesfullpaged"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.2}
-          particleDensity={50}
-          className="hidden h-full w-full dark:block"
-          particleColor="#FFFFFF"
-        />
-      </div>
-      <div className=" flex items-center justify-center">
+    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center bg-white dark:bg-black">
+      <SparklesCore
+        id="tsparticlesfullpaged-dark"
+        background="transparent"
+        minSize={0.6}
+        maxSize={0.9}
+        particleDensity={10}
+        className="absolute inset-0 hidden h-full w-full dark:block"
+        particleColor="#FFFFFF"
+      />
+      <SparklesCore
+        id="tsparticlesfullpaged-light"
+        background="transparent"
+        minSize={0.6}
+        maxSize={0.8}
+        particleDensity={10}
+        className="absolute inset-0 h-full w-full dark:hidden"
+        particleColor="#000000"
+      />
+      <div className="relative z-10 flex items-center justify-center">
         <Image
           src="/assets/gdsc_logo_left.png"
           height={50}
           width={50}
           alt="left_logo"
-          className="moveLeft z-10"
+          className="moveLeft"
           style={{ transform: `translateX(${logoOffset}px)` }}
         />
-        <h2 ref={titleRef} className="title fadeInOut">
+        <h2 ref={titleRef} className="title fadeInOut dark:text-white">
           {children}
         </h2>
         <Image
@@ -51,7 +58,7 @@ const Title: React.FC<AnimatedTitleProps> = ({ children }) => {
           height={52}
           width={52}
           alt="right_logo"
-          className="moveRight z-10"
+          className="moveRight"
           style={{ transform: `translateX(-${logoOffset}px)` }}
         />
       </div>
