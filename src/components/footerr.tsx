@@ -2,48 +2,48 @@ import React from 'react'
 import Image from 'next/image'
 const Footerr = () => {
   return (
-    <div className="">
-      <div className="mx-auto my-8 w-3/5 items-center border-b-2 border-b-gray-800 p-4 py-20"></div>
-      <div className="bg-gray-1000 m-3 mt-20 flex-grow px-8">
+    <div className="mt-20">
+      <div className="flex-grow bg-gray-200 px-8 pt-14 dark:bg-gray-900/30">
         <div className="flex items-center justify-start gap-10">
           <div>
-            <Image
-              src="/assets/gdsc_logo.png"
-              height={100}
-              width={100}
-              alt="gdsc_logo"
-              className="items-center justify-center"
-            ></Image>
-          </div>
-          <div>
-            <h2 className="mt-2 text-3xl text-white">
-              Google Developer Student Clubs
-            </h2>
-            <h4 className="mb-1 text-lg text-white">
-              Fr. Conceicao Rodrigues College of Engineering
-            </h4>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/assets/gdsc_logo.png"
+                height={50}
+                width={50}
+                alt="gdsc_logo"
+                className="items-center justify-center"
+              ></Image>
+            </div>
+            <div className="">
+              <h2 className="mt-2 flex items-center justify-center text-3xl dark:text-white">
+                Google Developer Student Clubs
+              </h2>
+              <h4 className="mb-1 flex items-center justify-center text-lg dark:text-white">
+                Fr. Conceicao Rodrigues College of Engineering
+              </h4>
+            </div>
           </div>
         </div>
-
-        <div className="mt-10 grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+        <div className="mt- grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           <div className="lg:mt-8">
-            <div className="pb-3 text-lg font-semibold uppercase text-white">
+            <div className="pb-3 text-lg font-semibold uppercase dark:text-white">
               Useful Links
             </div>
             <div className="grid">
-              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:text-red-500 hover:underline">
+              <div className="pb-4 text-gray-900 ease-in-out hover:translate-x-1 hover:text-red-500 hover:underline dark:text-gray-200 dark:hover:text-red-500">
                 {' '}
                 <a href="/">Home </a>
               </div>
-              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:text-blue-500 hover:underline">
+              <div className="pb-4 text-gray-900 ease-in-out hover:translate-x-1 hover:text-blue-500 hover:underline dark:text-gray-200 dark:hover:text-blue-500">
                 {' '}
                 <a href="#events">Events</a>
               </div>
-              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:text-green-500 hover:underline">
+              <div className="pb-4 text-gray-900 ease-in-out hover:translate-x-1 hover:text-green-500 hover:underline dark:text-gray-200 dark:hover:text-green-500">
                 {' '}
                 <a href="#team">Our Team</a>
               </div>
-              <div className="pb-4 text-gray-600 ease-in-out hover:translate-x-1 hover:text-yellow-500 hover:underline">
+              <div className="pb-4 text-gray-900 ease-in-out hover:translate-x-1 hover:text-yellow-500 hover:underline dark:text-gray-200 dark:hover:text-yellow-500">
                 <a href="https://developers.google.com/community-guidelines">
                   Community Guidelines
                 </a>
@@ -53,10 +53,12 @@ const Footerr = () => {
 
           <div className="mt-8 lg:col-span-1 lg:mt-8">
             <div className="">
-              <h1 className="pb-3 text-lg font-semibold uppercase text-white">
+              <h1 className="pb-3 text-lg font-semibold uppercase dark:text-white">
                 Contact us
               </h1>
-              <h2 className="py-1 text-gray-500">crcegdsc@gmail.com</h2>
+              <h2 className="py-1 text-gray-900 dark:text-gray-200">
+                crcegdsc@gmail.com
+              </h2>
             </div>
             <div className="flex flex-row py-4" id="foot">
               <div className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40 hover:bg-blue-300">
@@ -120,7 +122,7 @@ const Footerr = () => {
               height="200px"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="mb-5 mt-10 flex items-start justify-start rounded-3xl"
+              className="mb-10 flex items-start justify-start rounded-3xl"
             ></iframe>
           </div>
         </div>

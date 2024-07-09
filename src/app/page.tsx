@@ -5,6 +5,7 @@ import Spline from '@splinetool/react-spline'
 import WhatWeDo from '@/components/WhatWeDo'
 import Carousel from '@/components/final_c'
 import Hero from '@/components/Hero'
+import Title from '@/components/Title'
 
 export default async function Home() {
   const delay = async (ms: number) =>
@@ -20,6 +21,7 @@ export default async function Home() {
       </div>
       <main className="flex-grow">
         {/* <Hero /> */}
+        <Title />
         <CanvasRevealEffectDemo />
         <WhatWeDo />
         <Carousel />
