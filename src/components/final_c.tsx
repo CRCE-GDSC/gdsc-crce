@@ -40,7 +40,7 @@ const Carousel: React.FC = () => {
       color: '#fff',
       fontSize: pos === 0 ? '16px' : '0px',
       width: '40vw',
-      height: '100vh',
+      height: '80vh',
       borderRadius: '10px',
       boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.5)',
       position: 'absolute',
@@ -101,7 +101,7 @@ const Carousel: React.FC = () => {
           <Image src="/gdsc-fl.png" alt="Previous" width={50} height={50} />
         </button>
         <div className="w-full">
-          <div className="mb-10 flex h-screen w-full items-center justify-center font-sans">
+          <div className="mb-10 flex h-[80vh] min-h-fit w-full items-center justify-center font-sans">
             <ul className="perspective-300 relative m-0 flex h-full w-full list-none justify-center p-0">
               {items.map((item, index) => (
                 <li
