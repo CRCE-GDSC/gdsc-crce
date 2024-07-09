@@ -20,7 +20,7 @@ const DesktopView: React.FC = () => {
   return (
     <>
       <Navbar />
-      <div className="flex h-screen items-center justify-center bg-gray-100">
+      <div className="flex h-screen items-center justify-center dark:bg-inherit bg-inherit">
         <p className="text-center text-xl font-semibold">
           This is the desktop view for {slug}. The full event viewer is only
           available on mobile devices.

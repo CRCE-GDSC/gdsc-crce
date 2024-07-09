@@ -18,12 +18,14 @@ const Carousel: React.FC = () => {
 
   const getImageUrl = (index: number) => {
     const images = [
-      '/event_assests/event3.jpeg', //soham
-      '/event_assests/event2.jpeg', //aston n akshat
-      '/event_assests/event1.jpeg', //solution soham
       '/event_assests/mathday.jpeg',
+      '/event_assests/event2.jpeg', //aston n akshat
+      '/event_assests/event3.jpeg', //soham
       '/event_assests/ideation.jpg',
+
       '/event_assests/postman_event_poster.webp',
+      '/event_assests/event1.jpeg', //solution soham
+
       '/event_assests/HackOver3.0.jpg',
       '/event_assests/Bit-N-Build.jpg',
       '/event_assests/GDSC_Future-Forge.jpg',

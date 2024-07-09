@@ -42,7 +42,7 @@ const EventViewer: React.FC<{ events: Event[] }> = ({ events }) => {
   const currentEvent = events[currentEventIndex]
 
   return (
-    <div className="relative h-screen w-full bg-black">
+    <div className="relative h-screen w-full bg-inherit ">
       {/* Event Image */}
       {currentEvent && (
         <img
