@@ -7,22 +7,26 @@ const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
-  const items = ['', '', '', '', '',
+  const items = [
+    '',
+    '',
+    '',
+    '',
+    '',
     // '','','','',
   ]
 
   const getImageUrl = (index: number) => {
     const images = [
-      '/event_assests/event3.jpeg',//soham
-      '/event_assests/event2.jpeg',//aston n akshat
-      '/event_assests/event1.jpeg',//solution soham
+      '/event_assests/event3.jpeg', //soham
+      '/event_assests/event2.jpeg', //aston n akshat
+      '/event_assests/event1.jpeg', //solution soham
       '/event_assests/mathday.jpeg',
       '/event_assests/ideation.jpg',
       '/event_assests/postman_event_poster.webp',
       '/event_assests/HackOver3.0.jpg',
       '/event_assests/Bit-N-Build.jpg',
       '/event_assests/GDSC_Future-Forge.jpg',
-      
     ]
     return images[index % images.length]
   }
@@ -46,7 +50,7 @@ const Carousel: React.FC = () => {
       backgroundPosition: 'center',
     }
 
-   const isHovered = hoveredIndex === itemPos && pos === 0
+    const isHovered = hoveredIndex === itemPos && pos === 0
 
     switch (pos) {
       case 0:
@@ -81,8 +85,8 @@ const Carousel: React.FC = () => {
   }
 
   return (
-    <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-white text-gray-900 transition-colors duration-300 dark:bg-black dark:text-white">
-      <h1 className="text-center">
+    <div className="light:bg-white flex h-auto w-full flex-col items-center justify-center overflow-hidden text-gray-900 transition-colors duration-300 dark:bg-black dark:text-white">
+      <h1 className="text-center bg-transparent ">
         <Title>Our Events</Title>
       </h1>
       <div className="relative flex w-full flex-row items-center justify-center">

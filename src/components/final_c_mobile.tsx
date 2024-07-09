@@ -28,12 +28,18 @@ const AceGridCard: React.FC<CarouselItem> = ({
   const { theme } = useTheme()
   const contentRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
+  const [isTapped, setIsTapped] = useState(false) // New state for tap interaction
 
   useEffect(() => {
     if (contentRef.current) {
       setContentHeight(contentRef.current.offsetHeight)
     }
   }, [title, description, cta]) // Recalculate if content changes
+
+  // Toggle tap state
+  const handleTap = () => {
+    setIsTapped(!isTapped)
+  }
 
   return (
     <div
@@ -51,21 +57,24 @@ const AceGridCard: React.FC<CarouselItem> = ({
         backgroundRepeat: 'no-repeat',
         backgroundClip: 'border-box',
       }}
+      onClick={handleTap} // Handle tap here
     >
       <div
-        className="absolute inset-x-0 bottom-0 transform transition-all duration-300 h-40 translate-y-40"
-        // style={{
-        //   height: `${contentHeight}px`,
-        //   transform: `translateY(${contentHeight}px)`,
-        // }}
+        className="absolute inset-x-0 bottom-0 transform transition-all duration-300"
+        style={{
+          transform: isTapped ? 'translateY(-100%)' : 'translateY(0%)', // Use isTapped to control the transform
+        }}
       >
         <div
           ref={contentRef}
           className={cn(
-            'absolute inset-0 p-4 rounded-lg transition-transform duration-300 group-hover/bento:translate-y-[-100%]',
+            'absolute inset-0 rounded-lg p-4 transition-transform duration-300',
             theme === 'dark'
-              ? 'bg-black bg-opacity-50'
-              : 'bg-white bg-opacity-80'
+              ? 'bg-black bg-opacity-60'
+              : 'bg-white bg-opacity-80',
+            isTapped ? 'translate-y-[-100%] h-fit' : 'translate-y-[0%]',
+            '-bottom-10'
+            // Adjust based on isTapped
           )}
         >
           <div className="pb-6">
@@ -89,13 +98,14 @@ const AceGridCard: React.FC<CarouselItem> = ({
           </div>
           <div>
             <Button
-              variant="ghost"
+              variant="soft"
+              color='gray'
               className={cn(
-                'pointer-events-auto flex items-center',
+                'pointer-events-auto flex items-center border-none rounded-full p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700',
                 theme === 'dark' ? 'text-white' : 'text-black'
               )}
             >
-              <a href={href}>
+              <a href={href} className='flex items-center' >
                 {cta}
                 <ArrowRightIcon className="ml-2 h-4 w-4" />
               </a>
@@ -148,19 +158,20 @@ const VerticalCarousel: React.FC = () => {
     // Add more items as needed
   ]
 
-  return (
-    <div className="flex min-h-screen items-center justify-center px-4 py-8">
-      <h1 className="text-center">
-        <Title>Our Events</Title>
-      </h1>
-      <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
-        {carouselItems.map((item, index) => (
-          <div key={index} className="carousel-item h-full w-full">
-            <AceGridCard {...item} />
-          </div>
-        ))}
-      </div>
-    </div>
+  return ( 
+  <><h1 className="text-center -bottom-5 bg-black">
+      <Title>Our Events</Title>
+    </h1>
+    <div className="flex min-h-screen items-center justify-center px-4 py-8 bg-inherit">
+
+        <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
+          {carouselItems.map((item, index) => (
+            <div key={index} className="carousel-item h-full w-full">
+              <AceGridCard {...item} />
+            </div>
+          ))}
+        </div>
+      </div></>
   )
 }
 
