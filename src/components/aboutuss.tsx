@@ -9,7 +9,7 @@ export function CanvasRevealEffectDemo() {
   return (
     <>
     <Title>ABOUT US</Title>
-      <div className="mx-auto flex w-full select-none flex-col items-center justify-center gap-4 bg-white px-8 py-20 lg:flex-row dark:bg-black">
+      <div className="mx-auto flex w-full select-none flex-col items-center justify-center gap-4 bg-white px-8 py-20 lg:flex-row dark:bg-inherit">
         <Card
           title="The GDSC program is a grassroots channel through which Google
                 provides development, mobile &amp; web development skills for

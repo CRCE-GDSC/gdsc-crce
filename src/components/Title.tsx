@@ -22,25 +22,7 @@ const Title: React.FC<AnimatedTitleProps> = ({ children }) => {
   const logoOffset = titleWidth / 2 + gap
 
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center bg-white dark:bg-black">
-      <SparklesCore
-        id="tsparticlesfullpaged-dark"
-        background="transparent"
-        minSize={0.6}
-        maxSize={0.9}
-        particleDensity={10}
-        className="absolute inset-0 hidden h-full w-full dark:block"
-        particleColor="#FFFFFF"
-      />
-      <SparklesCore
-        id="tsparticlesfullpaged-light"
-        background="transparent"
-        minSize={0.6}
-        maxSize={0.8}
-        particleDensity={10}
-        className="absolute inset-0 h-full w-full dark:hidden"
-        particleColor="#000000"
-      />
+    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center bg-white dark:bg-inherit">
       <div className="relative z-10 flex items-center justify-center">
         <Image
           src="/assets/gdsc_logo_left.png"

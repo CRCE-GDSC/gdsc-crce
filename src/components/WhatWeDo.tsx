@@ -4,9 +4,9 @@ import Title from './Title'
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-inherit dark:bg-black" id="WwD">
+    <section className="bg-inherit dark:bg-transparent" id="WwD">
       <div>
-        <Title>WHAT WE DO</Title>
+        <Title >WHAT WE DO</Title>
         <div className='visible vn:invisible mx-[20%] w-[60%]'>
           <p className="text-wrap text-center dark:text-white">
             <span className="font-bold">GDSC CRCE</span> boasts of a
