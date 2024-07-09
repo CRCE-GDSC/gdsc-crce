@@ -4,6 +4,7 @@ import { cn } from '../lib/utils'
 import { Button } from '@radix-ui/themes'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 import { useTheme } from 'next-themes'
+import Title from './Title'
 
 interface CarouselItem {
   className?: string
@@ -149,6 +150,9 @@ const VerticalCarousel: React.FC = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4 py-8">
+      <h1 className="text-center">
+        <Title>Our Events</Title>
+      </h1>
       <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
         {carouselItems.map((item, index) => (
           <div key={index} className="carousel-item h-full w-full">
