@@ -46,8 +46,8 @@ const AceGridCard: React.FC<CarouselItem> = ({
       className={cn(
         'group/bento relative h-full w-full overflow-hidden rounded-xl border shadow-none transition duration-200 hover:shadow-xl',
         theme === 'dark'
-          ? 'border-white/[0.2] bg-black'
-          : 'border-gray-200 bg-white',
+          ? 'border-white/[0.2] bg-inherit'
+          : 'border-gray-200 bg-inherit',
         className
       )}
       style={{
@@ -72,7 +72,7 @@ const AceGridCard: React.FC<CarouselItem> = ({
             theme === 'dark'
               ? 'bg-black bg-opacity-60'
               : 'bg-white bg-opacity-80',
-            isTapped ? 'translate-y-[-100%] h-fit' : 'translate-y-[0%]',
+            isTapped ? 'h-fit translate-y-[-100%]' : 'translate-y-[0%]',
             '-bottom-10'
             // Adjust based on isTapped
           )}
@@ -99,13 +99,13 @@ const AceGridCard: React.FC<CarouselItem> = ({
           <div>
             <Button
               variant="soft"
-              color='gray'
+              color="gray"
               className={cn(
-                'pointer-events-auto flex items-center border-none rounded-full p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700',
+                'pointer-events-auto flex items-center rounded-full border-none p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700',
                 theme === 'dark' ? 'text-white' : 'text-black'
               )}
             >
-              <a href={href} className='flex items-center' >
+              <a href={href} className="flex items-center">
                 {cta}
                 <ArrowRightIcon className="ml-2 h-4 w-4" />
               </a>
@@ -158,12 +158,12 @@ const VerticalCarousel: React.FC = () => {
     // Add more items as needed
   ]
 
-  return ( 
-  <><h1 className="text-center -bottom-5 bg-black">
-      <Title>Our Events</Title>
-    </h1>
-    <div className="flex min-h-screen items-center justify-center px-4 py-8 bg-inherit">
-
+  return (
+    <>
+      <h1 className="-bottom-5 bg-black text-center">
+        <Title>Our Events</Title>
+      </h1>
+      <div className="flex min-h-screen items-center justify-center bg-inherit px-4 py-8">
         <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
           {carouselItems.map((item, index) => (
             <div key={index} className="carousel-item h-full w-full">
@@ -171,7 +171,8 @@ const VerticalCarousel: React.FC = () => {
             </div>
           ))}
         </div>
-      </div></>
+      </div>
+    </>
   )
 }
 
