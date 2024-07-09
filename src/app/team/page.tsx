@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import DotPattern from '@/components/ui/dot-pattern'
 import { cn } from '@/lib/utils'
-import TeamComponent from '@/components/Team'
+import { TeamComponent } from '@/components/Team'
 export default async function Home() {
   const delay = async (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms))

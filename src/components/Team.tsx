@@ -24,7 +24,7 @@ let data = [
   },
 ]
 
-export function AnimatedTooltipPreview() {
+export function TeamComponent() {
   return (
     <div className="h-full w-full flex-1">
       <VerticalTimeline lineColor="rgba(100,100,100,0.5)">
