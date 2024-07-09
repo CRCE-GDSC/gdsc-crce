@@ -2,7 +2,13 @@
 
 import React, { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
-import { SparklesCore } from './sparkles'
+import { Poppins } from 'next/font/google'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400',
+})
 
 interface AnimatedTitleProps {
   children: string

@@ -85,62 +85,63 @@ const Carousel: React.FC = () => {
   }
 
   return (
-    <div className="light:bg-white flex h-auto w-full flex-col items-center justify-center overflow-hidden text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white">
-      <h1 className="text-center bg-transparent ">
-        <Title>Our Events</Title>
-      </h1>
-      <div className="relative flex w-full flex-row items-center justify-center">
-        <button
-          onClick={() =>
-            setActivePos((prevPos) =>
-              prevPos === 0 ? items.length - 1 : prevPos - 1
-            )
-          }
-          className="absolute left-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-        >
-          <Image src="/gdsc-fl.png" alt="Previous" width={50} height={50} />
-        </button>
-        <div className="w-full">
-          <div className="mb-10 flex h-[80vh] min-h-fit w-full items-center justify-center font-sans">
-            <ul className="perspective-300 relative m-0 flex h-full w-full list-none justify-center p-0">
-              {items.map((item, index) => (
-                <li
-                  key={index}
-                  style={getItemStyle(index)}
-                  className={`overflow-hidden rounded-lg ${
-                    ((index - activePos + 5) % 5) - 2 === 0
-                      ? 'cursor-pointer'
-                      : ''
-                  }`}
-                  onMouseEnter={() =>
-                    ((index - activePos + 5) % 5) - 2 === 0 &&
-                    setHoveredIndex(index)
-                  }
-                  onMouseLeave={() => setHoveredIndex(null)}
-                  onClick={() =>
-                    window.open(
-                      'https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai-india/'
-                    )
-                  }
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+    <>
+      <Title>Our Events</Title>
+      <div className="light:bg-white flex h-auto w-full flex-col items-center justify-center overflow-hidden text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white">
+        <h1 className="bg-transparent text-center"></h1>
+        <div className="relative flex w-full flex-row items-center justify-center">
+          <button
+            onClick={() =>
+              setActivePos((prevPos) =>
+                prevPos === 0 ? items.length - 1 : prevPos - 1
+              )
+            }
+            className="absolute left-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <Image src="/gdsc-fl.png" alt="Previous" width={50} height={50} />
+          </button>
+          <div className="w-full">
+            <div className="mb-10 flex h-[80vh] min-h-fit w-full items-center justify-center font-sans">
+              <ul className="perspective-300 relative m-0 flex h-full w-full list-none justify-center p-0">
+                {items.map((item, index) => (
+                  <li
+                    key={index}
+                    style={getItemStyle(index)}
+                    className={`overflow-hidden rounded-lg ${
+                      ((index - activePos + 5) % 5) - 2 === 0
+                        ? 'cursor-pointer'
+                        : ''
+                    }`}
+                    onMouseEnter={() =>
+                      ((index - activePos + 5) % 5) - 2 === 0 &&
+                      setHoveredIndex(index)
+                    }
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    onClick={() =>
+                      window.open(
+                        'https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai-india/'
+                      )
+                    }
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+          <button
+            onClick={() =>
+              setActivePos((prevPos) =>
+                prevPos === items.length - 1 ? 0 : prevPos + 1
+              )
+            }
+            className="absolute right-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <Image src="/gdsc-fr.png" alt="Next" width={50} height={50} />
+          </button>
         </div>
-        <button
-          onClick={() =>
-            setActivePos((prevPos) =>
-              prevPos === items.length - 1 ? 0 : prevPos + 1
-            )
-          }
-          className="absolute right-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-        >
-          <Image src="/gdsc-fr.png" alt="Next" width={50} height={50} />
-        </button>
       </div>
-    </div>
+    </>
   )
 }
 
