@@ -30,6 +30,7 @@ export function AnimatedTooltipPreview() {
       <VerticalTimeline lineColor="rgba(100,100,100,0.5)">
         {data.map((item, idex) => (
           <VerticalTimelineElement
+            key={idex}
             visible={true}
             className="vertical-timeline-element--work"
             contentStyle={{
