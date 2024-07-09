@@ -75,7 +75,7 @@ const Carousel: React.FC = () => {
   }
 
   return (
-    <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-white">
+    <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-white text-gray-900 transition-colors duration-300 dark:bg-black dark:text-white">
       <h1 className=" text-center">
         <Title>Our Events</Title>
       </h1>

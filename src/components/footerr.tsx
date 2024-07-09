@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Footerr = () => {
   return (
     <div className="mt-20">
-      <div className="flex-grow bg-gray-200 px-8 pt-14 dark:bg-gray-900/30">
+      <div className="flex-grow bg-gray-200 px-8 pt-14 dark:bg-inherit /30">
         <div className="flex items-center justify-start gap-10">
           <div>
             <div className="flex items-center justify-center">

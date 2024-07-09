@@ -3,10 +3,12 @@ import React from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { CanvasRevealEffect } from './canvasreveal'
+import Title from './Title'
 
 export function CanvasRevealEffectDemo() {
   return (
     <>
+    <Title>ABOUT US</Title>
       <div className="mx-auto flex w-full select-none flex-col items-center justify-center gap-4 bg-white px-8 py-20 lg:flex-row dark:bg-black">
         <Card
           title="The GDSC program is a grassroots channel through which Google

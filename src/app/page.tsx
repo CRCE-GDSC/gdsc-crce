@@ -21,7 +21,6 @@ export default async function Home() {
       </div>
       <main className="flex-grow">
         {/* <Hero /> */}
-        <Title />
         <CanvasRevealEffectDemo />
         <WhatWeDo />
         <Carousel />
