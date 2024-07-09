@@ -3,8 +3,9 @@
 import Image from 'next/image'
 
 import React from "react";
-import { AnimatedTooltip } from "./ui/animated-tooltip";
-import { ChevronRight } from "lucide-react";
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { BackgroundGradient } from './ui/background-gradient';
+import Link from 'next/link';
 const people = [
   {
     id: 1,
