@@ -178,3 +178,8 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 768px) {
+  .body {
+    overflow: hidden;
+  }
+}
