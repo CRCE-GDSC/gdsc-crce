@@ -52,21 +52,20 @@ const AceGridCard: React.FC<CarouselItem> = ({
       }}
     >
       <div
-        className={cn(
-          'absolute inset-0 opacity-0 transition-opacity duration-300 group-hover/bento:opacity-100',
-          theme === 'dark' ? 'bg-black bg-opacity-50' : 'bg-white bg-opacity-70'
-        )}
-      ></div>
-      <div
-        className="absolute inset-x-0 bottom-0 transform transition-transform duration-300"
-        style={{
-          transform: `translateY(${contentHeight}px)`,
-          height: `${contentHeight}px`,
-        }}
+        className="absolute inset-x-0 bottom-0 transform transition-all duration-300 h-40 translate-y-40"
+        // style={{
+        //   height: `${contentHeight}px`,
+        //   transform: `translateY(${contentHeight}px)`,
+        // }}
       >
         <div
           ref={contentRef}
-          className="absolute bottom-0 left-0 right-0 transform p-4 transition-transform duration-300 group-hover/bento:translate-y-[-100%]"
+          className={cn(
+            'absolute inset-0 p-4 rounded-lg transition-transform duration-300 group-hover/bento:translate-y-[-100%]',
+            theme === 'dark'
+              ? 'bg-black bg-opacity-50'
+              : 'bg-white bg-opacity-80'
+          )}
         >
           <div className="pb-6">
             {icon}
@@ -106,6 +105,7 @@ const AceGridCard: React.FC<CarouselItem> = ({
     </div>
   )
 }
+
 const VerticalCarousel: React.FC = () => {
   const carouselItems: CarouselItem[] = [
     {

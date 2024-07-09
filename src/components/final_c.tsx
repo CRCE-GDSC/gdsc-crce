@@ -7,15 +7,22 @@ const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
-  const items = ['', '', '', '', '']
+  const items = ['', '', '', '', '',
+    // '','','','',
+  ]
 
   const getImageUrl = (index: number) => {
     const images = [
-      '/mathday.jpeg',
-      '/ideation.jpg',
-      '/postman_event_poster.webp',
-      '/HackOver3.0.jpg',
-      '/Bit-N-Build.jpg',
+      '/event_assests/event3.jpeg',//soham
+      '/event_assests/event2.jpeg',//aston n akshat
+      '/event_assests/event1.jpeg',//solution soham
+      '/event_assests/mathday.jpeg',
+      '/event_assests/ideation.jpg',
+      '/event_assests/postman_event_poster.webp',
+      '/event_assests/HackOver3.0.jpg',
+      '/event_assests/Bit-N-Build.jpg',
+      '/event_assests/GDSC_Future-Forge.jpg',
+      
     ]
     return images[index % images.length]
   }
@@ -52,7 +59,7 @@ const Carousel: React.FC = () => {
       case 1:
         return {
           ...baseStyle,
-          filter: 'blur(1px) brightness(70%)',
+          filter: 'blur(1px) brightness(90%)',
           transform: isHovered
             ? `translateX(${pos * 40}%) scale(0.95)`
             : `translateX(${pos * 40}%) scale(0.85)`,
@@ -62,7 +69,7 @@ const Carousel: React.FC = () => {
       case 2:
         return {
           ...baseStyle,
-          filter: 'blur(2px) brightness(50%)',
+          filter: 'blur(1px) brightness(80%)',
           transform: isHovered
             ? `translateX(${pos * 35}%) scale(0.8)`
             : `translateX(${pos * 35}%) scale(0.7)`,
@@ -75,7 +82,7 @@ const Carousel: React.FC = () => {
 
   return (
     <div className="flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-white text-gray-900 transition-colors duration-300 dark:bg-black dark:text-white">
-      <h1 className=" text-center">
+      <h1 className="text-center">
         <Title>Our Events</Title>
       </h1>
       <div className="relative flex w-full flex-row items-center justify-center">
@@ -90,7 +97,7 @@ const Carousel: React.FC = () => {
           <Image src="/gdsc-fl.png" alt="Previous" width={50} height={50} />
         </button>
         <div className="w-full">
-          <div className="flex h-screen mb-10 w-full items-center justify-center font-sans">
+          <div className="mb-10 flex h-screen w-full items-center justify-center font-sans">
             <ul className="perspective-300 relative m-0 flex h-full w-full list-none justify-center p-0">
               {items.map((item, index) => (
                 <li
@@ -106,6 +113,11 @@ const Carousel: React.FC = () => {
                     setHoveredIndex(index)
                   }
                   onMouseLeave={() => setHoveredIndex(null)}
+                  onClick={() =>
+                    window.open(
+                      'https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai-india/'
+                    )
+                  }
                 >
                   {item}
                 </li>

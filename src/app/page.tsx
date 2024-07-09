@@ -43,8 +43,8 @@ export default async function Home() {
         <CanvasRevealEffectDemo />
         <WhatWeDo />
 
-        {/* {typeof window !== 'undefined' && window.innerWidth <= 768 ? <CarouselMobile /> : <Carousel />} */}
-        <VerticalCarousel />
+        {typeof window !== 'undefined' && window.innerWidth <= 768 ?  <VerticalCarousel /> : <Carousel />}
+       
       </main>
     </div>
   )
