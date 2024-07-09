@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Theme from 'daisyui'
 
 interface Point {
   id: number
@@ -12,11 +13,11 @@ interface Point {
 const InteractiveCircle: React.FC = () => {
   const [points] = useState<Point[]>([
     { id: 1, text: 'Cloud Computing', image: '/Cloud Avatar.gif' },
-    { id: 2, text: 'App Development', image: '/app dev.gif' },
+    { id: 2, text: 'App Development', image: '/mobiledev.gif' },
     { id: 3, text: 'Web Development', image: '/web dev.gif' },
     { id: 4, text: 'Machine Learning', image: '/machine learning.gif' },
     { id: 5, text: 'Cyber Security', image: '/cyber-security.gif' },
-    { id: 6, text: 'Blockchain', image: '/blockchain.webp' },
+    { id: 6, text: 'Blockchain', image: '/blockchain.gif' },
   ])
   const [activePoint, setActivePoint] = useState<number>(0)
   const [isMobile, setIsMobile] = useState<boolean>(false)
@@ -69,7 +70,7 @@ const InteractiveCircle: React.FC = () => {
   }
 
   return (
-    <div className={`${isMobile ? 'min-h-screen mb-0 pb-0   ' : ''}`}>
+    <div className={`${isMobile ? 'mb-0 min-h-full pb-0' : ''}`}>
       <div
         ref={containerRef}
         className="relative mb-0 pb-0"
@@ -135,8 +136,8 @@ const InteractiveCircle: React.FC = () => {
               )
             })}
             {isMobile && (
-              <div className="flex w-fit items-center justify-center mb-0 pb-0">
-                <div className="relative ml-32 h-40 w-40 mb-0 pb-0 ">
+              <div className="mb-0 flex w-fit items-center justify-center pb-0">
+                <div className="relative mb-0 ml-32 h-40 w-40 pb-0">
                   <Image
                     src={points[activePoint].image}
                     alt={points[activePoint].text}
