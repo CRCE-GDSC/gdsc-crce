@@ -3,7 +3,6 @@ import React from 'react'
 import { CanvasRevealEffectDemo } from '@/components/aboutuss'
 import Spline from '@splinetool/react-spline'
 import WhatWeDo from '@/components/WhatWeDo'
-import { SparklesCore } from '../components/sparkles'
 import Carousel from '@/components/final_c'
 import VerticalCarousel from '@/components/final_c_mobile'
 import ResponsiveCarousel from '@/components/Events'
@@ -17,24 +16,6 @@ export default async function Home() {
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
     <div className="flex min-h-screen w-fit flex-col items-center justify-center">
-      <SparklesCore
-        id="tsparticlesfullpaged-dark"
-        background="transparent"
-        minSize={0.6}
-        maxSize={0.9}
-        particleDensity={10}
-        className="fixed inset-0 -z-10 hidden h-full w-full bg-black dark:block"
-        particleColor="#FFFFFF"
-      />
-      <SparklesCore
-        id="tsparticlesfullpaged-light"
-        background="transparent"
-        minSize={0.6}
-        maxSize={0.8}
-        particleDensity={10}
-        className="fixed inset-0 h-full w-full dark:hidden"
-        particleColor="#000000"
-      />
       <div className="h-screen w-full items-center justify-center">
         <Spline
           scene="/assets/gdsc.splinecode"

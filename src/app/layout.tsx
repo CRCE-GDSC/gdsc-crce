@@ -4,8 +4,9 @@ import './globals.css'
 import Loading from './loading'
 import Footerr from '@/components/footerr'
 import Navbar from '@/components/Navbar'
-import { ThemeProvider } from "@/components/ThemeProvider"
+import { ThemeProvider } from '@/components/ThemeProvider'
 import { Suspense } from 'react'
+import { SparklesCore } from '../components/sparkles'
 const inter = Inter({ subsets: ['latin'] })
 // import Navbar from '@components/Navbar'
 // import Sidebar from '@components/sidebar/Sidebar'
@@ -30,15 +31,33 @@ export default function RootLayout({
       </head>
       <Suspense fallback={<Loading />}>
         <body className={inter.className}>
-        <ThemeProvider
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-          <Navbar />
-          {children}
-          <Footerr />
+            <SparklesCore
+              id="tsparticlesfullpaged-dark"
+              background="transparent"
+              minSize={0.6}
+              maxSize={0.9}
+              particleDensity={10}
+              className="fixed inset-0 -z-10 hidden h-full w-full bg-black dark:block"
+              particleColor="#FFFFFF"
+            />
+            <SparklesCore
+              id="tsparticlesfullpaged-light"
+              background="transparent"
+              minSize={0.6}
+              maxSize={0.8}
+              particleDensity={10}
+              className="fixed inset-0 h-full w-full bg-white dark:hidden"
+              particleColor="#000000"
+            />
+            <Navbar />
+            {children}
+            <Footerr />
           </ThemeProvider>
         </body>
       </Suspense>
