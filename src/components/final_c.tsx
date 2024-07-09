@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Title from './Title'
-
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)

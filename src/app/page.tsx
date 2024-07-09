@@ -4,6 +4,7 @@ import { CanvasRevealEffectDemo } from '@/components/aboutuss'
 import Spline from '@splinetool/react-spline'
 import WhatWeDo from '@/components/WhatWeDo'
 import Carousel from '@/components/final_c'
+import CarouselMobile from '@/components/final_c_mobile'
 import Hero from '@/components/Hero'
 import Title from '@/components/Title'
 
@@ -23,7 +24,9 @@ export default async function Home() {
         {/* <Hero /> */}
         <CanvasRevealEffectDemo />
         <WhatWeDo />
-        <Carousel />
+
+        {/* {typeof window !== 'undefined' && window.innerWidth <= 768 ? <CarouselMobile /> : <Carousel />} */}
+        <CarouselMobile />
       </main>
     </div>
   )
