@@ -7,9 +7,16 @@ import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { Suspense } from 'react'
 import { SparklesCore } from '../components/sparkles'
+import { Roboto } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 // import Navbar from '@components/Navbar'
 // import Sidebar from '@components/sidebar/Sidebar'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400',
+})
 
 export const metadata: Metadata = {
   title: 'GDSC CRCE',
@@ -30,7 +37,7 @@ export default function RootLayout({
         ></meta>
       </head>
       <Suspense fallback={<Loading />}>
-        <body className={inter.className}>
+        <body className={roboto.className}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
