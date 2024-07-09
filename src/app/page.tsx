@@ -8,7 +8,7 @@ import VerticalCarousel from '@/components/final_c_mobile'
 import ResponsiveCarousel from '@/components/Events'
 import Hero from '@/components/Hero'
 import Title from '@/components/Title'
-import { AnimatedTooltipPreview } from '@/components/team'
+import { HomeTeam } from '@/components/home-team'
 
 export default async function Home() {
   const delay = async (ms: number) =>
@@ -25,7 +25,7 @@ export default async function Home() {
       <main className="flex-grow">
         <CanvasRevealEffectDemo />
         <WhatWeDo />
-        <AnimatedTooltipPreview />
+        <HomeTeam />
         <ResponsiveCarousel />
       </main>
     </div>
