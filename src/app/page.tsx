@@ -3,14 +3,12 @@ import React from 'react'
 import { CanvasRevealEffectDemo } from '@/components/aboutuss'
 import Spline from '@splinetool/react-spline'
 import WhatWeDo from '@/components/WhatWeDo'
-import {SparklesCore}  from '../components/sparkles'
+import { SparklesCore } from '../components/sparkles'
 import Carousel from '@/components/final_c'
 import VerticalCarousel from '@/components/final_c_mobile'
 import ResponsiveCarousel from '@/components/Events'
 import Hero from '@/components/Hero'
 import Title from '@/components/Title'
-
-
 
 export default async function Home() {
   const delay = async (ms: number) =>
@@ -24,7 +22,7 @@ export default async function Home() {
         minSize={0.6}
         maxSize={0.9}
         particleDensity={10}
-        className="fixed inset-0 hidden h-full w-full dark:block -z-10 bg-black"
+        className="fixed inset-0 -z-10 hidden h-full w-full bg-black dark:block"
         particleColor="#FFFFFF"
       />
       <SparklesCore
@@ -45,9 +43,8 @@ export default async function Home() {
       <main className="flex-grow">
         <CanvasRevealEffectDemo />
         <WhatWeDo />
-        <ResponsiveCarousel/>
-       
+        <ResponsiveCarousel />
       </main>
     </div>
-  );
+  )
 }

@@ -3,28 +3,7 @@ import Image from 'next/image'
 const Footerr = () => {
   return (
     <div className="mt-20">
-      <div className="flex-grow bg-gray-200 px-8 pt-14 dark:bg-inherit /30">
-        <div className="flex items-center justify-start gap-10">
-          <div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/assets/gdsc_logo.png"
-                height={50}
-                width={50}
-                alt="gdsc_logo"
-                className="items-center justify-center"
-              ></Image>
-            </div>
-            <div className="">
-              <h2 className="mt-2 flex items-center justify-center text-3xl dark:text-white">
-                Google Developer Student Clubs
-              </h2>
-              <h4 className="mb-1 flex items-center justify-center text-lg dark:text-white">
-                Fr. Conceicao Rodrigues College of Engineering
-              </h4>
-            </div>
-          </div>
-        </div>
+      <div className="/30 flex-grow bg-gray-200 px-8 pt-14 dark:bg-inherit">
         <div className="mt- grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           <div className="lg:mt-8">
             <div className="pb-3 text-lg font-semibold uppercase dark:text-white">
@@ -124,6 +103,26 @@ const Footerr = () => {
               referrerPolicy="no-referrer-when-downgrade"
               className="mb-10 flex items-start justify-start rounded-3xl"
             ></iframe>
+          </div>
+        </div>
+
+        <div className="flex flex-row items-center justify-start gap-10 py-6">
+          <div className="flex items-center justify-start">
+            <Image
+              src="/assets/gdsc_logo.png"
+              height={80}
+              width={80}
+              alt="gdsc_logo"
+              className="items-center justify-center"
+            ></Image>
+          </div>
+          <div className="">
+            <h2 className="mt-2 flex items-center justify-center text-xl font-medium dark:text-white md:text-2xl lg:text-3xl">
+              Google Developer Student Clubs
+            </h2>
+            <h4 className="mb-1 flex items-center justify-center text-lg dark:text-white">
+              Fr. Conceicao Rodrigues College of Engineering
+            </h4>
           </div>
         </div>
       </div>
