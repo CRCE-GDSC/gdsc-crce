@@ -21,6 +21,8 @@ export default {
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
         gradient: 'gradient 8s linear infinite',
+        scrollMoveLeft: 'scrollMoveLeft 1s linear',
+        scrollMoveRight: 'scrollMoveRight 1s linear',
       },
       keyframes: {
         meteor: {
@@ -30,6 +32,14 @@ export default {
             transform: 'rotate(215deg) translateX(-500px)',
             opacity: '0',
           },
+        },
+        scrollMoveLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-10px)' },
+        },
+        scrollMoveRight: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(10px)' },
         },
         marquee: {
           from: { transform: 'translateX(0)' },
@@ -54,14 +64,12 @@ export default {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
       screens: {
-        'vn': '1195px',
+        vn: '1195px',
         // => @media (min-width: 1145px) { ... }
-      }
+      },
     },
   },
-  plugins: [addVariablesForColors, daisyui,],
-  
-  
+  plugins: [addVariablesForColors, daisyui],
 } satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {
