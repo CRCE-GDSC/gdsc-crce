@@ -1,28 +1,34 @@
-'use client'
-
-import { useEffect } from 'react'
+import React from 'react';
+import { useRouter } from 'next/router';
 
 const AllEventsPage: React.FC = () => {
-  useEffect(() => {
-    const checkScreenSize = () => {
-      if (typeof window !== 'undefined') {
-        if (window.innerWidth <= 768) {
-          window.location.href = '/allevents/events/mobile'
-        } else {
-          window.location.href = '/allevents/events/desktop'
-        }
-      }
-    }
+  const router = useRouter();
+  const [isMobile, setIsMobile] = React.useState(false);
 
-    checkScreenSize()
-    window.addEventListener('resize', checkScreenSize)
+  const checkScreenSize = () => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth <= 768);
+    }
+  };
+
+  React.useEffect(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
 
     return () => {
-      window.removeEventListener('resize', checkScreenSize)
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
+  React.useEffect(() => {
+    if (isMobile) {
+      return </>
+    } else {
+      router.push('/allevents/[slug]/desktop');
     }
-  }, [])
+  }, [isMobile, router]);
 
-  return null // This component doesn't render anything
-}
+  return null; // This component doesn't render anything
+};
 
-export default AllEventsPage
+export default AllEventsPage;
