@@ -110,19 +110,19 @@ const MobileView: React.FC = () => {
   const events: Event[] = [
     {
       id: 1,
-      imageUrl: 'https://via.placeholder.com/400x800',
+      imageUrl: '/event_assests/event1.jpeg',
       name: 'Summer Festival',
       date: 'July 15, 2024',
     },
     {
       id: 2,
-      imageUrl: 'https://via.placeholder.com/400x800',
+      imageUrl: '/event_assests/event2.jpeg',
       name: 'Tech Conference',
       date: 'August 5, 2024',
     },
     {
       id: 3,
-      imageUrl: 'https://via.placeholder.com/400x800',
+      imageUrl: '/event_assests/event3.jpeg',
       name: 'Art Exhibition',
       date: 'September 10, 2024',
     },
