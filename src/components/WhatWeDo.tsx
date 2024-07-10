@@ -4,7 +4,7 @@ import Title from './Title'
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-inherit mb-0 pb-0" id="WwD">
+    <section className="mb-0 bg-inherit pb-0" id="WwD">
       <div>
         <Title>WHAT WE DO</Title>
         <div className="visible mx-[20%] w-[60%] vn:invisible">
@@ -18,8 +18,8 @@ const WhatWeDo = () => {
           </p>
         </div>
 
-        <div className="md:flex pb-0 mb-0 max-h-[5800px]">
-          <div className="min-h-full pl-20 md:pl-72 vn:pl-32 pb-0 mb-0">
+        <div className="mb-0 max-h-[5800px] pb-0 md:flex">
+          <div className="mb-0 min-h-full pb-0 pl-20 md:pl-72 vn:pl-32">
             <InteractiveCircle />
           </div>
           <div className="invisible sticky top-0 mx-20 h-screen w-[40%] pt-[43vh] vn:visible">

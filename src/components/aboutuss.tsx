@@ -8,8 +8,8 @@ import Title from './Title'
 export function CanvasRevealEffectDemo() {
   return (
     <>
-    <Title>ABOUT US</Title>
-      <div className="mx-auto flex w-full select-none flex-col items-center justify-center gap-4 bg-white px-8 py-20 lg:flex-row dark:bg-inherit">
+      <Title>ABOUT US</Title>
+      <div className="mx-auto flex w-full select-none flex-col items-center justify-center gap-4 bg-white px-8 py-20 dark:bg-inherit lg:flex-row">
         <Card
           title="The GDSC program is a grassroots channel through which Google
                 provides development, mobile &amp; web development skills for
@@ -99,7 +99,7 @@ const Card = ({
         <div className="absolute inset-0 hidden dark:block">{children}</div>
       )}
 
-      <div className="relative z-20">
+      <div className="relative z-20" id="about">
         <div className="mt-15 mx-auto flex w-full items-center justify-center text-center">
           {icon}
         </div>

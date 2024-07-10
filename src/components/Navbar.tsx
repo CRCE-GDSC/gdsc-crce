@@ -7,11 +7,11 @@ import { useTheme } from 'next-themes'
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  { name: 'What We Do', href: '/services' },
-  { name: 'Events', href: '/portfolio' },
-  { name: 'Our Team', href: '/blog' },
-  { name: 'Contact Us', href: '/contact' },
+  { name: 'About Us', href: '#about' },
+  { name: 'What We Do', href: '#services' },
+  { name: 'Events', href: '#events' },
+  { name: 'Our Team', href: '#team' },
+  { name: 'Contact Us', href: '#contact' },
 ]
 
 const Navbar: React.FC = () => {
@@ -69,17 +69,17 @@ const Navbar: React.FC = () => {
         <div
           className={`mx-4 my-2 rounded-full border-2 ${isDarkMode ? 'border-gray-700 bg-black' : 'border-gray-200 bg-white'} shadow-vn transition-all duration-300 ease-in-out hover:shadow-xl`}
         >
-          <div className="vn:px-8 mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 vn:px-8">
             <div className="flex h-20 items-center justify-between">
               {/* Logo */}
-              <div className="vn:flex-1 flex flex-shrink items-center">
-                <Link href="/" className="vn:justify-start flex justify-center">
+              <div className="flex flex-shrink items-center vn:flex-1">
+                <Link href="/" className="flex justify-center vn:justify-start">
                   <Image
                     src="/gdsc_logo.png"
                     alt="Google Developer Student Clubs Logo"
                     width={10000}
                     height={10000}
-                    className="max-h-[50%] w-full min-w-[180px] max-w-[450px] hidden dark:block"
+                    className="hidden max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:block"
                     quality={100}
                   />
                   <Image
@@ -87,14 +87,14 @@ const Navbar: React.FC = () => {
                     alt="Google Developer Student Clubs Logo"
                     width={10000}
                     height={10000}
-                    className=" max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:hidden "
+                    className="max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:hidden"
                     quality={100}
                   />
                 </Link>
               </div>
 
               {/* Desktop navigation */}
-              <div className="vn:block hidden">
+              <div className="hidden vn:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navItems.map((item) => (
                     <Link
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
               </div>
 
               {/* Dark mode toggle for desktop */}
-              <div className="vn:block vn:pl-4 hidden">
+              <div className="hidden vn:block vn:pl-4">
                 <button onClick={toggleDarkMode} className="p-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const Navbar: React.FC = () => {
               </div>
 
               {/* Mobile menu and dark mode toggle */}
-              <div className="vn:hidden flex items-center">
+              <div className="flex items-center vn:hidden">
                 {/* Dark mode toggle for mobile */}
                 <button onClick={toggleDarkMode} className="p-2">
                   <svg

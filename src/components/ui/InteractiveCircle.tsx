@@ -75,6 +75,7 @@ const InteractiveCircle: React.FC = () => {
         ref={containerRef}
         className="relative mb-0 pb-0"
         style={{ height: `${points.length * 100}vh` }}
+        id="services"
       >
         <div
           ref={circleRef}

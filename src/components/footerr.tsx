@@ -73,7 +73,10 @@ const Footerr = () => {
                   </svg>
                 </a>
               </div>
-              <div className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40 hover:bg-blue-300">
+              <div
+                id="contact"
+                className="mr-10 flex h-12 w-12 items-center justify-center rounded-full bg-white bg-opacity-40 hover:bg-blue-300"
+              >
                 <a
                   className=""
                   href="https://twitter.com/gdsc_crce"
@@ -112,14 +115,14 @@ const Footerr = () => {
             height={10000}
             width={10000}
             alt="gdsc_logo"
-            className="hidden dark:block min-w-[180px] max-w-[450px]"
+            className="hidden min-w-[180px] max-w-[450px] dark:block"
           />
           <Image
             src="/gdsc_logo_black.png"
             height={10000}
             width={10000}
             alt="gdsc_logo"
-            className="dark:hidden min-w-[180px] max-w-[450px]"
+            className="min-w-[180px] max-w-[450px] dark:hidden"
           />
         </div>
       </div>

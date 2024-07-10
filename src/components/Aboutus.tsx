@@ -7,10 +7,7 @@ const Aboutus = () => {
   return (
     <div className="z-50 bg-white">
       <div className="z-50 bg-white pb-20">
-        <div
-          className="container mx-auto mt-8 scroll-mt-96 p-4 max-sm:mt-0 xl:py-16"
-          id="about"
-        >
+        <div className="container mx-auto mt-8 scroll-mt-96 p-4 max-sm:mt-0 xl:py-16">
           <div className="flex items-center justify-center">
             <Image
               src="/assets/gdsc_logo_left.png"
@@ -78,7 +75,7 @@ const Aboutus = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="font-poppins mb-2 text-xl font-bold">
+              <div className="font-poppins mb-2 text-xl font-bold" id="about">
                 <h4 className="mx-4 text-gray-500 hover:text-white">
                   Why GDSC?
                 </h4>
