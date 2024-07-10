@@ -22,7 +22,7 @@ const AllEventsPage: React.FC = () => {
 
   React.useEffect(() => {
     if (isMobile) {
-      return </>
+      router.push('/allevents/[slug]/mobile');
     } else {
       router.push('/allevents/[slug]/desktop');
     }
