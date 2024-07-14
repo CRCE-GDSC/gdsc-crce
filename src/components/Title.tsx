@@ -77,3 +77,4 @@ const Title: React.FC<AnimatedTitleProps> = ({ children }) => {
 }
 
 export default Title
+

@@ -1,13 +1,10 @@
 'use server'
 import React from 'react'
-import { CanvasRevealEffectDemo } from '@/components/aboutuss'
-import Spline from '@splinetool/react-spline'
-import WhatWeDo from '@/components/WhatWeDo'
+
 import Carousel from '@/components/final_c'
 import VerticalCarousel from '@/components/final_c_mobile'
 import ResponsiveCarousel from '@/components/Events'
-import Hero from '@/components/Hero'
-import Title from '@/components/Title'
+
 //import { HomeTeam } from '@/components/home-team'
 
 export default async function Home() {
@@ -17,15 +14,8 @@ export default async function Home() {
   return (
     <div className="flex min-h-screen w-fit flex-col items-center justify-center">
       <div className="h-screen w-full items-center justify-center">
-        <Spline
-          scene="https://prod.spline.design/Lx4jFWigayr7EvOc/scene.splinecode"
-          className="min-h-screen w-full"
-        />
       </div>
       <main className="flex-grow">
-        <CanvasRevealEffectDemo />
-        <WhatWeDo />
-        {/* <HomeTeam /> */}
         <ResponsiveCarousel />
       </main>
     </div>
