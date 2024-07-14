@@ -6,7 +6,6 @@ import Footerr from '@/components/footerr'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { Suspense } from 'react'
-import { SparklesCore } from '../components/sparkles'
 import { Roboto } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 // import Navbar from '@components/Navbar'
@@ -44,24 +43,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <SparklesCore
-              id="tsparticlesfullpaged-dark"
-              background="transparent"
-              minSize={0.6}
-              maxSize={0.9}
-              particleDensity={10}
-              className="fixed inset-0 -z-10 hidden h-full w-full bg-black dark:block"
-              particleColor="#FFFFFF"
-            />
-            <SparklesCore
-              id="tsparticlesfullpaged-light"
-              background="transparent"
-              minSize={0.6}
-              maxSize={0.8}
-              particleDensity={10}
-              className="fixed inset-0 -z-10 h-full w-full bg-white dark:hidden"
-              particleColor="#000000"
-            />
             <Navbar />
             {children}
             <Footerr />

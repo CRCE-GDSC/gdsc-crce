@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Title from './Title'
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -88,7 +87,6 @@ const Carousel: React.FC = () => {
 
   return (
     <>
-      <Title>Our Events</Title>
       <div className="light:bg-white flex h-auto w-full flex-col items-center justify-center overflow-hidden text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white">
         <h1 className="bg-transparent text-center"></h1>
         <div className="relative flex w-full flex-row items-center justify-center">

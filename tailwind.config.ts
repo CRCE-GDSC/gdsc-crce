@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
-import daisyui from 'daisyui'
 
 export default {
   content: [
@@ -54,14 +53,12 @@ export default {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
       screens: {
-        'vn': '1195px',
+        vn: '1195px',
         // => @media (min-width: 1145px) { ... }
-      }
+      },
     },
   },
-  plugins: [addVariablesForColors, daisyui,],
-  
-  
+  plugins: [addVariablesForColors],
 } satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {

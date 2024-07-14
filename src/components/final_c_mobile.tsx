@@ -4,7 +4,6 @@ import { cn } from '../lib/utils'
 import { Button } from '@radix-ui/themes'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 import { useTheme } from 'next-themes'
-import Title from './Title'
 
 interface CarouselItem {
   className?: string
@@ -18,6 +17,7 @@ interface CarouselItem {
 
 const AceGridCard: React.FC<CarouselItem> = ({
   className,
+
   title,
   description,
   image,
@@ -160,7 +160,6 @@ const VerticalCarousel: React.FC = () => {
 
   return (
     <>
-      <Title>Our Events</Title>
       <div className="flex min-h-screen items-center justify-center bg-inherit px-4 py-8">
         <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
           {carouselItems.map((item, index) => (
