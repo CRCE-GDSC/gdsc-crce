@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useTheme } from 'next-themes'
+import { Sun, Moon } from 'lucide-react'
+import { ThemeToggle } from './ToogleButton'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -19,8 +20,7 @@ const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
-  const [isDarkMode, setIsDarkMode] = useState(true)
-  const { setTheme } = useTheme()
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,15 +45,6 @@ const Navbar: React.FC = () => {
     }
   }, [isOpen])
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-    if (isDarkMode) {
-      setTheme('light')
-    } else {
-      setTheme('dark')
-    }
-    // Add logic here to actually change the theme
-  }
 
   return (
     <>
@@ -67,7 +58,7 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div
-          className={`mx-4 my-2 rounded-full border-2 ${isDarkMode ? 'border-gray-700 bg-black' : 'border-gray-200 bg-white'} shadow-vn transition-all duration-300 ease-in-out hover:shadow-xl`}
+          className={`shadow-vn mx-4 my-2 rounded-full border-2 border-gray-200 bg-white transition-all duration-300 ease-in-out hover:shadow-xl dark:border-gray-700 dark:bg-black`}
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 vn:px-8">
             <div className="flex h-20 items-center justify-between">
@@ -100,9 +91,7 @@ const Navbar: React.FC = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`text-vn rounded-md px-3 py-2 text-center font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white ${
-                        isDarkMode ? 'text-white' : 'text-black'
-                      }`}
+                      className={`text-vn rounded-md px-3 py-2 text-center font-medium text-black transition-colors duration-200 hover:bg-gray-700 hover:text-white dark:text-white`}
                     >
                       {item.name}
                     </Link>
@@ -112,70 +101,21 @@ const Navbar: React.FC = () => {
 
               {/* Dark mode toggle for desktop */}
               <div className="hidden vn:block vn:pl-4">
-                <button onClick={toggleDarkMode} className="p-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
-                  >
-                    {isDarkMode ? (
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                      />
-                    ) : (
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                      />
-                    )}
-                  </svg>
-                </button>
+                <ThemeToggle />
               </div>
 
               {/* Mobile menu and dark mode toggle */}
               <div className="flex items-center vn:hidden">
                 {/* Dark mode toggle for mobile */}
-                <button onClick={toggleDarkMode} className="p-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-black'}`}
-                  >
-                    {isDarkMode ? (
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                      />
-                    ) : (
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                      />
-                    )}
-                  </svg>
-                </button>
+                <ThemeToggle />
 
                 {/* Mobile menu button */}
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className={`inline-flex items-center justify-center rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ${
-                    isDarkMode
-                      ? 'text-white hover:bg-gray-700'
-                      : 'text-black hover:bg-gray-200'
-                  }`}
+                  className={`inline-flex items-center justify-center rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white 
+                    dark:text-white dark:hover:bg-gray-700
+                      text-black hover:bg-gray-200
+                  `}
                 >
                   <span className="sr-only">Open main menu</span>
                   {isOpen ? (
@@ -233,9 +173,8 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div
-          className={`mx-4 overflow-hidden rounded-3xl border-2 ${
-            isDarkMode ? 'border-gray-700 bg-black' : 'border-gray-200 bg-white'
-          } shadow-vn transition-all duration-300 ease-in-out ${
+          className={`mx-4 overflow-hidden rounded-3xl border-2 dark:border-gray-700 dark:bg-black border-gray-200 bg-white
+           shadow-vn transition-all duration-300 ease-in-out ${
             isOpen ? 'max-h-[calc(100vh-7rem)]' : 'max-h-0'
           }`}
           onClick={(e) => e.stopPropagation()}
@@ -247,9 +186,9 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`text-vn rounded-md px-3 py-2 font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white ${
-                      isDarkMode ? 'text-white' : 'text-black'
-                    }`}
+                    className={`text-vn rounded-md px-3 py-2 font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white 
+                      dark:text-white text-black
+                    `}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
