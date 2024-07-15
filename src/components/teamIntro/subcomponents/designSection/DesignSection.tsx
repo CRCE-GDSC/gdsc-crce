@@ -1,5 +1,6 @@
+'use client'
 import React, { useState } from 'react'
-import Image from 'next/image'
+import { FigmaWindow, GdscTeam } from '@/components/teamIntro/svg'
 import { DesignSectionContainer } from './DesignSection.styled'
 import {
   DndContext,
@@ -59,7 +60,7 @@ const DesignSection: React.FC = () => {
 
   return (
     <DesignSectionContainer>
-      <Image alt="img" src="/images/figma_window.svg" />
+      <FigmaWindow/>
       <DndContext
         sensors={sensors}
         onDragEnd={({ delta, active }) => {
@@ -106,7 +107,7 @@ const DesignSection: React.FC = () => {
             className="draggable logo"
             id="logo"
           >
-            {/* <GDSCLogo /> */}
+            <GdscTeam />
           </Draggable>
         </div>
       </DndContext>

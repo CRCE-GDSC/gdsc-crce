@@ -28,17 +28,7 @@ const GlobalStyles = createGlobalStyle`
       background-color: #4f4f4f;
       border-radius: 14px;
     }
-    
-    html {
-        scroll-behavior: smooth;
-        color-scheme: light dark;
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-text-size-adjust: 100%;
-        cursor: url("/cursors/cursor-svg.svg") 10 0, auto;
-    }
+
 
 
     a, button{

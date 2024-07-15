@@ -14,7 +14,7 @@ export const DesignSectionContainer = styled.div`
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 100%;
     height: 70%;
     overflow: hidden;
     z-index: 2;
@@ -25,7 +25,7 @@ export const DesignSectionContainer = styled.div`
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 100%;
     height: 67%;
     overflow: hidden;
     z-index: 2;
@@ -47,14 +47,14 @@ export const DesignSectionContainer = styled.div`
     height: 120px;
     border-radius: 50%;
     filter: blur(50px);
-    background-color: ${({ theme }) => theme.colors.brandBlue};
+    background-color: #000000 ;
   }
   .blob2 {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     filter: blur(50px);
-    background-color: ${({ theme }) => theme.colors.brandGreen};
+    background-color: #000000;
   }
   .logo {
     width: 260px;

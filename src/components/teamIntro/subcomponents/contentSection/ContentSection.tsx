@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import {MobileDocs, GoogleDocs} from "@/components/teamIntro/svg"
 import { ContentSectionContainer } from './ContentSection.styled';
 import { TypingEffect } from '@/components/typography/typingEffect/TypingEffect';
 import { devices } from 'constants/theme';
@@ -26,9 +26,9 @@ const ContentSection: React.FC = () => {
   return (
     <ContentSectionContainer>
       {isMobile ? (
-        <Image alt="google doc mobile" src="/images/mobile_docs.svg" />
+        <MobileDocs />
       ) : (
-        <Image alt="google doc" src="/images/googledocs_window.svg" />
+        <GoogleDocs />
       )}
       <div className="docs-text">
         <TypingEffect interKeyStrokeDurationInMs={20} showCursor={true}>

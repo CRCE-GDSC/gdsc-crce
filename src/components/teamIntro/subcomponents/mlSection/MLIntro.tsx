@@ -7,7 +7,7 @@ import {
   PhoneContainer,
   ScreenContent,
 } from './MLIntro.styled'
-import Image from 'next/image'
+import {Phone} from '@/components/teamIntro/svg'
 import { TypingEffect } from '@/components/typography/typingEffect/TypingEffect'
 import TensorFlowLogo from '../tensorflowlogo/TensorFlowLogo'
 
@@ -22,7 +22,7 @@ const MLIntro: React.FC = () => {
   return (
     <MLIntroContainer>
       <PhoneContainer>
-        <Image alt="phone img" src="/images/phone.svg" />
+        <Phone />
         <ScreenContent>
           <LogosWrapper>
             <TensorFlowLogo />
