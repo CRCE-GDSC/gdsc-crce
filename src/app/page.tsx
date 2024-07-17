@@ -16,13 +16,13 @@ export default async function Home() {
     <div className="min-w-screen flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black">
       <Hero />
       <ResponsiveCarousel />
-      <TeamIntro />
+      <WhatWeDo />
 
       <DotPattern
         className={cn(
           '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] bg-inherit dark:bg-black'
         )}
-      /> */}
+      /> 
     </div>
   )
 }

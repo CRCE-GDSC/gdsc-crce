@@ -1,5 +1,6 @@
 import React from 'react'
 import OrbitingCircles from './ui/orbittinghero'
+import Image from 'next/image'
 
 const Hero: React.FC = () => {
 return (
@@ -25,50 +26,8 @@ return (
         </button>
       </div>
       <div className="flex justify-center md:w-1/2">
-        {' '}
         {/* Added flex and justify-center classes */}
-        <div className="bg-background relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl">
-          <span className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
-            GDSC
-          </span>
-
-          {/* Inner Circles */}
-          <OrbitingCircles
-            className="size-[30px] border-none bg-transparent"
-            duration={20}
-            delay={20}
-            radius={80}
-          >
-            <Icons.whatsapp />
-          </OrbitingCircles>
-          <OrbitingCircles
-            className="size-[30px] border-none bg-transparent"
-            duration={20}
-            delay={10}
-            radius={80}
-          >
-            <Icons.notion />
-          </OrbitingCircles>
-
-          {/* Outer Circles (reverse) */}
-          <OrbitingCircles
-            className="size-[50px] border-none bg-transparent"
-            radius={190}
-            duration={20}
-            reverse
-          >
-            <Icons.googleDrive />
-          </OrbitingCircles>
-          <OrbitingCircles
-            className="size-[50px] border-none bg-transparent"
-            radius={190}
-            duration={20}
-            delay={20}
-            reverse
-          >
-            <Icons.gitHub />
-          </OrbitingCircles>
-        </div>
+       <Image alt='hero' src="/GDSC_hero.gif" height={100000} width={100000} className='max-w-[600px]'/>
       </div>
     </div>
   </div>
