@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
+import daisyui from 'daisyui'
 
 export default {
   content: [
@@ -22,8 +23,19 @@ export default {
         gradient: 'gradient 8s linear infinite',
         scrollMoveLeft: 'scrollMoveLeft 1s linear',
         scrollMoveRight: 'scrollMoveRight 1s linear',
+        orbit: 'orbit calc(var(--duration)*1s) linear infinite',
       },
       keyframes: {
+        orbit: {
+          '0%': {
+            transform:
+              'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)',
+          },
+          '100%': {
+            transform:
+              'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)',
+          },
+        },
         meteor: {
           '0%': { transform: 'rotate(215deg) translateX(0)', opacity: '1' },
           '70%': { opacity: '1' },
@@ -68,7 +80,7 @@ export default {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, daisyui],
 } satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {
