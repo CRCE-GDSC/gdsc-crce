@@ -3,71 +3,75 @@ import OrbitingCircles from './ui/orbittinghero'
 
 const Hero: React.FC = () => {
 return (
-    <div className="flex h-screen items-center justify-center bg-inherit">
-        <div className="container mx-auto flex flex-col md:flex-row">
-            <div className="text-center md:w-1/2">
-                {' '}
-                {/* Added text-center class */}
-                <h1 className="mb-4 text-4xl font-bold">Welcome to our App</h1>
-                <p className="mb-8 text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    aliquam, libero et aliquet tincidunt, mauris nunc aliquam nunc, id
-                    tincidunt nisl urna in mauris. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Ullam libero architecto voluptates
-                    ipsum? Explicabo animi dicta aliquam voluptate odit! Excepturi id
-                    iusto quam earum? Aspernatur, eveniet! Incidunt, eum. Sint,
-                    excepturi.
-                </p>
-                <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-                    Get Started
-                </button>
-            </div>
-            <div className="md:w-1/2 flex justify-center"> {/* Added flex and justify-center classes */}
-                <div className="bg-background relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl">
-                    <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        GDSC
-                    </span>
+  <div className="flex h-screen items-center justify-center bg-inherit">
+    <div className="container mx-auto flex flex-col md:flex-row">
+      <div className="text-center md:w-1/2">
+        {' '}
+        {/* Added text-center class */}
+        <h1 className="mb-4 text-4xl font-bold">Welcome to our App</h1>
+        <p className="mb-8 text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam,
+          libero et aliquet tincidunt, mauris nunc aliquam nunc, id tincidunt
+          nisl urna in mauris. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Ullam libero architecto voluptates ipsum? Explicabo
+          animi dicta aliquam voluptate odit! Excepturi id iusto quam earum?
+          Aspernatur, eveniet! Incidunt, eum. Sint, excepturi.
+        </p>
+        <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+          Sign In
+        </button>
+        <button className="rounded bg-blue-500 px-4 ml-10 py-2 font-bold text-white hover:bg-blue-700">
+         Join Us
+        </button>
+      </div>
+      <div className="flex justify-center md:w-1/2">
+        {' '}
+        {/* Added flex and justify-center classes */}
+        <div className="bg-background relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl">
+          <span className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+            GDSC
+          </span>
 
-                    {/* Inner Circles */}
-                    <OrbitingCircles
-                        className="size-[30px] border-none bg-transparent"
-                        duration={20}
-                        delay={20}
-                        radius={80}
-                    >
-                        <Icons.whatsapp />
-                    </OrbitingCircles>
-                    <OrbitingCircles
-                        className="size-[30px] border-none bg-transparent"
-                        duration={20}
-                        delay={10}
-                        radius={80}
-                    >
-                        <Icons.notion />
-                    </OrbitingCircles>
+          {/* Inner Circles */}
+          <OrbitingCircles
+            className="size-[30px] border-none bg-transparent"
+            duration={20}
+            delay={20}
+            radius={80}
+          >
+            <Icons.whatsapp />
+          </OrbitingCircles>
+          <OrbitingCircles
+            className="size-[30px] border-none bg-transparent"
+            duration={20}
+            delay={10}
+            radius={80}
+          >
+            <Icons.notion />
+          </OrbitingCircles>
 
-                    {/* Outer Circles (reverse) */}
-                    <OrbitingCircles
-                        className="size-[50px] border-none bg-transparent"
-                        radius={190}
-                        duration={20}
-                        reverse
-                    >
-                        <Icons.googleDrive />
-                    </OrbitingCircles>
-                    <OrbitingCircles
-                        className="size-[50px] border-none bg-transparent"
-                        radius={190}
-                        duration={20}
-                        delay={20}
-                        reverse
-                    >
-                        <Icons.gitHub />
-                    </OrbitingCircles>
-                </div>
-            </div>
+          {/* Outer Circles (reverse) */}
+          <OrbitingCircles
+            className="size-[50px] border-none bg-transparent"
+            radius={190}
+            duration={20}
+            reverse
+          >
+            <Icons.googleDrive />
+          </OrbitingCircles>
+          <OrbitingCircles
+            className="size-[50px] border-none bg-transparent"
+            radius={190}
+            duration={20}
+            delay={20}
+            reverse
+          >
+            <Icons.gitHub />
+          </OrbitingCircles>
         </div>
+      </div>
     </div>
+  </div>
 )
 }
 
