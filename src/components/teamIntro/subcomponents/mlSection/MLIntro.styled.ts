@@ -19,7 +19,8 @@ export const PhoneContainer = styled.div`
   position: relative;
 
   @media screen and (${devices.lg}) {
-    width: 60%;
+    width: 80%;
+    height : 100%
   }
 `
 
@@ -29,7 +30,7 @@ export const ScreenContent = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
-  width: 50%;
+  width: 35%;
   object-fit: cover;
   height: 75%;
   position: absolute;

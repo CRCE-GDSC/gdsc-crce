@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const Footerr = () => {
   return (
-    <div className="mt-20 bg-inherit">
+    <div className="mt-20 bg-inherit dark:bg-black">
       <div className="flex-grow px-8 pt-14">
         <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           <div className="lg:mt-8">

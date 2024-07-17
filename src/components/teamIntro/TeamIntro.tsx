@@ -16,11 +16,15 @@ import ContentSection from './subcomponents/contentSection/ContentSection'
 import CommunitySection from './subcomponents/communitySection/CommunitySection'
 import MobileDesignSection from './subcomponents/designSection/mobileDesignSection/MobileDesignSection'
 
-const TeamIntro: React.FC = () => {
+
+interface TeamIntroProps {
+  isMobile: boolean
+}
+const TeamIntro: React.FC<TeamIntroProps> = ({ isMobile }) => {
   const [activeTeam, setActiveTeam] = useState<string>('tech')
 
   return (
-    <TeamIntroContainer className="w-screen">
+    <TeamIntroContainer className="w-screen bg-inherit dark:bg-black">
       <Typography variant="h1">What We Do</Typography>
       <TeamIntroSectionWrapper>
         <TeamTitlesSection>
@@ -63,14 +67,8 @@ const TeamIntro: React.FC = () => {
         <TeamDescriptionSection>
           {activeTeam === 'tech' && <Terminal />}
           {activeTeam === 'android' && <MLIntro />}
-          {
-            activeTeam === 'design' && (
-              // (isMobile ? <MobileDesignSection /> :
-              <DesignSection />
-            )
-
-            // )
-          }
+          {activeTeam === 'design' &&
+            (isMobile ? <MobileDesignSection /> : <DesignSection />)}
           {activeTeam === 'content' && <ContentSection />}
           {activeTeam === 'community' && <CommunitySection />}
         </TeamDescriptionSection>

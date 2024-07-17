@@ -26,9 +26,9 @@ const ContentSection: React.FC = () => {
   return (
     <ContentSectionContainer>
       {isMobile ? (
-        <MobileDocs />
+       <div className='min-w-full rounded-b-xl overflow-hidden'> <MobileDocs /></div>
       ) : (
-        <GoogleDocs />
+        <div className='min-w-full rounded-b-xl overflow-hidden'><GoogleDocs/></div>
       )}
       <div className="docs-text">
         <TypingEffect interKeyStrokeDurationInMs={20} showCursor={true} className='dark:text-black'>
