@@ -24,12 +24,9 @@ export const TeamIntroContainer = styled.div`
 
 export const TeamIntroSectionWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
-  gap: 10rem;
+  position : relative;
 
   @media screen and (${devices.lg}) {
     gap: 2rem;
@@ -45,6 +42,7 @@ export const TeamTitlesSection = styled.div`
   gap: 1rem;
   flex-basis: 30%;
   padding: 1rem 0;
+  margin-left: 10rem;
   @media screen and (${devices.lg}) {
     flex-basis: unset;
     width: 100%;
@@ -52,18 +50,18 @@ export const TeamTitlesSection = styled.div`
     max-height: 90px;
     flex-direction: row;
   }
-`;
+`
 
 export const TeamDescriptionSection = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  margin-inline: 10% 10%;
+  align-self: flex-start;
   flex-basis: 50%;
   height: 70vh;
   width: 100%;
-`;
+`
 
 export const TeamButton = styled.button`
   display: flex;

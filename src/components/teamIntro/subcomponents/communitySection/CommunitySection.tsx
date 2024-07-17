@@ -3,8 +3,8 @@ import React from 'react'
 const CommunitySection: React.FC = () => {
   return (
     <video
-      width="80%"
-      height="80%"
+      width="70%"
+      height="70%"
       autoPlay
       style={{
         borderRadius: '20px',

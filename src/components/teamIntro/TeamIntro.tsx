@@ -20,35 +20,40 @@ const TeamIntro: React.FC = () => {
   const [activeTeam, setActiveTeam] = useState<string>('tech')
 
   return (
-    <TeamIntroContainer>
+    <TeamIntroContainer className="w-screen">
       <Typography variant="h1">What We Do</Typography>
       <TeamIntroSectionWrapper>
         <TeamTitlesSection>
           <TeamButton
+            className="dark:text-black"
             onClick={() => setActiveTeam('tech')}
             isSelected={activeTeam === 'tech'}
           >
             Technical
           </TeamButton>
           <TeamButton
+            className="dark:text-black"
             onClick={() => setActiveTeam('android')}
             isSelected={activeTeam === 'android'}
           >
             ML & Android
           </TeamButton>
           <TeamButton
+            className="dark:text-black"
             onClick={() => setActiveTeam('design')}
             isSelected={activeTeam === 'design'}
           >
             Design
           </TeamButton>
           <TeamButton
+            className="dark:text-black"
             onClick={() => setActiveTeam('content')}
             isSelected={activeTeam === 'content'}
           >
             Content
           </TeamButton>
           <TeamButton
+            className="dark:text-black"
             onClick={() => setActiveTeam('community')}
             isSelected={activeTeam === 'community'}
           >
@@ -59,10 +64,11 @@ const TeamIntro: React.FC = () => {
           {activeTeam === 'tech' && <Terminal />}
           {activeTeam === 'android' && <MLIntro />}
           {
-            activeTeam === 'design' && 
+            activeTeam === 'design' && (
               // (isMobile ? <MobileDesignSection /> :
               <DesignSection />
-            
+            )
+
             // )
           }
           {activeTeam === 'content' && <ContentSection />}

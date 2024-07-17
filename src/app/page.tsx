@@ -13,11 +13,10 @@ export default async function Home() {
     new Promise((resolve) => setTimeout(resolve, ms))
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center">
-      <main className="">
+    <div className="flex min-h-screen min-w-screen flex-col items-center justify-center">
+
         <ResponsiveCarousel />
         <TeamIntro />
-      </main>
-    </div>
+      </div>
   )
 }
