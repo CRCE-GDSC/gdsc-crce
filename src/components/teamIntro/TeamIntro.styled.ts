@@ -29,7 +29,7 @@ export const TeamIntroSectionWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  gap: 2rem;
+  gap: 10rem;
 
   @media screen and (${devices.lg}) {
     gap: 2rem;

@@ -14,8 +14,8 @@ export default async function Home() {
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center">
-      <main className="flex-grow">
-        {/* <ResponsiveCarousel /> */}
+      <main className="">
+        <ResponsiveCarousel />
         <TeamIntro />
       </main>
     </div>

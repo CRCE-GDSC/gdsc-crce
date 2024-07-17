@@ -20,7 +20,7 @@ export function Draggable({
     useDraggable({
       id: id ? id : 'draggable',
     })
-  const style = transform
+  const style : any = transform
     ? {
         transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
         border: isDragging ? '2px solid #4285F4' : 'none',

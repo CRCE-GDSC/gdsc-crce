@@ -21,7 +21,7 @@ const TeamIntro: React.FC = () => {
 
   return (
     <TeamIntroContainer>
-      <Typography variant="h1">Our dynamic team structure</Typography>
+      <Typography variant="h1">What We Do</Typography>
       <TeamIntroSectionWrapper>
         <TeamTitlesSection>
           <TeamButton
@@ -59,10 +59,10 @@ const TeamIntro: React.FC = () => {
           {activeTeam === 'tech' && <Terminal />}
           {activeTeam === 'android' && <MLIntro />}
           {
-            activeTeam === 'design' && (
+            activeTeam === 'design' && 
               // (isMobile ? <MobileDesignSection /> :
               <DesignSection />
-            )
+            
             // )
           }
           {activeTeam === 'content' && <ContentSection />}

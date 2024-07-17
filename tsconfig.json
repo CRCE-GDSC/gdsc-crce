@@ -39,7 +39,7 @@
     "**/*.js",
     ".next/types/**/*.ts",
     "**/*.d.ts"
-  ],
+, "src/components/teamIntro/subcomponents/designSection/DesignSection.tsx"  ],
   "exclude": ["node_modules"]
 }
 

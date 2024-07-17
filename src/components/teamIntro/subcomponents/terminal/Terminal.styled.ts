@@ -6,12 +6,12 @@ export const TerminalContainer = styled.div`
   flex-direction: column;
   max-width: 600px;
   width: 100%;
-  min-width: 300px;
+  min-width: 600px;
   height: 70%;
   border-radius: 13px;
   background: #171717;
   @media screen and (${devices.lg}) {
-    height: 100%;
+    height: 568px;
   }
 `;
 

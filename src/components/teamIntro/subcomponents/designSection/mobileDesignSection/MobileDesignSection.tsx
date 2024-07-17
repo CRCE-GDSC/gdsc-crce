@@ -12,7 +12,7 @@ const MobileDesignSection: React.FC = () => {
       <DesignTeam />
       <Typography variant="body">
         <TypingEffect interKeyStrokeDurationInMs={20}>
-          The Design Team at GDSC MVJCE is the driving force behind our visual
+          The Design Team at GDSC CRCE is the driving force behind our visual
           appeal. They craft compelling event posters and captivating graphics.
         </TypingEffect>
       </Typography>
