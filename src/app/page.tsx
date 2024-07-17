@@ -1,6 +1,6 @@
 'use server'
 import React from 'react'
-
+import Navbar from '@/components/Navbar'
 import Carousel from '@/components/final_c'
 import VerticalCarousel from '@/components/final_c_mobile'
 import ResponsiveCarousel from '@/components/Events'
@@ -16,6 +16,7 @@ export default async function Home() {
     <div className="flex min-h-screen w-full flex-col items-center justify-center">
       <main className="flex-grow">
         {/* <ResponsiveCarousel /> */}
+         <Navbar/>
         <TeamIntro />
       </main>
     </div>
