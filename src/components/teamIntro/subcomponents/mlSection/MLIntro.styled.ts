@@ -29,7 +29,7 @@ export const ScreenContent = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
-  width: 30%;
+  width: 50%;
   object-fit: cover;
   height: 75%;
   position: absolute;

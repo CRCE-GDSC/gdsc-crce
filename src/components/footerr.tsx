@@ -108,23 +108,6 @@ const Footerr = () => {
             ></iframe>
           </div>
         </div>
-
-        <div className="flex flex-row items-center justify-start py-6">
-          <Image
-            src="/gdsc_logo.png"
-            height={10000}
-            width={10000}
-            alt="gdsc_logo"
-            className="hidden min-w-[180px] max-w-[450px] dark:block"
-          />
-          <Image
-            src="/gdsc_logo_black.png"
-            height={10000}
-            width={10000}
-            alt="gdsc_logo"
-            className="min-w-[180px] max-w-[450px] dark:hidden"
-          />
-        </div>
       </div>
     </div>
   )

@@ -31,8 +31,8 @@ const ContentSection: React.FC = () => {
         <GoogleDocs />
       )}
       <div className="docs-text">
-        <TypingEffect interKeyStrokeDurationInMs={20} showCursor={true}>
-          The Content Team at GDSC MVJCE is the storytelling heart of our
+        <TypingEffect interKeyStrokeDurationInMs={20} showCursor={true} className='dark:text-black'>
+          The Content Team at GDSC CRCE is the storytelling heart of our
           community. They curate captivating blogs, craft insightful articles,
           and orchestrate engaging newsletters. With a passion for sharing
           knowledge and fostering connections, this team weaves words into

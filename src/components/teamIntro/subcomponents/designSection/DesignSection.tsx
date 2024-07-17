@@ -79,7 +79,7 @@ const DesignSection: React.FC = () => {
           >
             <div className="text-draggable">
               <Typography variant="bodyEmphasized">
-                The Design Team at GDSC MVJCE is the driving force behind our
+                The Design Team at GDSC CRCE is the driving force behind our
                 visual appeal. They craft compelling event posters and
                 captivating graphics
               </Typography>
