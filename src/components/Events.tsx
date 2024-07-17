@@ -6,7 +6,7 @@ import Carousel from './final_c'
 function ResponsiveCarousel() {
   return (
     <div
-      className="flex min-h-screen flex-col items-center justify-center w-full"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-inherit dark:bg-black"
       id="events"
     >
       <div className="w-full">

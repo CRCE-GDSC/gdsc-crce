@@ -2,16 +2,17 @@ import { devices } from 'constants/theme'
 import { styled } from 'styled-components'
 
 export const ContentSectionContainer = styled.div`
-  width: 110%;
-  height: 110%; 
+  width: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: relative;
 
   .docs-text {
     position: absolute;
-    top: 48%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 65%;
@@ -25,10 +26,10 @@ export const ContentSectionContainer = styled.div`
   }
 
   @media screen and (${devices.lg}) {
-  height: 50%;
-  width: 50%;
+    height: 100%;
+    width: 200%;
     .docs-text {
-      width: 85%;
+      width: 105%;
       font-weight: 400;
       font-size: 1.1rem;
     }

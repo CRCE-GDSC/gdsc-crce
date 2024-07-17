@@ -1,7 +1,7 @@
 'use server'
 import React from 'react'
 import ResponsiveCarousel from '@/components/Events'
-import TeamIntro from '@/components/teamIntro/TeamIntro'
+import WhatWeDo from '@/components/WhatWeDo'
 import Hero from '@/components/Hero'
 import DotPattern from '@/components/ui/dot-pattern'
 import { cn } from '@/lib/utils'
