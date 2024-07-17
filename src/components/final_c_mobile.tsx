@@ -175,42 +175,42 @@ const VerticalCarousel: React.FC = () => {
 
 export default VerticalCarousel
 
-const carouselItems: CarouselItem[] = [
-  {
-    title: 'The Future Forge',
-    description: 'A new way to learn and grow',
-    image: '/event_assests/GDSC_Future-Forge.jpg',
-    href: '/allevents',
-    cta: 'Learn More',
-  },
-  {
-    title: 'HackOver3.0',
-    description: 'A 24-hour hackathon',
-    image: '/event_assests/HackOver3.0.jpg',
-    href: '/allevents',
-    cta: 'Learn More',
-  },
-  {
-    title: 'Ideation',
-    description: 'A platform to share your ideas',
-    image: '/event_assests/ideation.jpg',
-    href: '/allevents',
-    cta: 'Learn More',
-  },
-  {
-    title: 'mathday',
-    description: 'A day to celebrate math',
-    image: '/event_assests/mathday.jpeg',
-    href: '/allevents',
-    cta: 'Learn More',
-  },
-  {
-    title: ' the Postman playbook',
-    description: 'Learn abiut PostMan, the API development tool',
-    image: '/event_assests/postman_event_poster.webp',
-    href: '/allevents',
-    cta: 'Learn More',
-  },
+// const carouselItems: CarouselItem[] = [
+//   {
+//     title: 'The Future Forge',
+//     description: 'A new way to learn and grow',
+//     image: '/event_assests/GDSC_Future-Forge.jpg',
+//     href: '/allevents',
+//     cta: 'Learn More',
+//   },
+//   {
+//     title: 'HackOver3.0',
+//     description: 'A 24-hour hackathon',
+//     image: '/event_assests/HackOver3.0.jpg',
+//     href: '/allevents',
+//     cta: 'Learn More',
+//   },
+//   {
+//     title: 'Ideation',
+//     description: 'A platform to share your ideas',
+//     image: '/event_assests/ideation.jpg',
+//     href: '/allevents',
+//     cta: 'Learn More',
+//   },
+//   {
+//     title: 'mathday',
+//     description: 'A day to celebrate math',
+//     image: '/event_assests/mathday.jpeg',
+//     href: '/allevents',
+//     cta: 'Learn More',
+//   },
+//   {
+//     title: ' the Postman playbook',
+//     description: 'Learn abiut PostMan, the API development tool',
+//     image: '/event_assests/postman_event_poster.webp',
+//     href: '/allevents',
+//     cta: 'Learn More',
+//   },
 
-  // Add more items as needed
-]
+//   // Add more items as needed
+// ]
