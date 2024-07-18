@@ -21,11 +21,11 @@ export default async function Home() {
       <WhatWeDo />
 
       {/* <WhatWeDoSection /> */}
-      <DotPattern
+      {/* <DotPattern
         className={cn(
           '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] bg-inherit dark:bg-black'
         )}
-      />
+      /> */}
     </div>
   )
 }
