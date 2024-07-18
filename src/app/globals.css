@@ -291,12 +291,12 @@
 }
 
 .feature-item-left {
-  width: 47.5%;
+  width: 52.5%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 8vw;
+  padding: 0 10vw;
   border-radius: 5px;
   padding-right: 0;
   overflow: hidden;
@@ -308,7 +308,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 8vw;
+  padding: 0 10vw;
 }
 
 @media only screen and (max-width: 600px) {
