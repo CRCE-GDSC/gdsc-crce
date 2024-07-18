@@ -21,7 +21,7 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
 }) => {
   return (
     <div
-      className={`relative my-24 flex flex-col items-center justify-between md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+      className={` w-full relative my-24 flex flex-col items-center justify-between md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
     >
       <div
         className="relative h-[400px] w-full overflow-visible md:h-[400px] md:w-1/2"
@@ -78,7 +78,7 @@ const AboutUs: React.FC = () => {
       <h1 className="mb-12 text-center text-4xl font-bold text-gray-800 dark:text-neutral-100 md:text-5xl">
         What GDSC does and how
       </h1>
-      <div className="space-y-32">
+      <div className=" w-full space-y-32">
         {featuresInfo.map((item, index) => (
           <RenderFeature
             key={index}
