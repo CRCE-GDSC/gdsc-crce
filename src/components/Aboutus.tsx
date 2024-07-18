@@ -62,11 +62,10 @@ const featuresInfo: FeatureInfo[] = [
 const AboutUs: React.FC = () => {
   return (
     <div className='w-full'>
-      <p className="h3 darkText ta-center " >
+      <h1 className="h3 darkText ta-center " >
         What GDSC does and how
-      </p>
-
-      <div className="features">
+      </h1>
+      <div className=" w-full space-y-32">
         {featuresInfo.map((item, index) => (
           <RenderFeature
             color={item.color}
