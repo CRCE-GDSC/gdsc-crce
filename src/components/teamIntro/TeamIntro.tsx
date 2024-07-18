@@ -24,7 +24,7 @@ const TeamIntro: React.FC<TeamIntroProps> = ({ isMobile }) => {
   const [activeTeam, setActiveTeam] = useState<string>('tech')
 
   return (
-    <TeamIntroContainer className="w-screen bg-inherit dark:bg-black">
+    <TeamIntroContainer className="min-w-full bg-inherit dark:bg-black">
       <Typography variant="h1">What We Do</Typography>
       <TeamIntroSectionWrapper>
         <TeamTitlesSection>

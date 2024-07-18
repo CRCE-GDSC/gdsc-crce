@@ -36,7 +36,7 @@ export default function RootLayout({
         ></meta>
       </head>
       <Suspense fallback={<Loading />}>
-        <body className={roboto.className}>
+        <body className={` min-w-fit ${ roboto.className }`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

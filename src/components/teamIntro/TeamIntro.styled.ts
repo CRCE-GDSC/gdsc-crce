@@ -46,6 +46,8 @@ export const TeamTitlesSection = styled.div`
   @media screen and (${devices.lg}) {
     flex-basis: unset;
     width: 100%;
+    margin-left: 5rem;
+    margin-right: 5rem;
     overflow-x: auto;
     max-height: 90px;
     flex-direction: row;
