@@ -23,8 +23,8 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
   return (
     
       <div className="feature-item ">
-        <div className="feature-item-left" style={{ backgroundColor: color }}>
-          <Image src={image} alt={title} height={1000} width={1000} className={` max-w-[400px] feature-${key}`} />
+        <div className="feature-item-left " style={{ backgroundColor: color }}>
+          <Image src={image} alt={title} height={1000} width={1000} className={` -translate-x-[38px] -translate-y-[53.5px] max-w-[650px] feature-${key}`} />
         </div>
         <div className="feature-item-right">
           {/* <p className="h0 lightGrey">0{key + 1}</p> */}
@@ -61,7 +61,7 @@ const featuresInfo: FeatureInfo[] = [
 
 const AboutUs: React.FC = () => {
   return (
-    <div className='w-full rounded-'>
+    <div className='w-full'>
       <p className="h3 darkText ta-center " >
         What GDSC does and how
       </p>
