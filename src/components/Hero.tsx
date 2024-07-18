@@ -26,7 +26,7 @@ return (
       </div>
       <div className="flex justify-center md:w-1/2">
         {/* Added flex and justify-center classes */}
-       <Image alt='hero' src="/GDSC_hero.gif" height={100000} width={100000} className='max-w-[600px]'/>
+       <Image alt='hero' src="/GDSC_hero.gif" height={100000} width={100000} unoptimized className='max-w-[600px]'/>
       </div>
     </div>
   </div>

@@ -1,8 +1,6 @@
 import React from 'react'
 // Assuming bulb, team, and jigsaw are imported from somewhere
-import bulb from 'public/images/gdsc-team.svg'
-import team from 'public/images/figma_window.svg'
-import jigsaw from 'public/images/design-team.svg'
+import Image from 'next/image'
 
 interface FeatureInfo {
   color: string
@@ -26,7 +24,7 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
     
       <div className="feature-item ">
         <div className="feature-item-left" style={{ backgroundColor: color }}>
-          <img src={image} alt={title} className={`feature-${key}`} />
+          <Image src={image} alt={title} height={1000} width={1000} className={` max-w-[400px] feature-${key}`} />
         </div>
         <div className="feature-item-right">
           {/* <p className="h0 lightGrey">0{key + 1}</p> */}
@@ -41,21 +39,21 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
 const featuresInfo: FeatureInfo[] = [
   {
     color: '#4285F4',
-    image: bulb,
+    image: '/ideate.png',
     title: 'We ideate',
     description:
       'We brainstorm for new ideas and chalk up a path to implement them successfully',
   },
   {
     color: '#FBA416',
-    image: team,
+    image: '/communicate.png',
     title: 'We communicate',
     description:
       'We help to hone intelligent minds and develop a dynamic environment through dialogue',
   },
   {
     color: '#594DD2',
-    image: jigsaw,
+    image: '/collaborate.png',
     title: 'We collaborate',
     description: 'We work together on projects and empower the whole community',
   },
@@ -63,7 +61,7 @@ const featuresInfo: FeatureInfo[] = [
 
 const AboutUs: React.FC = () => {
   return (
-    <div>
+    <div className='w-full rounded-'>
       <p className="h3 darkText ta-center " >
         What GDSC does and how
       </p>
