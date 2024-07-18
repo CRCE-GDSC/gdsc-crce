@@ -19,29 +19,29 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
   description,
   index,
 }) => {
-  return (
+return (
     <div
-      className={` w-full relative my-24 flex flex-col items-center justify-between md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+        className={`feature-item relative my-24 flex flex-col items-center justify-between md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
     >
-      <div
-        className="relative h-[400px] w-full overflow-visible md:h-[400px] md:w-1/2"
-        style={{ backgroundColor: color }}
-      >
-        <div className="absolute left-0 top-0 h-full w-full ">
-          <Image
-            src={image}
-            alt={title}
-            layout="fill"
-            objectFit="contain"
-            className="max-w-[650px] -translate-x-[0%] -translate-y-[53.5px] object-contain"
-          />
+        <div
+            className="feature-item-left relative w-full overflow-visible md:h-[400px] md:w-1/2"
+            style={{ backgroundColor: color }}
+        >
+            <div className="absolute left-0 top-0 h-full w-full">
+                <Image
+                    src={image}
+                    alt={title}
+                    layout="fill"
+                    objectFit="contain"
+                    className="max-w-[650px] -translate-x-[0%] -translate-y-[53.5px] object-contain"
+                />
+            </div>
         </div>
-      </div>
-      <div className="w-full p-4 md:w-1/2 md:p-8">
-        <h2 className="mb-4 text-3xl font-bold text-gray-800 dark:text-neutral-100 md:text-4xl">
-          {title}
-        </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
+        <div className="feature-item-right w-full p-4 md:w-1/2 md:p-8">
+            <h2 className="mb-4 h2 font-medium text-gray-800 dark:text-neutral-100 md:text-4xl">
+                {title}
+            </h2>
+        <p className="t2 text-gray-500 dark:text-gray-400">
           {description}
         </p>
       </div>
