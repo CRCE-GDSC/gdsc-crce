@@ -4,8 +4,9 @@ import ResponsiveCarousel from '@/components/Events'
 import WhatWeDo from '@/components/WhatWeDo'
 import Hero from '@/components/Hero'
 import DotPattern from '@/components/ui/dot-pattern'
+import AboutUs from '@/components/Aboutus'
 import { cn } from '@/lib/utils'
-import WhatWeDoSection from '@/components/Aboutus'
+
 //import { HomeTeam } from '@/components/home-team'
 
 export default async function Home() {
@@ -16,8 +17,10 @@ export default async function Home() {
     <div className="min-w-screen flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black">
       <Hero />
       <ResponsiveCarousel />
+      <AboutUs />
       <WhatWeDo />
-      <WhatWeDoSection />
+
+      {/* <WhatWeDoSection /> */}
       <DotPattern
         className={cn(
           '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] bg-inherit dark:bg-black'

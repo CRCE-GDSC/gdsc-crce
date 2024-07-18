@@ -6,8 +6,7 @@ return (
   <div className="flex h-screen items-center justify-center bg-inherit">
     <div className="container mx-auto flex flex-col md:flex-row">
       <div className="text-center md:w-1/2">
-        {' '}
-        {/* Added text-center class */}
+        
         <h1 className="mb-4 text-4xl font-bold">Welcome to our App</h1>
         <p className="mb-8 text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam,
