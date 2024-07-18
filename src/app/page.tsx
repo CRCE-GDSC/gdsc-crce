@@ -5,7 +5,7 @@ import WhatWeDo from '@/components/WhatWeDo'
 import Hero from '@/components/Hero'
 import DotPattern from '@/components/ui/dot-pattern'
 import { cn } from '@/lib/utils'
-
+import WhatWeDoSection from '@/components/Aboutus'
 //import { HomeTeam } from '@/components/home-team'
 
 export default async function Home() {
@@ -17,11 +17,12 @@ export default async function Home() {
       <Hero />
       <ResponsiveCarousel />
       <WhatWeDo />
-      {/* <DotPattern
+      <WhatWeDoSection />
+      <DotPattern
         className={cn(
           '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] bg-inherit dark:bg-black'
         )}
-      /> */}
+      />
     </div>
   )
 }
