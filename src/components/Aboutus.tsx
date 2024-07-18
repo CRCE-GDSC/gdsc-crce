@@ -1,5 +1,6 @@
 import React from 'react'
 // Assuming bulb, team, and jigsaw are imported from somewhere
+// Assuming bulb, team, and jigsaw are imported from somewhere
 import Image from 'next/image'
 
 interface FeatureInfo {
@@ -20,23 +21,33 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
   description,
   key,
 }) => {
-  return (
-    <div className="feature-item">
-      <div className="feature-item-left" style={{ backgroundColor: color }}>
-        <Image
-          src={image}
-          alt={title}
-          height={1000}
-          width={1000}
-          className={`max-w-[650px] min-w-[100px] vn:min-w-[650px] -translate-x-[38px] -translate-y-[53.5px] feature-${key}`}
-        />
+return (
+    <div
+        className={`feature-item relative my-24 flex flex-col items-center justify-between md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+    >
+        <div
+            className="feature-item-left relative w-full overflow-visible md:h-[400px] md:w-1/2"
+            style={{ backgroundColor: color }}
+        >
+            <div className="absolute left-0 top-0 h-full w-full">
+                <Image
+                    src={image}
+                    alt={title}
+                    layout="fill"
+                    objectFit="contain"
+                    className="max-w-[650px] -translate-x-[0%] -translate-y-[53.5px] object-contain"
+                />
+            </div>
+        </div>
+        <div className="feature-item-right w-full p-4 md:w-1/2 md:p-8">
+            <h2 className="mb-4 h2 font-medium text-gray-800 dark:text-neutral-100 md:text-4xl">
+                {title}
+            </h2>
+        <p className="t2 text-gray-500 dark:text-gray-400">
+          {description}
+        </p>
       </div>
-      <div className="feature-item-right">
-        {/* <p className="h0 lightGrey">0{key + 1}</p> */}
-        <p className="h2 tanText dark:text-neutral-100">{title}</p>
-        <p className="t2 darkGrey">{description}</p>
-      </div>
-    </div>
+   
   )
 }
 
@@ -65,9 +76,11 @@ const featuresInfo: FeatureInfo[] = [
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="min-w-full">
-      <p className="h2 font-bold darkText ta-center">About Us</p>
-      <div className="features">
+    <div className="mx-auto w-full max-w-7xl px-4 py-12">
+      <h1 className="mb-12 text-center text-4xl font-bold text-gray-800 dark:text-neutral-100 md:text-5xl">
+        What GDSC does and how
+      </h1>
+      <div className=" w-full space-y-32">
         {featuresInfo.map((item, index) => (
           <RenderFeature
             color={item.color}
