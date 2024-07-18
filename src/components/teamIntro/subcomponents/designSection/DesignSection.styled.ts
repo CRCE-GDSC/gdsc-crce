@@ -47,14 +47,14 @@ export const DesignSectionContainer = styled.div`
     height: 120px;
     border-radius: 50%;
     filter: blur(50px);
-    background-color: #000000 ;
+    background-color: #f03c2e ;
   }
   .blob2 {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     filter: blur(50px);
-    background-color: #000000;
+    background-color: #4385f2;
   }
   .logo {
     width: 260px;

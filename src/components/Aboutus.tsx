@@ -53,21 +53,21 @@ const featuresInfo: FeatureInfo[] = [
   {
     color: '#4285F4',
     image: '/ideate.png',
-    title: 'We ideate',
+    title: 'We Ideate',
     description:
       'We brainstorm for new ideas and chalk up a path to implement them successfully',
   },
   {
     color: '#FBA416',
     image: '/communicate.png',
-    title: 'We communicate',
+    title: 'We Communicate',
     description:
       'We help to hone intelligent minds and develop a dynamic environment through dialogue',
   },
   {
     color: '#594DD2',
     image: '/collaborate.png',
-    title: 'We collaborate',
+    title: 'We Collaborate',
     description: 'We work together on projects and empower the whole community',
   },
 ]

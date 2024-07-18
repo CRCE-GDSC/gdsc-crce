@@ -5,28 +5,29 @@ import Image from 'next/image'
 const Hero: React.FC = () => {
 return (
   <div className="flex h-screen items-center justify-center bg-inherit">
-    <div className="container mx-auto flex flex-col md:flex-row">
-      <div className="text-center md:w-1/2">
-        
-        <h1 className="mb-4 text-4xl font-bold">Welcome to our App</h1>
+    <div className="container mx-8 flex flex-col items-center justify-center md:flex-row">
+      <div className="text-center md:w-1/2 mr-10">
+        <h1 className="mb-4 text-4xl font-bold">Welcome to GDSC</h1>
         <p className="mb-8 text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam,
-          libero et aliquet tincidunt, mauris nunc aliquam nunc, id tincidunt
-          nisl urna in mauris. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ullam libero architecto voluptates ipsum? Explicabo
-          animi dicta aliquam voluptate odit! Excepturi id iusto quam earum?
-          Aspernatur, eveniet! Incidunt, eum. Sint, excepturi.
+          Get ready to delve into the World of Developers
         </p>
         <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
           Sign In
         </button>
-        <button className="rounded bg-blue-500 px-4 ml-10 py-2 font-bold text-white hover:bg-blue-700">
-         Join Us
+        <button className="ml-10 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+          Join Us
         </button>
       </div>
       <div className="flex justify-center md:w-1/2">
         {/* Added flex and justify-center classes */}
-       <Image alt='hero' src="/GDSC_hero.gif" height={100000} width={100000} unoptimized className='max-w-[600px]'/>
+        <Image
+          alt="hero"
+          src="/GDSC_hero.gif"
+          height={100000}
+          width={100000}
+          unoptimized
+          className="max-w-[600px]"
+        />
       </div>
     </div>
   </div>
