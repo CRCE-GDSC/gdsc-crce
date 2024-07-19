@@ -28,11 +28,11 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
           alt={title}
           height={1000}
           width={1000}
-          className={` mobile max-w-[650px] min-w-[100px] vn:min-w-[650px] -translate-x-[38px]  -translate-y-[53.5px] feature-${key}`}
+          priority
+          className={` mobile min-w-[100px] max-w-[650px] -translate-y-[53.5px] md:-translate-x-[38px]  md:-translate-y-[0px] vn:min-w-[650px] vn:-translate-y-[53.5px] feature-${key}`}
         />
       </div>
       <div className="feature-item-right">
-        {/* <p className="h0 lightGrey">0{key + 1}</p> */}
         <p className="h2 tanText dark:text-neutral-100">{title}</p>
         <p className="t2 darkGrey">{description}</p>
       </div>
