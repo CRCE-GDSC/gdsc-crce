@@ -28,7 +28,7 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
           alt={title}
           height={1000}
           width={1000}
-          className={`max-w-[650px] min-w-[100px] vn:min-w-[650px] -translate-x-[38px] -translate-y-[53.5px] feature-${key}`}
+          className={` mobile max-w-[650px] min-w-[100px] vn:min-w-[650px] -translate-x-[38px]  -translate-y-[53.5px] feature-${key}`}
         />
       </div>
       <div className="feature-item-right">

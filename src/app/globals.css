@@ -327,6 +327,11 @@
   margin-top: 6%;
   width: 100vw;
 }
+.mobile{
+  position: relative;
+  left: 10%;
+ 
+}
   .feature-item {
     flex-direction: column;
     height: auto;
