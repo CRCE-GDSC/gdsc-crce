@@ -18,7 +18,7 @@ export default async function Home() {
     <div className=" bg-white dark:bg-black">
       <DotPattern
         className={cn(
-          'bg-inherit [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] dark:bg-black'
+          ' bg-inherit [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] dark:bg-black'
         )}
       />
       <Hero />
