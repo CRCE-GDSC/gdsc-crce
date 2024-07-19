@@ -29,7 +29,7 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
           height={1000}
           width={1000}
           priority
-          className={`min-w-[100px] max-w-[650px] -translate-y-[53.5px] md:-translate-x-[38px] md:-translate-y-[0px] vn:min-w-[650px] vn:-translate-y-[53.5px] feature-${key}`}
+          className={` mobile min-w-[100px] max-w-[650px] -translate-y-[53.5px] md:-translate-x-[38px]  md:-translate-y-[0px] vn:min-w-[650px] vn:-translate-y-[53.5px] feature-${key}`}
         />
       </div>
       <div className="feature-item-right">
@@ -65,7 +65,7 @@ const featuresInfo: FeatureInfo[] = [
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <p className="h2 darkText ta-center font-bold dark:text-neutral-300">
         About Us
       </p>
