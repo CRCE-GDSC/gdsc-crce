@@ -15,7 +15,7 @@ export default async function Home() {
     new Promise((resolve) => setTimeout(resolve, ms))
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
-    <div className="min-w-fit flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black">
+    <div className=" bg-white dark:bg-black">
       <DotPattern
         className={cn(
           'bg-inherit [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] dark:bg-black'
@@ -23,7 +23,7 @@ export default async function Home() {
       />
       <Hero />
       <AboutUs />
-      {/* <WhatWeDo /> */}
+      <WhatWeDo />
       <ResponsiveCarousel />
       <HomeTeam/>
     </div>

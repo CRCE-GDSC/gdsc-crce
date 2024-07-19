@@ -11,7 +11,7 @@ export const TerminalContainer = styled.div`
   border-radius: 13px;
   background: #171717;
   @media screen and (${devices.lg}) {
-    height: 568px;
+    height: auto;
   }
 `;
 

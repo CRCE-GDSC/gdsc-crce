@@ -12,7 +12,7 @@ export const ContentSectionContainer = styled.div`
 
   .docs-text {
     position: absolute;
-    top: 53%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 65%;
@@ -27,9 +27,9 @@ export const ContentSectionContainer = styled.div`
 
   @media screen and (${devices.lg}) {
     height: 100%;
-    width: 200%;
+    width: 80%;
     .docs-text {
-      width: 105%;
+      width: 80%;
       font-weight: 400;
       font-size: 1.1rem;
     }

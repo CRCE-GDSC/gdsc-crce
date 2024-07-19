@@ -19,7 +19,7 @@ export const PhoneContainer = styled.div`
   position: relative;
 
   @media screen and (${devices.lg}) {
-    width: 80%;
+    width: 50%;
     height : 100%
   }
 `
