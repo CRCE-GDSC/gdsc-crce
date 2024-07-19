@@ -36,7 +36,7 @@ export default function RootLayout({
         ></meta>
       </head>
       <Suspense fallback={<Loading />}>
-        <body className={`-z-10 bg-white dark:bg-black min-w-fit ${ roboto.className }`}>
+        <body className={` bg-white dark:bg-black min-h-full min-w-fit ${ roboto.className }`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

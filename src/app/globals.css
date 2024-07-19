@@ -214,7 +214,11 @@
   }
 }
 /* css for about us */
-
+/* :root {
+    --tanText : #434343;
+    --darkGrey: #878787;
+    --darkText : #2a2b2b;
+} */
 
 .h2 {
   font-family: Google Sans Medium;
@@ -261,6 +265,7 @@
 .ta-center {
   text-align: center;
 }
+
 .featurecontainer{
   width:101% ;
   overflow-x: hidden;
@@ -320,20 +325,23 @@
 }
 
 @media only screen and (max-width: 738px) {
-  .featurecontainer{
- width: 100vw;
- overflow-x: hidden;
-  }
   .features {
   margin: 40px auto;
   margin-top: 6%;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
 }
-.mobile{
-  position: relative;
-  
- 
+.featurecontainer{
+  width:100% ;
+  overflow-x: hidden;
+  overflow-y: auto;
+ margin-left: 0% ;
+ margin-right: 0%;
 }
+
   .feature-item {
     flex-direction: column;
     height: auto;
@@ -345,7 +353,6 @@
     width: 100%;
     height: 350px;
     padding: 0 10px;
-    margin-top: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,17 +362,17 @@
     width: 100%;
     height: auto;
     padding: 0 10px;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 20px;
   }
 
   .feature-item-right .h2 {
-    font-size: 28px;
+    font-size: 50px;
     text-align: center;
   }
 
   .feature-item-right .t2 {
     text-align: center;
+    font-size: 25px;
   }
 
   .feature-item:nth-child(even) {
