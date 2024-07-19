@@ -23,7 +23,7 @@ export default async function Home() {
       />
       <Hero />
       <AboutUs />
-      {/* <WhatWeDo /> */}
+      <WhatWeDo />
       <ResponsiveCarousel />
       <TeamComponent/>
     </div>
