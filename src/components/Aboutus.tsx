@@ -66,7 +66,7 @@ const featuresInfo: FeatureInfo[] = [
 const AboutUs: React.FC = () => {
   return (
     <div className="min-w-full">
-      <p className="h2 font-bold darkText ta-center">About Us</p>
+      <p className="h2 darkText dark:text-neutral-300 ta-center font-bold">About Us</p>
       <div className="features">
         {featuresInfo.map((item, index) => (
           <RenderFeature
