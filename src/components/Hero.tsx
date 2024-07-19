@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <div className="z-10 flex h-screen min-w-full items-center justify-center bg-transparent">
       <div className="container flex flex-col items-center justify-center md:flex-row">
-        <div className="ml-36 w-full text-center">
+        <div className="lg:pl-36  w-full text-center">
           <h1 className="mb-4 text-8xl font-bold">Welcome To GDSC</h1>
           <p className="mb-8 text-xl">
             Get ready to delve into the World of Developers

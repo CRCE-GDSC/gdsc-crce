@@ -6,7 +6,7 @@ import Hero from '@/components/Hero'
 import DotPattern from '@/components/ui/dot-pattern'
 import AboutUs from '@/components/Aboutus'
 import { cn } from '@/lib/utils'
-import { TeamComponent } from '@/components/Team'
+import { HomeTeam } from '@/components/home-team'
 
 //import { HomeTeam } from '@/components/home-team'
 
@@ -23,9 +23,9 @@ export default async function Home() {
       />
       <Hero />
       <AboutUs />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <ResponsiveCarousel />
-      <TeamComponent/>
+      <HomeTeam/>
     </div>
   )
 }
