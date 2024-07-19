@@ -39,9 +39,9 @@ const WhatWeDo: React.FC = () => {
   }, [])
 
   return (
-    <>
-      <TeamIntro isMobile={isLarge}/>
-    </>
+    <div id="services">
+      <TeamIntro isMobile={isLarge} />
+    </div>
   )
 }
 
