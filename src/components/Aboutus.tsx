@@ -65,7 +65,7 @@ const featuresInfo: FeatureInfo[] = [
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <p className="h2 darkText ta-center font-bold dark:text-neutral-300">
         About Us
       </p>
