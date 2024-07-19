@@ -335,7 +335,7 @@
 
 }
 .featurecontainer{
-  width:101% ;
+  width:100% ;
   overflow-x: hidden;
   overflow-y: auto;
  margin-left: 0% ;
@@ -366,12 +366,13 @@
   }
 
   .feature-item-right .h2 {
-    font-size: 28px;
+    font-size: 50px;
     text-align: center;
   }
 
   .feature-item-right .t2 {
     text-align: center;
+    font-size: 25px;
   }
 
   .feature-item:nth-child(even) {

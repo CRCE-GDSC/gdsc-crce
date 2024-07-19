@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Hero: React.FC = () => {
   return (
-    <div className="z-10 flex h-screen min-w-full items-center justify-center bg-transparent">
+    <div className="z-10 mt-24 md:mt-0 flex h-screen min-w-full items-center justify-center bg-transparent">
       <div className="container flex flex-col items-center justify-center vn:flex-row">
         <div className="vn:pl-36  w-full text-center">
           <h1 className="mb-4 text-8xl font-bold">Welcome To GDSC</h1>
