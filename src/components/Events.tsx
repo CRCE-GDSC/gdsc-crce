@@ -56,26 +56,25 @@ function ResponsiveCarousel() {
   }, [])
 
   return (
-    <>
-      <Typography variant="h1">Events</Typography>
-      <div
-        className="flex min-h-screen w-full flex-col items-center justify-center bg-inherit dark:bg-black"
-        id="events"
-      >
-        {isMobile ? <VerticalCarousel /> : <Carousel />}
-        <button
-          className="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-          onClick={() =>
-            window.open(
-              'https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai-india/'
-            )
-          }
-        >
-          Go to All Events
-        </button>
+    <div
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-inherit dark:bg-black"
+      id="events"
+    >
+      <div className="mb-20">
+        <h1 className="h2">Events</h1>
       </div>
-    </>
+      {isMobile ? <VerticalCarousel /> : <Carousel />}
+      <button
+        className="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+        onClick={() =>
+          window.open(
+            'https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai-india/'
+          )
+        }
+      >
+        Go to All Events
+      </button>
+    </div>
   )
 }
-
-export default ResponsiveCarousel 
+export default ResponsiveCarousel
