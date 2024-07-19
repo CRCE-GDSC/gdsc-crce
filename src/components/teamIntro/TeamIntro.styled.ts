@@ -126,7 +126,7 @@ export const TeamIntroSectionWrapper = styled.div`
   height: 100%;
   gap: 2rem;
 
-  @media screen and (${devices.lg}) {
+  @media screen and (${devices.vn}) {
     gap: 2rem;
     flex-direction: column;
     justify-content: flex-start;
@@ -140,7 +140,7 @@ export const TeamTitlesSection = styled.div`
   gap: 1rem;
   flex-basis: 30%;
   padding: 1rem 0;
-  @media screen and (${devices.lg}) {
+  @media screen and (${devices.vn}) {
     flex-basis: unset;
     width: 100%;
     overflow-x: auto;
@@ -181,7 +181,7 @@ export const TeamButton = styled.button`
     border: 3px solid #4285f4;
     `};
 
-  @media screen and (${devices.lg}) {
+  @media screen and (${devices.vn}) {
     flex-grow: 1;
     font-size: 16px;
     height: fit-content;
