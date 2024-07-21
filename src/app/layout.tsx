@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth ">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta
           name="viewport"
@@ -36,7 +36,9 @@ export default function RootLayout({
         ></meta>
       </head>
       <Suspense fallback={<Loading />}>
-        <body className={` bg-white dark:bg-black min-h-full min-w-fit ${ roboto.className }`}>
+        <body
+          className={`min-h-full bg-white dark:bg-black ${roboto.className}`}
+        >
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
