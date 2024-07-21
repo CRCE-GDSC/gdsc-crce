@@ -110,6 +110,7 @@ export const TeamIntroContainer = styled.div`
   transition: all 0.2s ease-in-out;
 
   @media screen and (${devices.lg}) {
+    width: 100%;
     height: 100%;
     min-height: 430px;
     justify-content: flex-start;

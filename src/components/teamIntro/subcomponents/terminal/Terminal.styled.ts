@@ -1,19 +1,21 @@
-import { devices } from "constants/theme";
-import { styled } from "styled-components";
+import { devices } from 'constants/theme'
+import { styled } from 'styled-components'
 
 export const TerminalContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 600px;
   width: 100%;
   min-width: 600px;
+  max-width: 600px;
   height: 70%;
   border-radius: 13px;
   background: #171717;
   @media screen and (${devices.lg}) {
+  max-width : 100%;
+  min-width: 100%;
     height: auto;
   }
-`;
+`
 
 export const TerminalHeader = styled.div`
   display: flex;
@@ -26,7 +28,7 @@ export const TerminalHeader = styled.div`
   background: #1e1e1e;
   border-radius: 13px 13px 0px 0px;
   background: #363636;
-`;
+`
 
 export const TerminalContent = styled.div`
   display: flex;
@@ -42,11 +44,11 @@ export const TerminalContent = styled.div`
   .gdsc-text {
     color: #24b06c;
   }
-`;
+`
 
 export const TerminalButton = styled.button`
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: ${({ color }) => color};
-`;
+`

@@ -55,7 +55,7 @@ export function HomeTeam() {
       <div className="flex items-center justify-center py-4" id="team">
         <h3 className="h2">Meet Our Team</h3>
       </div>
-      <div className="my-10 flex w-fit flex-1 scale-150 flex-row items-center justify-center md:scale-[200%]">
+      <div className="my-10 flex w-fit flex-1 scale-90 flex-row items-center justify-center md:scale-[200%]">
         <AnimatedTooltip items={people} />
         <Link href="/team">
           <button className="relative me-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-purple-500 to-pink-500 p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4 focus:ring-purple-200 dark:text-white dark:focus:ring-purple-800">

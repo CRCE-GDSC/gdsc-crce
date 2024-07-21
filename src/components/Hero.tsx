@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Hero: React.FC = () => {
   return (
-    <div className="z-10 mt-32 mb-0 md:mt-0 flex h-screen min-w-full items-center justify-center bg-transparent">
+    <div className="z-10 mt-32 mb-0 md:mt-0 flex min-h-screen min-w-full items-center justify-center bg-transparent">
       <div className="z-10 container flex flex-col items-center justify-center vn:flex-row">
         <div className="vn:pl-36  w-full text-center">
           <h1 className="mb-4 text-8xl font-bold">Welcome To GDSC</h1>
@@ -25,8 +25,8 @@ const Hero: React.FC = () => {
           className="max-w-[600px]"
         />
       </div> */}
-        <div className="relative vn:mr-20 vn:my-0 my-20  flex h-[500px] w-full flex-col items-center justify-center overflow-visible bg-transparent">
-          <div className="z-10 max-w-[450px]">
+        <div className="relative vn:mr-20 vn:my-0 my-20  flex  vn:h-[500px] w-full flex-col items-center justify-center overflow-visible bg-transparent">
+          <div className="z-10 vn:max-w-[450px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"

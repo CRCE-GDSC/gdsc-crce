@@ -7,7 +7,7 @@ import { Sun, Moon } from 'lucide-react'
 import { ThemeToggle } from './ToogleButton'
 
 const navItems = [
-  { name: 'Home', href: '/' },
+  { name: 'Home', href: '#home' },
   { name: 'About Us', href: '#about' },
   { name: 'What We Do', href: '#services' },
   { name: 'Events', href: '#events' },
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`fixed left-0 right-0 top-0 z-50 text-center transition-transform duration-300 ease-in-out ${
+        className={` w-full fixed left-0 right-0 top-0 z-50 text-center transition-transform duration-300 ease-in-out ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
