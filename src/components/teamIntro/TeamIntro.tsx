@@ -1,6 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import CommunitySection from './subcomponents/communitySection/CommunitySection'
+import ContentSection from './subcomponents/contentSection/ContentSection'
+import DesignSection from './subcomponents/designSection/DesignSection'
+import MobileDesignSection from './subcomponents/designSection/mobileDesignSection/MobileDesignSection'
+import MLIntro from './subcomponents/mlSection/MLIntro'
+import Terminal from './subcomponents/terminal/Terminal'
 import {
   TeamButton,
   TeamDescriptionSection,
@@ -8,14 +14,6 @@ import {
   TeamIntroSectionWrapper,
   TeamTitlesSection,
 } from './TeamIntro.styled'
-import Typography from '../typography/Typography'
-import Terminal from './subcomponents/terminal/Terminal'
-import MLIntro from './subcomponents/mlSection/MLIntro'
-import DesignSection from './subcomponents/designSection/DesignSection'
-import ContentSection from './subcomponents/contentSection/ContentSection'
-import CommunitySection from './subcomponents/communitySection/CommunitySection'
-import MobileDesignSection from './subcomponents/designSection/mobileDesignSection/MobileDesignSection'
-
 
 interface TeamIntroProps {
   isMobile: boolean
@@ -24,7 +22,7 @@ const TeamIntro: React.FC<TeamIntroProps> = ({ isMobile }) => {
   const [activeTeam, setActiveTeam] = useState<string>('tech')
 
   return (
-    <TeamIntroContainer className="my-10 bg-inherit dark:bg-black">
+    <TeamIntroContainer className="my-10 bg-transparent">
       <p className="h2">What We Do</p>
       <TeamIntroSectionWrapper>
         <TeamTitlesSection>
@@ -68,7 +66,7 @@ const TeamIntro: React.FC<TeamIntroProps> = ({ isMobile }) => {
           {activeTeam === 'tech' && <Terminal />}
           {activeTeam === 'android' && <MLIntro />}
           {activeTeam === 'design' &&
-          (isMobile ? <MobileDesignSection /> : <DesignSection />)}
+            (isMobile ? <MobileDesignSection /> : <DesignSection />)}
           {activeTeam === 'content' && <ContentSection />}
           {activeTeam === 'community' && <CommunitySection />}
         </TeamDescriptionSection>

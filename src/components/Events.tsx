@@ -34,17 +34,16 @@ function ResponsiveCarousel() {
 export default ResponsiveCarousel*/
 
 'use client'
-import { useState, useEffect } from 'react'
-import VerticalCarousel from './final_c_mobile'
+import { useEffect, useState } from 'react'
 import Carousel from './final_c'
-import Typography from './typography/Typography'
+import VerticalCarousel from './final_c_mobile'
 
 function ResponsiveCarousel() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024) // Adjust this breakpoint as needed
+      setIsMobile(window.innerWidth < 600) // Adjust this breakpoint as needed
     }
 
     handleResize() // Initial check
@@ -57,11 +56,11 @@ function ResponsiveCarousel() {
 
   return (
     <div
-      className="flex min-h-screen w-full flex-col items-center justify-center bg-inherit dark:bg-black"
+      className="flex h-screen w-full flex-col items-center justify-center bg-transparent dark:bg-black"
       id="events"
     >
-      <div className="mb-20">
-        <h1 className="h2">Events</h1>
+      <div className="my-16">
+        <p className="h2">Event</p>
       </div>
       {isMobile ? <VerticalCarousel /> : <Carousel />}
       <button

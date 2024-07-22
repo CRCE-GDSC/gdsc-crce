@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
 import Image from 'next/image'
+import React, { useState } from 'react'
 const Carousel: React.FC = () => {
   const [activePos, setActivePos] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -40,8 +40,8 @@ const Carousel: React.FC = () => {
       justifyContent: 'center',
       color: '#fff',
       fontSize: pos === 0 ? '16px' : '0px',
-      width: '40vw',
-      height: '80vh',
+      width: '30vw',
+      height: '65vh',
       borderRadius: '10px',
       boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.5)',
       position: 'absolute',
@@ -87,9 +87,9 @@ const Carousel: React.FC = () => {
 
   return (
     <>
-      <div className="light:bg-white flex h-auto w-full flex-col items-center justify-center overflow-hidden text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white">
+      <div className="light:bg-white flex h-auto w-full flex-col items-center justify-center text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white">
         <h1 className="bg-transparent text-center"></h1>
-        <div className="relative flex w-full flex-row items-center justify-center">
+        <div className="relative mx-10 flex w-full flex-row items-center justify-center">
           <button
             onClick={() =>
               setActivePos((prevPos) =>
@@ -101,7 +101,7 @@ const Carousel: React.FC = () => {
             <Image src="/gdsc-fl.png" alt="Previous" width={50} height={50} />
           </button>
           <div className="w-full">
-            <div className="mb-10 flex h-[80vh] min-h-fit w-full items-center justify-center font-sans">
+            <div className="mb-10 flex h-[65vh] min-h-fit w-full items-center justify-center font-sans">
               <ul className="perspective-300 relative m-0 flex h-full w-full list-none justify-center p-0">
                 {items.map((item, index) => (
                   <li
