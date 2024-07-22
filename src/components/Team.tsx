@@ -1,26 +1,32 @@
-
-"use client";
+'use client'
 import Image from 'next/image'
 
-import React from "react";
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { BackgroundGradient } from './ui/background-gradient';
-import Link from 'next/link';
+import React from 'react'
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component'
+import { BackgroundGradient } from './ui/background-gradient'
+import 'react-vertical-timeline-component/style.min.css'
+import Link from 'next/link'
 let data = [
   {
-    img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Team 2024",
-    description: "Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged."
+    img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'Team 2024',
+    description:
+      'Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged.',
   },
   {
-    img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Team 2023",
-    description: "Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged."
+    img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'Team 2023',
+    description:
+      'Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged.',
   },
   {
-    img: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Team 2022",
-    description: "Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged."
+    img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'Team 2022',
+    description:
+      'Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged.',
   },
 ]
 
