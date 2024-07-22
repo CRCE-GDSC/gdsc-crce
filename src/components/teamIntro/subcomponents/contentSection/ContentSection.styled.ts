@@ -25,13 +25,23 @@ export const ContentSectionContainer = styled.div`
     font-weight: 500;
   }
 
-  @media screen and (${devices.lg}) {
+  @media screen and (${devices.vn}) {
     height: 100%;
     width: 80%;
     .docs-text {
-      width: 80%;
+      width: 70%;
+      max-height: 50%;
       font-weight: 400;
       font-size: 1.1rem;
+    }
+    @media screen and (${devices.md}) {
+    height: 100%;
+    width: 100%;
+    .docs-text {
+      width: 80%;
+      max-height: 30%;
+      font-weight: 300;
+      font-size: 1rem;
     }
   }
 `

@@ -26,21 +26,39 @@ const ContentSection: React.FC = () => {
   return (
     <ContentSectionContainer>
       {isMobile ? (
-       <div className='min-w-full rounded-b-xl overflow-hidden'> <MobileDocs /></div>
+        <div className="min-w-full overflow-hidden rounded-b-xl">
+          {' '}
+          <MobileDocs />
+        </div>
       ) : (
-        <div className='min-w-full rounded-b-xl overflow-hidden'><GoogleDocs/></div>
+        <div className="min-w-full overflow-hidden rounded-b-xl">
+          <GoogleDocs />
+        </div>
       )}
       <div className="docs-text">
-        <TypingEffect interKeyStrokeDurationInMs={20} showCursor={true} className='dark:text-black'>
+        <TypingEffect
+          interKeyStrokeDurationInMs={20}
+          showCursor={true}
+          className="hidden md:block dark:text-black"
+        >
           The Content Team at GDSC CRCE is the storytelling heart of our
           community. They curate captivating blogs, craft insightful articles,
           and orchestrate engaging newsletters. With a passion for sharing
           knowledge and fostering connections, this team weaves words into
           meaningful narratives that keep our members informed and inspired.
         </TypingEffect>
+        <TypingEffect
+          interKeyStrokeDurationInMs={20}
+          showCursor={true}
+          className=" md:hidden dark:text-black"
+        >
+          The Content Team at GDSC CRCE is the storytelling heart of our
+          community. They curate captivating blogs, craft insightful articles,
+          and orchestrate engaging newsletters.
+        </TypingEffect>
       </div>
     </ContentSectionContainer>
-  );
+  )
 };
 
 export default ContentSection;
