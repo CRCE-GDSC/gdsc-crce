@@ -19,30 +19,35 @@ const people = [
   },
   {
     id: 3,
+    name: 'Aditya Rathod',
+    designation: 'Management Lead',
+    image: '/team/Adi.jpg',
+  },
+  {
+    id: 4,
     name: 'Susan Fernandes',
     designation: 'Management Co-Lead',
     image: '/team/sussan.jpg',
   },
-  {
-    id: 4,
-    name: 'Aditya Rathod',
-    designation: 'Management Lead',
-    image:"/team/Adi.jpg"  },
+
   {
     id: 5,
     name: 'Bryce Miranda',
     designation: 'Operational Advisor',
-    image:"/team/Bryce.png"  },
+    image: '/team/Bryce.png',
+  },
   {
     id: 6,
     name: 'Soham Parab',
     designation: 'Technical Advisor',
-    image:"/team/Soham.jpg"  },
+    image: '/team/Soham.jpg',
+  },
   {
     id: 7,
     name: 'Sanket Mane',
     designation: 'Managing Advisor',
-    image:"/team/Sanket.JPG"  },
+    image: '/team/Sanket.JPG',
+  },
   // {
   //   id: 8,
   //   name: 'Dora',
