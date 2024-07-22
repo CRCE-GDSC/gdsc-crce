@@ -21,7 +21,7 @@ export default async function Home() {
           ' bg-inherit [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] dark:bg-black'
         )}
       />
-      <Hero />
+      {/* <Hero /> */}
       <AboutUs />
       <WhatWeDo />
       <ResponsiveCarousel />

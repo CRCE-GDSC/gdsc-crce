@@ -22,14 +22,17 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
 }) => {
   return (
     <div className="feature-item">
-      <div className="feature-item-left overflow-visible" style={{ backgroundColor: color }}>
+      <div
+        className="feature-item-left overflow-visible"
+        style={{ backgroundColor: color }}
+      >
         <Image
           src={image}
           alt={title}
           height={1000}
           width={1000}
           priority
-          className={`min-w-[100px] min-h-full max-w-[650px] overflow-visible -translate-y-[53.5px] md:-translate-x-[38px] md:-translate-y-[0px] vn:min-w-[650px] vn:-translate-y-[53.5px] feature-${key}`}
+          className={`min-h-full min-w-full max-w-[450px] md:max-w-[650px] -translate-y-[0px] overflow-visible sm:-translate-y-[0px] md:-translate-x-[38px] md:-translate-y-[0px] vn:min-w-[650px] vn:-translate-y-[53.5px] feature-${key}`}
         />
       </div>
       <div className="feature-item-right">
@@ -66,7 +69,7 @@ const featuresInfo: FeatureInfo[] = [
 const AboutUs: React.FC = () => {
   return (
     <div className="min-w-full vn:my-10 mt-52" id='about'>
-      <p className="h2 darkText dark:text-neutral-300 ta-center font-bold">About Us</p>
+      <p className="h3 darkText dark:text-neutral-300 ta-center font-bold">About Us</p>
       <div className="featurecontainer mt-10">
         <div className="features">
           {featuresInfo.map((item, index) => (

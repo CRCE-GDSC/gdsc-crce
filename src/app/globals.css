@@ -222,8 +222,7 @@
 
 .h2 {
   font-family: Google Sans Medium;
-  font-size: 50px;
-  letter-spacing: 1px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
 }
@@ -351,7 +350,7 @@
 
   .feature-item-left {
     width: 100%;
-    height: 350px;
+    height: max-content;
     padding: 0 10px;
     display: flex;
     align-items: center;
@@ -366,7 +365,7 @@
   }
 
   .feature-item-right .h2 {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
   }
 
