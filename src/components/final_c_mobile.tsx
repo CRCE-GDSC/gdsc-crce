@@ -44,7 +44,7 @@ const AceGridCard: React.FC<CarouselItem> = ({
   return (
     <div
       className={cn(
-        'group/bento relative h-full w-full overflow-hidden rounded-xl border shadow-none transition duration-200 hover:shadow-xl',
+        'group/bento relative h-[80vh] w-full overflow-hidden rounded-xl border shadow-none transition duration-200 hover:shadow-xl',
         theme === 'dark'
           ? 'border-white/[0.2] bg-inherit'
           : 'border-gray-200 bg-inherit',
