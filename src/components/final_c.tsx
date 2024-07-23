@@ -87,7 +87,10 @@ const Carousel: React.FC = () => {
 
   return (
     <>
-      <div className="light:bg-white flex h-auto w-full flex-col items-center justify-center text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white">
+      <div
+        className="light:bg-white flex h-auto w-full flex-col items-center justify-center text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white"
+        id="desktop"
+      >
         <h1 className="bg-transparent text-center"></h1>
         <div className="relative mx-10 flex w-full flex-row items-center justify-center">
           <button

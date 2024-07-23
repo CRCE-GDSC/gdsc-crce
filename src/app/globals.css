@@ -192,8 +192,8 @@
 }
 /* css for the mobile caro usel*/
 .carousel {
-  @apply inline-flex overflow-x-scroll;
-  scroll-snap-type: x mandatory;
+  @apply w-screen overflow-y-scroll;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   &-vertical {
     @apply flex-col overflow-y-scroll;
@@ -265,12 +265,12 @@
   text-align: center;
 }
 
-.featurecontainer{
-  width:101% ;
+.featurecontainer {
+  width: 101%;
   overflow-x: hidden;
   overflow-y: auto;
- margin-left: -1% ;
- margin-right: -1%;
+  margin-left: -1%;
+  margin-right: -1%;
 }
 
 .features {
@@ -280,7 +280,6 @@
   flex-direction: column;
   align-items: flex-start;
   width: 103%;
-
 }
 
 .feature-item {
@@ -309,7 +308,6 @@
   flex-direction: row;
 }
 
-
 .feature-item-right {
   width: 52.5%;
   height: 100%;
@@ -318,34 +316,32 @@
   justify-content: center;
   padding: 0 8vw;
 }
-.feature-item:nth-child(even)   {
+.feature-item:nth-child(even) {
   flex-direction: row-reverse;
-
 }
 
 @media only screen and (max-width: 738px) {
   .features {
-  margin: 40px auto;
-  margin-top: 6%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-
-}
-.featurecontainer{
-  width:100% ;
-  overflow-x: hidden;
-  overflow-y: auto;
- margin-left: 0% ;
- margin-right: 0%;
-}
+    margin: 40px auto;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .featurecontainer {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 
   .feature-item {
     flex-direction: column;
     height: auto;
     padding: 20px;
-        align-items: center;
+    align-items: center;
   }
 
   .feature-item-left {

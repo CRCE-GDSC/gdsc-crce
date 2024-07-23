@@ -160,7 +160,7 @@ const VerticalCarousel: React.FC = () => {
 
   return (
     <>
-      <div className="flex min-h-screen items-center justify-center bg-inherit px-4 py-8">
+      <div className="flex-col items-center justify-center bg-inherit px-4 py-8" id='mobile'>
         <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
           {carouselItems.map((item, index) => (
             <div key={index} className="carousel-item h-full w-full">
