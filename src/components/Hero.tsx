@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import OrbitingCircles from './ui/orbittinghero'
 import { devices } from 'constants/theme'
+import Link from 'next/link'
 
 const Hero: React.FC = () => {
   const [isSmall, setIsSmall] = useState<boolean>(false)
@@ -42,15 +43,19 @@ const Hero: React.FC = () => {
     <div className="z-10 mb-0 flex min-h-screen min-w-full items-center justify-center bg-transparent md:mt-0">
       <div className="container z-10 flex flex-col-reverse items-center justify-center vn:flex-row">
         <div className="w-full text-center vn:pl-36">
-          <h1 className="mb-4 w-fit text-5xl md:text-8xl font-bold">Welcome To GDSC</h1>
+          <h1 className="mb-4 w-fit text-5xl font-bold md:text-8xl">
+            Welcome To GDSC
+          </h1>
           <p className="mb-8 text-xl">
             Get ready to delve into the World of Developers
           </p>
-          <button className="vn:ml-10 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
-            Join Us
-          </button>
+          <Link href="https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai-india/">
+            <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 vn:ml-10">
+              Join Us
+            </button>
+          </Link>
         </div>
-        <div className="relative flex w-full  flex-col items-center justify-center overflow-visible bg-transparent vn:my-0 vn:mr-20 vn:h-[500px]">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-visible bg-transparent vn:my-0 vn:mr-20 vn:h-[500px]">
           <div className="z-10 max-w-[250px] vn:max-w-[450px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"

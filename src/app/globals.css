@@ -197,7 +197,7 @@
   scroll-behavior: smooth;
   &-vertical {
     @apply flex overflow-y-scroll;
-    scroll-snap-type: mandatory; /* y mandatory  */
+    scroll-snap-type: y mandatory; /* y mandatory  */
   }
   &-item {
     @apply box-content flex flex-none;
