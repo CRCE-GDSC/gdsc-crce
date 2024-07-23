@@ -44,7 +44,7 @@ const AceGridCard: React.FC<CarouselItem> = ({
   return (
     <div
       className={cn(
-        'group/bento relative h-[80vh] w-[80vw] overflow-hidden rounded-xl mx-[10%] border shadow-none transition duration-200 hover:shadow-xl',
+        'group/bento relative h-full w-[80vw] overflow-hidden rounded-xl mx-[10%] border shadow-none transition duration-200 hover:shadow-xl',
         theme === 'dark'
           ? 'border-white/[0.2] bg-inherit'
           : 'border-gray-200 bg-inherit',
@@ -160,7 +160,7 @@ const VerticalCarousel: React.FC = () => {
 
   return (
     <>
-      <div className="flex-col items-center justify-center bg-inherit px-4 py-8" id='mobile'>
+      <div className="flex-col items-center justify-center bg-inherit py-8" id='mobile'>
         <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
           {carouselItems.map((item, index) => (
             <div key={index} className="carousel-item h-full w-full">
