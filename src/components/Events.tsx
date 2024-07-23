@@ -56,7 +56,7 @@ function ResponsiveCarousel() {
 
   return (
     <div
-      className="flex h-screen w-full flex-col items-center justify-center bg-transparent dark:bg-black"
+      className="flex vn:h-screen w-full flex-col items-center justify-center bg-transparent dark:bg-black"
       id="events"
     >
       <div className="my-16">

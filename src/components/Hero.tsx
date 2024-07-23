@@ -1,32 +1,57 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import OrbitingCircles from './ui/orbittinghero'
-import Image from 'next/image'
+import { devices } from 'constants/theme'
 
 const Hero: React.FC = () => {
+  const [isSmall, setIsSmall] = useState<boolean>(false)
+  const [isMedium, setIsMedium] = useState<boolean>(false)
+  const [isLarge, setIsLarge] = useState<boolean>(false)
+
+  useEffect(() => {
+    const mediaQuerySm = window.matchMedia(devices.sm)
+    const mediaQueryMd = window.matchMedia(devices.md)
+    const mediaQueryLg = window.matchMedia(devices.lg)
+
+    setIsSmall(mediaQuerySm.matches)
+    setIsMedium(mediaQueryMd.matches)
+    setIsLarge(mediaQueryLg.matches)
+
+    const handleMediaQueryChangeSm = (event: MediaQueryListEvent) => {
+      setIsSmall(event.matches)
+    }
+    const handleMediaQueryChangeMd = (event: MediaQueryListEvent) => {
+      setIsMedium(event.matches)
+    }
+    const handleMediaQueryChangeLg = (event: MediaQueryListEvent) => {
+      setIsLarge(event.matches)
+    }
+
+    mediaQuerySm.addEventListener('change', handleMediaQueryChangeSm)
+    mediaQueryMd.addEventListener('change', handleMediaQueryChangeMd)
+    mediaQueryLg.addEventListener('change', handleMediaQueryChangeLg)
+
+    return () => {
+      mediaQuerySm.removeEventListener('change', handleMediaQueryChangeSm)
+      mediaQueryMd.removeEventListener('change', handleMediaQueryChangeMd)
+      mediaQueryLg.removeEventListener('change', handleMediaQueryChangeLg)
+    }
+  }, [])
+
   return (
-    <div className="z-10 mt-32 mb-0 md:mt-0 flex min-h-screen min-w-full items-center justify-center bg-transparent">
-      <div className="z-10 container flex flex-col items-center justify-center vn:flex-row">
-        <div className="vn:pl-36  w-full text-center">
-          <h1 className="mb-4 text-8xl font-bold">Welcome To GDSC</h1>
+    <div className="z-10 mb-0 flex min-h-screen min-w-full items-center justify-center bg-transparent md:mt-0">
+      <div className="container z-10 flex flex-col-reverse items-center justify-center vn:flex-row">
+        <div className="w-full text-center vn:pl-36">
+          <h1 className="mb-4 w-fit text-5xl md:text-8xl font-bold">Welcome To GDSC</h1>
           <p className="mb-8 text-xl">
             Get ready to delve into the World of Developers
           </p>
-          <button className="ml-10 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
+          <button className="vn:ml-10 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
             Join Us
           </button>
         </div>
-        {/* <div className="flex justify-center md:w-1/2">
-        <Image
-          alt="hero"
-          src="/GDSC_hero.gif"
-          height={100000}
-          width={100000}
-          unoptimized
-          className="max-w-[600px]"
-        />
-      </div> */}
-        <div className="relative vn:mr-20 vn:my-0 my-20  flex  vn:h-[500px] w-full flex-col items-center justify-center overflow-visible bg-transparent">
-          <div className="z-10 vn:max-w-[450px]">
+        <div className="relative flex w-full  flex-col items-center justify-center overflow-visible bg-transparent vn:my-0 vn:mr-20 vn:h-[500px]">
+          <div className="z-10 max-w-[250px] vn:max-w-[450px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -72,10 +97,10 @@ const Hero: React.FC = () => {
 
           {/* Inner Circles */}
           <OrbitingCircles
-            className="size-[30px] border-none bg-transparent"
+            className="size-[20px] border-none bg-transparent md:size-[30px]"
             duration={20}
             delay={20}
-            radius={120}
+            radius={isMedium ? 60 : 120}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -95,10 +120,10 @@ const Hero: React.FC = () => {
             </svg>
           </OrbitingCircles>
           <OrbitingCircles
-            className="size-[30px] border-none bg-transparent"
+            className="size-[20px] border-none bg-transparent md:size-[30px]"
             duration={20}
             delay={10}
-            radius={120}
+            radius={isMedium ? 60 : 120}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -683,8 +708,8 @@ const Hero: React.FC = () => {
 
           {/* Outer Circles (reverse) */}
           <OrbitingCircles
-            className="size-[50px] border-none bg-transparent"
-            radius={250}
+            className="size-[30px] border-none bg-transparent md:size-[50px]"
+            radius={isMedium ? 140 : 250}
             duration={20}
             reverse
           >
@@ -735,8 +760,8 @@ const Hero: React.FC = () => {
             </svg>
           </OrbitingCircles>
           <OrbitingCircles
-            className="size-[50px] border-none bg-transparent"
-            radius={250}
+            className="size-[30px] border-none bg-transparent md:size-[50px]"
+            radius={isMedium ? 140 : 250}
             duration={20}
             delay={20}
             reverse

@@ -68,7 +68,7 @@ const featuresInfo: FeatureInfo[] = [
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="min-w-full vn:my-10 mt-52" id='about'>
+    <div className="min-w-full vn:my-10 mt-10" id='about'>
       <p className="h3 darkText dark:text-neutral-300 ta-center font-bold">About Us</p>
       <div className="featurecontainer mt-10">
         <div className="features">

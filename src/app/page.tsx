@@ -5,6 +5,7 @@ import { HomeTeam } from '@/components/home-team'
 import DotPattern from '@/components/ui/dot-pattern'
 import WhatWeDo from '@/components/WhatWeDo'
 import { cn } from '@/lib/utils'
+import Hero from '@/components/Hero'
 
 //import { HomeTeam } from '@/components/home-team'
 
@@ -19,10 +20,10 @@ export default async function Home() {
           'bg-inherit [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] dark:bg-black'
         )}
       />
-      {/* <Hero /> */}
+      <Hero />
       <AboutUs />
       <WhatWeDo />
-      <div className="my-10">
+      <div className="vn:my-10">
         <ResponsiveCarousel />
       </div>
       <HomeTeam />
