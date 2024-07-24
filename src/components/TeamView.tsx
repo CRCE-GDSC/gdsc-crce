@@ -10,7 +10,7 @@ import { Dock, DockIcon } from './ui/dock'
 import { getTeam2024Data } from '@/data/Teamdata'
 
 export default function TeamView(props) {
-  const [selectedMember, setSelectedMember] = useState(1)
+  const [selectedMember, setSelectedMember] = useState(null)
   const [isSeniorVisible, setIsSeniorVisible] = useState(false)
   const [selectedPositionIndex, setSelectedPositionIndex] = useState(0)
   const [direction, setDirection] = useState(0)
@@ -19,8 +19,7 @@ export default function TeamView(props) {
     'GDSC Associates',
     'Graphic Associates',
   ])
-  const [teamData, setTeamData] = useState<number[][]>([])
-  const [positionWithKey, setPositionWithKey] = useState({})
+  const [teamData, setTeamData] = useState([])
 
   const handleToggle = () => {
     setIsSeniorVisible(!isSeniorVisible)
@@ -45,6 +44,7 @@ export default function TeamView(props) {
 
   useEffect(() => {
     setTeamData(getTeam2024Data(isSeniorVisible))
+
     if (isSeniorVisible) {
       setPositions(['Management Team', 'Core Team', 'Advisors'])
     } else {
@@ -91,7 +91,7 @@ export default function TeamView(props) {
         <AnimatePresence mode="wait">
           {selectedMember && (
             <motion.div
-              key={selectedMember}
+              key={selectedMember.name}
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -100, opacity: 0 }}
@@ -103,18 +103,22 @@ export default function TeamView(props) {
                     <div className="flex flex-col items-center pb-10">
                       <img
                         className="mb-3 aspect-auto h-44 w-44 rounded-full border border-gray-500 object-contain shadow-lg"
-                        src="/gdsc-f.png"
-                        alt="Bonnie image"
+                        src={selectedMember.imgSrc}
+                        alt={`${selectedMember.name} image`}
                       />
                       <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-                        {selectedMember}
+                        {selectedMember.name}
                       </h5>
                       <span className="text-sm text-gray-500 dark:text-gray-400">
-                        Visual Designer
+                        {selectedMember.position}
                       </span>
                       <div className="mt-4 flex gap-4 md:mt-6">
-                        <span>fhsef</span>
-                        <span>fhsef</span>
+                        <a href={selectedMember.linkedIn} target="_blank" rel="noopener noreferrer">
+                          LinkedIn
+                        </a>
+                        <a href={selectedMember.Instagram} target="_blank" rel="noopener noreferrer">
+                          Instagram
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -141,14 +145,14 @@ export default function TeamView(props) {
           />
         </div>
         <Dock>
-          {teamData[selectedPositionIndex]?.map((item, index) => (
+          {teamData[selectedPositionIndex]?.map((member, index) => (
             <DockIcon
               key={index}
-              item={item}
+              item={member}
               setSelectedMember={setSelectedMember}
-              className="p-2"
+              className=""
             >
-              <img src="/gdsc-f.png" />
+              <img src={member.imgSrc} className='rounded-full' alt={member.name} />
             </DockIcon>
           ))}
         </Dock>
