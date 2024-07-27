@@ -1,5 +1,5 @@
-import { devices } from "constants/theme";
-import { styled } from "styled-components";
+import { devices } from 'constants/theme'
+import { styled } from 'styled-components'
 
 // export const TeamIntroContainer = styled.div`
 //   width: 100%;
@@ -95,7 +95,6 @@ import { styled } from "styled-components";
 //   }
 // `;
 
-
 export const TeamIntroContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -137,7 +136,7 @@ export const TeamIntroSectionWrapper = styled.div`
 export const TeamTitlesSection = styled.div`
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-self: flex-center;
   gap: 1rem;
   flex-basis: 30%;
   padding: 1rem 0;
