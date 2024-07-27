@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
-  weight: '400',
+  weight: '500',
 })
 
 export const metadata: Metadata = {

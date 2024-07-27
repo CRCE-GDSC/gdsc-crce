@@ -47,6 +47,7 @@ const Hero: React.FC = () => {
           <GradualSpacing
             className="font-display text-center text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
             text="Welcome to GDSC"
+            duration={0.75}
           />
           <p className="mb-8 text-2xl font-bold">
             Get ready to delve into the World of Developers
@@ -59,7 +60,7 @@ const Hero: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="relative flex w-full flex-col items-center justify-center overflow-visible bg-transparent vn:my-0 vn:mr-20 vn:h-[500px]">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-visible bg-transparent vn:my-10 vn:mr-20 vn:h-[700px]">
           <div className="z-10 max-w-[250px] vn:max-w-[450px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"

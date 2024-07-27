@@ -1,6 +1,10 @@
 import { devices } from 'constants/theme'
 import { styled } from 'styled-components'
 
+interface TeamButtonProps {
+  isSelected?: boolean
+}
+
 // export const TeamIntroContainer = styled.div`
 //   width: 100%;
 //   height: 100%;
@@ -160,7 +164,7 @@ export const TeamDescriptionSection = styled.div`
   width: 100%;
 `
 
-export const TeamButton = styled.button`
+export const TeamButton = styled.button<TeamButtonProps>`
   display: flex;
   justify-content: flex-start;
   align-items: center;
