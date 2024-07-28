@@ -1,13 +1,13 @@
 'use client'
 
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Linkedin, Instagram, Github, Twitter } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BackgroundGradient } from './ui/background-gradient'
 import AnimatedGradientText from './ui/animated-gradient-text'
 import { cn } from '@/lib/utils'
 import { Dock, DockIcon } from './ui/dock'
-import { getTeam2024Data } from '@/data/Teamdata'
+import { getTeam2022Data, getTeam2023Data, getTeam2024Data } from '@/data/Teamdata'
 
 export default function TeamView(props) {
   const [selectedMember, setSelectedMember] = useState(null)
@@ -40,10 +40,14 @@ export default function TeamView(props) {
     if (props.type === 'Team2024') {
       setTeamData(getTeam2024Data(isSeniorVisible))
     }
+    if (props.type === 'Team2023') {
+      setTeamData(getTeam2023Data(isSeniorVisible))
+    } if (props.type === 'Team2022') {
+      setTeamData(getTeam2022Data(isSeniorVisible))
+    }
   }, [props.type, isSeniorVisible])
 
   useEffect(() => {
-    setTeamData(getTeam2024Data(isSeniorVisible))
 
     if (isSeniorVisible) {
       setPositions(['Management Team', 'Core Team', 'Advisors'])
@@ -52,8 +56,31 @@ export default function TeamView(props) {
     }
   }, [isSeniorVisible])
 
+  const renderDocks = () => {
+    const currentTeam = teamData[selectedPositionIndex] || []
+    const docks = []
+    for (let i = 0; i < currentTeam.length; i += 5) {
+      const slicedTeam = currentTeam.slice(i, i + 5)
+      docks.push(
+        <Dock key={i}>
+          {slicedTeam.map((member, index) => (
+            <DockIcon
+              key={index}
+              item={member}
+              setSelectedMember={setSelectedMember}
+              className=""
+            >
+              <img src={member.imgSrc} className='rounded-full' alt={member.name} />
+            </DockIcon>
+          ))}
+        </Dock>
+      )
+    }
+    return docks
+  }
+
   return (
-    <div className="flex flex-1 flex-col items-center justify-between gap-8">
+    <div className="flex flex-1 flex-col items-center justify-between p-4 gap-8">
       <div className="mt-2 flex items-center justify-center gap-4">
         <AnimatedGradientText>
           <span
@@ -97,29 +124,32 @@ export default function TeamView(props) {
               exit={{ x: -100, opacity: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <BackgroundGradient>
-                <div className="w-full max-w-md rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-                  <div className="flex justify-end px-4 pt-4">
-                    <div className="flex flex-col items-center pb-10">
-                      <img
-                        className="mb-3 aspect-auto h-44 w-44 rounded-full border border-gray-500 object-contain shadow-lg"
-                        src={selectedMember.imgSrc}
-                        alt={`${selectedMember.name} image`}
-                      />
-                      <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-                        {selectedMember.name}
-                      </h5>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {selectedMember.position}
-                      </span>
-                      <div className="mt-4 flex gap-4 md:mt-6">
-                        <a href={selectedMember.linkedIn} target="_blank" rel="noopener noreferrer">
-                          LinkedIn
+              <BackgroundGradient className="p-1 rounded-xl">
+                <div className="w-full max-w-md rounded-lg bg-white/10 shadow-xl backdrop-blur-md">
+                  <div className="flex flex-col items-center p-8">
+                    <img
+                      className="mb-4 h-32 w-32 rounded-full border-4 border-blue-500 object-cover shadow-lg"
+                      src={selectedMember.imgSrc}
+                      alt={`${selectedMember.name} image`}
+                    />
+                    <h5 className="mb-1 text-2xl font-bold text-white">
+                      {selectedMember.name}
+                    </h5>
+                    <span className="mb-4 text-lg text-blue-300">
+                      {selectedMember.position}
+                    </span>
+                    <div className="mt-4 flex gap-4">
+                      {selectedMember.linkedIn && (
+                        <a href={selectedMember.linkedIn} target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
+                          <Linkedin size={24} />
                         </a>
-                        <a href={selectedMember.Instagram} target="_blank" rel="noopener noreferrer">
-                          Instagram
+                      )}
+                      {selectedMember.Instagram && (
+                        <a href={selectedMember.Instagram} target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition-colors">
+                          <Instagram size={24} />
                         </a>
-                      </div>
+                      )}
+
                     </div>
                   </div>
                 </div>
@@ -144,18 +174,7 @@ export default function TeamView(props) {
             onClick={() => handleChevronClick(1)}
           />
         </div>
-        <Dock>
-          {teamData[selectedPositionIndex]?.map((member, index) => (
-            <DockIcon
-              key={index}
-              item={member}
-              setSelectedMember={setSelectedMember}
-              className=""
-            >
-              <img src={member.imgSrc} className='rounded-full' alt={member.name} />
-            </DockIcon>
-          ))}
-        </Dock>
+        {renderDocks()}
       </div>
     </div>
   )

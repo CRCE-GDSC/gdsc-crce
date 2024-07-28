@@ -1,4 +1,192 @@
-const Seniors24 = [
+const Senior2024 = [
+  {
+    name: 'Shaun Mendes',
+    imgSrc: "/assets/team/Shaun.jpeg", // Reusing existing image path
+    position: 'Co Lead',
+    department: 'TE COMPS A',
+    linkedIn: 'https://www.linkedin.com/in/shaun-mendes-2107521b0/',
+    Instagram: 'https://www.instagram.com/shaun_mendes_01/',
+  },
+  {
+    name: 'Angela Dsouza',
+    imgSrc: "/assets/team/Angela.jpg", // Reusing existing image path
+    position: 'Head of Operations',
+    department: 'TE COMPS B',
+    linkedIn: 'https://www.linkedin.com/in/angela-dsouza-751a22249',
+    Instagram: 'https://instagram.com/angela._.ds?igshid=MzNlNGNkZWQ4Mg==',
+  },
+  {
+    name: 'Aditya Rathod',
+    imgSrc: "/assets/team/aditya_rathod.jpg", // New image path needed
+    position: 'Management Lead',
+    department: 'TE AI/DS',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Susan Fernandes',
+    imgSrc: "/assets/team/susan.jpeg", // Reusing existing image path
+    position: 'Management Co Lead',
+    department: 'TE COMPS B',
+    linkedIn: 'https://www.linkedin.com/in/susan-fernandes-3b6635256',
+    Instagram: 'https://instagram.com/_susan_fernandes_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D',
+  },
+  {
+    name: 'Zane Fernandes',
+    imgSrc: "/assets/team/Zane2.jpg", // Reusing existing image path
+    position: 'Technical Lead',
+    department: 'TE COMPS A',
+    linkedIn: 'http://www.linkedin.com/in/zane-fernandes-b46b75264',
+    Instagram: 'https://www.instagram.com/zane_fernandes/',
+  },
+  {
+    name: 'Sharian Dabre',
+    imgSrc: "/assets/team/sharian_dabre.jpg", // New image path needed
+    position: 'Technical Co Lead',
+    department: 'TE COMPS A',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Snowy Fernandes',
+    imgSrc: "/assets/team/snowy_fernandes.jpg", // New image path needed
+    position: 'Public Relations Lead',
+    department: 'TE COMPS B',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Siddhant Jadhav',
+    imgSrc: "/assets/team/Siddhant.png", // Reusing existing image path
+    position: 'Graphic Design Lead',
+    department: 'TE COMPS B',
+    linkedIn: 'https://www.linkedin.com/in/siddhant-jadhav-21bb43282',
+    Instagram: 'https://instagram.com/whyy.siddd?igshid=OGQ5ZDc2ODk2ZA==',
+  },
+  {
+    name: 'Bliss Machado',
+    imgSrc: "/assets/team/bliss_machado.jpg", // New image path needed
+    position: 'Graphic Design Co Lead',
+    department: 'TE ECS',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Soham Parab',
+    imgSrc: "/assets/team/Soham.jpg", // Reusing existing image path
+    position: 'Technical Advisor',
+    department: 'BE COMPS B',
+    linkedIn: 'https://www.linkedin.com/in/soham-parab-a51a791b7/',
+    Instagram: 'https://instagram.com/soo.oham?igshid=ZDc4ODBmNjlmNQ==',
+  },
+  {
+    name: 'Bryce Miranda',
+    imgSrc: "/assets/team/Bryce.jpeg", // Reusing existing image path
+    position: 'Operational Advisor',
+    department: 'BE COMPS B',
+    linkedIn: 'https://www.linkedin.com/in/bryce-miranda-b7a94a216/',
+    Instagram: 'https://instagram.com/thestoryofbryce?igshid=MmIzYWVlNDQ5Yg==',
+  },
+  {
+    name: 'Sanket Mane',
+    imgSrc: "/assets/team/sanket3.jpeg", // Reusing existing image path
+    position: 'Managing Advisor',
+    department: 'BE COMPS B',
+    linkedIn: 'https://www.linkedin.com/in/sanketmane2323',
+    Instagram: 'https://www.instagram.com/_sanket.mane23',
+  },
+];
+const Juniors2024 = [
+  {
+    name: 'Chris Lopes',
+    imgSrc: "/assets/team/chris_lopes.jpg", // Placeholder path
+    position: 'Technical Associate',
+    department: 'SE COMPS A',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Vanessa Rodrigues',
+    imgSrc: "/assets/team/vanessa_rodrigues.jpg", // Placeholder path
+    position: 'Technical Associate',
+    department: 'SE COMPS B',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Arshdeep Kaur',
+    imgSrc: "/assets/team/arshdeep_kaur.jpg", // Placeholder path
+    position: 'Technical Associate',
+    department: 'SE COMPS A',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Yash Solanki',
+    imgSrc: "/assets/team/yash_solanki.jpg", // Placeholder path
+    position: 'GDSC Associate',
+    department: 'SE COMPS B',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Jaden Vaz',
+    imgSrc: "/assets/team/Jaden.jpg", // Placeholder path
+    position: 'GDSC Associate',
+    department: 'SE ECS',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Sumeet Pathak',
+    imgSrc: "/assets/team/sumeet_pathak.jpg", // Placeholder path
+    position: 'GDSC Associate',
+    department: 'SE COMPS A',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Sarah Dayal',
+    imgSrc: "/assets/team/sarah_dayal.jpg", // Placeholder path
+    position: 'GDSC Associate',
+    department: 'SE COMPS B',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Harshil Sampat',
+    imgSrc: "/assets/team/harshil_sampat.jpg", // Placeholder path
+    position: 'GDSC Associate',
+    department: 'SE AI/DS',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Liza Castelino',
+    imgSrc: "/assets/team/liza_castelino.jpg", // Placeholder path
+    position: 'Graphic Design Associate',
+    department: 'SE COMPS A',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Celene Ciby',
+    imgSrc: "/assets/team/celene_ciby.jpg", // Placeholder path
+    position: 'Graphic Design Associate',
+    department: 'SE ECS',
+    linkedIn: '',
+    Instagram: '',
+  },
+  {
+    name: 'Vadim Rodricks',
+    imgSrc: "/assets/team/vadim_rodricks.jpg", // Placeholder path
+    position: 'Graphic Design Associate',
+    department: 'SE MECH',
+    linkedIn: '',
+    Instagram: '',
+  },
+];
+const Seniors2023 = [
   {
     name: 'Prof. Kalpana',
     imgSrc: "/assets/team/kalpana.jpg",
@@ -142,7 +330,7 @@ const Seniors24 = [
 
 ]
 
-const Juniors24 = [
+const Juniors2023 = [
   {
     name: "Angela D'Souza",
     imgSrc: "/assets/team/Angela.jpg",
@@ -249,7 +437,7 @@ const Juniors24 = [
     Instagram: '',
   },
 ]
-const Seniors23 = [
+const Seniors2022 = [
 
   {
     name: 'Prof. Kalpana',
@@ -428,7 +616,7 @@ const Seniors23 = [
   },
 
 ]
-const Juniors23 = [
+const Juniors2022 = [
   {
     name: 'Akshat Sarraf',
     imgSrc: "/assets/team/Akshat.jpg",
@@ -512,109 +700,158 @@ export function getTeam2024Data(isSenior: boolean) {
     return [
       [
         // Management Team
-        Seniors24[1],  // Arnav Pandita
-        Seniors24[2],  // Shreya Sahay
-        Seniors24[3],  // Sanket Mane
-        Seniors24[7],  // Shubh Shetty
+        Senior2024[0],  // Shaun Mendes
+        Senior2024[1],  // Angela Dsouza
+        Senior2024[2],  // Aditya Rathod
+        Senior2024[3],  // Susan Fernandes
       ],
       [
         // Core Team
-        Seniors24[9],  // Bryce Miranda
-        Seniors24[10], // Punit Giri
-        Seniors24[11], // Shruti Patil
-        Seniors24[12], // Sanat Patil
-        Seniors24[14], // Chhand Chaughule
-        Seniors24[15], // Zane Falcao
-        Seniors24[16], // Aston Castelino
-        Seniors24[18], // Soham Parab
-        Seniors24[19], // Rudalph Gonsalves
+        Senior2024[4],  // Zane Fernandes
+        Senior2024[5],  // Sharian Dabre
+        Senior2024[6],  // Snowy Fernandes
+        Senior2024[7],  // Siddhant Jadhav
+        Senior2024[8],  // Bliss Machado
       ],
       [
         // Advisors
-        Seniors24[0],  // Prof. Kalpana
-        Seniors24[4],  // Vijay Prajapati
-        Seniors24[5],  // Rahul Bothra
+        Senior2024[9],  // Soham Parab
+        Senior2024[10], // Bryce Miranda
+        Senior2024[11], // Sanket Mane
       ]
-    ]
+    ];
   }
   return [
     [
-      // Tech Associates
-      Juniors24[1],  // Zane Fernandes
-      Juniors24[2],  // Shaun Mendes
-      Juniors24[3],  // Alvin D'Souza
+      // Technical Associates
+      Juniors2024[0], // Chris Lopes
+      Juniors2024[1], // Vanessa Rodrigues
+      Juniors2024[2], // Arshdeep Kaur
     ],
     [
       // GDSC Associates
-      Juniors24[7],  // Susan Fernandes
-      Juniors24[8],  // Samuel D'Souza
-      Juniors24[9],  // Sakshi Kupekar
-      Juniors24[10], // Jefin John
-      Juniors24[11], // Elita Gonsalves
-      Juniors24[12], // Joshua Gonsalves
-      Juniors24[13], // Saumitra Gurav
-      Juniors24[14], // Iqra Khan
+      Juniors2024[3], // Yash Solanki
+      Juniors2024[4], // Jaden Vaz
+      Juniors2024[5], // Sumeet Pathak
+      Juniors2024[6], // Sarah Dayal
+      Juniors2024[7], // Harshil Sampat
     ],
     [
-      // Graphic Associates
-      Juniors24[4],  // Leora Dias
-      Juniors24[5],  // Aditi Singh
-      Juniors24[6],  // Siddhant Jadhav
+      // Graphic Design Associates
+      Juniors2024[8],  // Liza Castelino
+      Juniors2024[9],  // Celene Ciby
+      Juniors2024[10], // Vadim Rodricks
     ]
-  ]
+  ];
 }
-
 export function getTeam2023Data(isSenior: boolean) {
   if (isSenior) {
     return [
       [
         // Management Team
-        Seniors23[1],  // Vijay Prajapati
-        Seniors23[2],  // Deon Gracias
-        Seniors23[3],  // Jainam Joshi
-        Seniors23[17], // Rissa Chettiar
+        Seniors2023[1],  // Arnav Pandita
+        Seniors2023[2],  // Shreya Sahay
+        Seniors2023[3],  // Sanket Mane
+        Seniors2023[7],  // Shubh Shetty
       ],
       [
         // Core Team
-        Seniors23[4],  // Ishaan Loomba
-        Seniors23[5],  // Candida Noronha
-        Seniors23[6],  // Aditya Vyas
-        Seniors23[8],  // Andre Nazareth
-        Seniors23[10], // Aditya Mahamuni
-        Seniors23[12], // Upmanyu Jha
-        Seniors23[14], // Mahek Intwala
-        Seniors23[16], // Atharva Pawar
-        Seniors23[19], // Asher Lopes
-        Seniors23[21], // Meet Satra
+        Seniors2023[9],  // Bryce Miranda
+        Seniors2023[10], // Punit Giri
+        Seniors2023[11], // Shruti Patil
+        Seniors2023[12], // Sanat Patil
+        Seniors2023[14], // Chhand Chaughule
+        Seniors2023[15], // Zane Falcao
+        Seniors2023[16], // Aston Castelino
+        Seniors2023[18], // Soham Parab
+        Seniors2023[19], // Rudalph Gonsalves
       ],
       [
         // Advisors
-        Seniors23[0],  // Prof. Kalpana
-        Seniors23[22], // Arpita Kar
-        Seniors23[23], // Anosh V
+        Seniors2023[0],  // Prof. Kalpana
+        Seniors2023[4],  // Vijay Prajapati
+        Seniors2023[5],  // Rahul Bothra
       ]
     ]
   }
   return [
     [
       // Tech Associates
-      Juniors23[0], // Akshat Sarraf
-      Juniors23[1], // Zane Falcao
-      Juniors23[2], // Rahul Gandla
+      Juniors2023[1],  // Zane Fernandes
+      Juniors2023[2],  // Shaun Mendes
+      Juniors2023[3],  // Alvin D'Souza
     ],
     [
       // GDSC Associates
-      Juniors23[5],  // Shubh Shetty
-      Juniors23[6],  // Arnav Pandita
-      Juniors23[7],  // Shruti Patil
-      Juniors23[8],  // Rudalph Gonsalves
-      Juniors23[9],  // Sanket Mane
-      Juniors23[10], // Punit Giri
+      Juniors2023[7],  // Susan Fernandes
+      Juniors2023[8],  // Samuel D'Souza
+      Juniors2023[9],  // Sakshi Kupekar
+      Juniors2023[10], // Jefin John
+      Juniors2023[11], // Elita Gonsalves
+      Juniors2023[12], // Joshua Gonsalves
+      Juniors2023[13], // Saumitra Gurav
+      Juniors2023[14], // Iqra Khan
     ],
     [
       // Graphic Associates
-      Juniors23[3], // Sanat Patil
-      Juniors23[4], // Shreya Sahay
+      Juniors2023[4],  // Leora Dias
+      Juniors2023[5],  // Aditi Singh
+      Juniors2023[6],  // Siddhant Jadhav
+    ]
+  ]
+}
+
+export function getTeam2022Data(isSenior: boolean) {
+  if (isSenior) {
+    return [
+      [
+        // Management Team
+        Seniors2022[1],  // Vijay Prajapati
+        Seniors2022[2],  // Deon Gracias
+        Seniors2022[3],  // Jainam Joshi
+        Seniors2022[17], // Rissa Chettiar
+      ],
+      [
+        // Core Team
+        Seniors2022[4],  // Ishaan Loomba
+        Seniors2022[5],  // Candida Noronha
+        Seniors2022[6],  // Aditya Vyas
+        Seniors2022[8],  // Andre Nazareth
+        Seniors2022[10], // Aditya Mahamuni
+        Seniors2022[12], // Upmanyu Jha
+        Seniors2022[14], // Mahek Intwala
+        Seniors2022[16], // Atharva Pawar
+        Seniors2022[19], // Asher Lopes
+        Seniors2022[21], // Meet Satra
+      ],
+      [
+        // Advisors
+        Seniors2022[0],  // Prof. Kalpana
+        Seniors2022[22], // Arpita Kar
+        Seniors2022[23], // Anosh V
+      ]
+    ]
+  }
+  return [
+    [
+      // Tech Associates
+      Juniors2022[0], // Akshat Sarraf
+      Juniors2022[1], // Zane Falcao
+      Juniors2022[2], // Rahul Gandla
+    ],
+    [
+      // GDSC Associates
+      Juniors2022[5],  // Shubh Shetty
+      Juniors2022[6],  // Arnav Pandita
+      Juniors2022[7],  // Shruti Patil
+      Juniors2022[8],  // Rudalph Gonsalves
+      Juniors2022[9],  // Sanket Mane
+      Juniors2022[10], // Punit Giri
+    ],
+    [
+      // Graphic Associates
+      Juniors2022[3], // Sanat Patil
+      Juniors2022[4], // Shreya Sahay
     ]
   ]
 }
