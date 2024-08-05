@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com']
+    domains: ['images.unsplash.com', 'aceternity.com'],
   },
   typescript: {
     // !! WARN !!
@@ -10,6 +10,6 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
