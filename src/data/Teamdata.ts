@@ -1,39 +1,39 @@
 const Senior2024 = [
   {
     name: 'Shaun Mendes',
-    imgSrc: "/assets/team/Shaun.jpeg", // Reusing existing image path
+    imgSrc: "/assets/team/shaun.jpg",
     position: 'Co Lead',
     department: 'TE COMPS A',
-    linkedIn: 'https://www.linkedin.com/in/shaun-mendes-2107521b0/',
-    Instagram: 'https://www.instagram.com/shaun_mendes_01/',
+    linkedIn: 'https://www.linkedin.com/in/shaun-mendes-2107521b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    Instagram: 'https://www.instagram.com/shaun_mendes_01?igsh=MXZxc2NsbjcwY2s3OQ%3D%3D&utm_source=qr',
   },
   {
     name: 'Angela Dsouza',
-    imgSrc: "/assets/team/Angela.jpg", // Reusing existing image path
+    imgSrc: "/assets/team/angela.jpg",
     position: 'Head of Operations',
     department: 'TE COMPS B',
-    linkedIn: 'https://www.linkedin.com/in/angela-dsouza-751a22249',
-    Instagram: 'https://instagram.com/angela._.ds?igshid=MzNlNGNkZWQ4Mg==',
+    linkedIn: 'https://www.linkedin.com/in/angeladso?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    Instagram: 'https://www.instagram.com/angela._.ds?igsh=MTNmM2RnbGE1ZTRmdw==',
   },
   {
     name: 'Aditya Rathod',
-    imgSrc: "/assets/team/aditya_rathod.jpg", // New image path needed
+    imgSrc: "/team/Adi.jpg",
     position: 'Management Lead',
     department: 'TE AI/DS',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/aditya-rathod-339080282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    Instagram: 'https://www.instagram.com/___aditya27?igsh=NWc5NmZkZDdtMGZl',
   },
   {
     name: 'Susan Fernandes',
-    imgSrc: "/assets/team/susan.jpeg", // Reusing existing image path
+    imgSrc: "/assets/team/susan.jpg",
     position: 'Management Co Lead',
     department: 'TE COMPS B',
     linkedIn: 'https://www.linkedin.com/in/susan-fernandes-3b6635256',
-    Instagram: 'https://instagram.com/_susan_fernandes_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D',
+    Instagram: 'https://www.instagram.com/_susan_fernandes_?igsh=bWtrbjFyZG1rOGN1',
   },
   {
     name: 'Zane Fernandes',
-    imgSrc: "/assets/team/Zane2.jpg", // Reusing existing image path
+    imgSrc: "/assets/team/Zane2.jpg",
     position: 'Technical Lead',
     department: 'TE COMPS A',
     linkedIn: 'http://www.linkedin.com/in/zane-fernandes-b46b75264',
@@ -41,7 +41,7 @@ const Senior2024 = [
   },
   {
     name: 'Sharian Dabre',
-    imgSrc: "/assets/team/sharian_dabre.jpg", // New image path needed
+    imgSrc: "/assets/team/sharian.jpg",
     position: 'Technical Co Lead',
     department: 'TE COMPS A',
     linkedIn: '',
@@ -49,7 +49,7 @@ const Senior2024 = [
   },
   {
     name: 'Snowy Fernandes',
-    imgSrc: "/assets/team/snowy_fernandes.jpg", // New image path needed
+    imgSrc: "/assets/team/snowy.jpg",
     position: 'Public Relations Lead',
     department: 'TE COMPS B',
     linkedIn: '',
@@ -57,23 +57,23 @@ const Senior2024 = [
   },
   {
     name: 'Siddhant Jadhav',
-    imgSrc: "/assets/team/Siddhant.png", // Reusing existing image path
+    imgSrc: "/assets/team/Siddhant.png",
     position: 'Graphic Design Lead',
     department: 'TE COMPS B',
-    linkedIn: 'https://www.linkedin.com/in/siddhant-jadhav-21bb43282',
-    Instagram: 'https://instagram.com/whyy.siddd?igshid=OGQ5ZDc2ODk2ZA==',
+    linkedIn: 'https://www.linkedin.com/in/siddhant-jadhav-72229a25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    Instagram: 'https://www.instagram.com/whyy.siddd?igsh=NmtvaHMycGFjdnZj&utm_source=qr',
   },
   {
     name: 'Bliss Machado',
-    imgSrc: "/assets/team/bliss_machado.jpg", // New image path needed
+    imgSrc: "/assets/team/bliss.jpg",
     position: 'Graphic Design Co Lead',
     department: 'TE ECS',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/bliss-machado-727a8424a/',
+    Instagram: 'https://www.instagram.com/blissmachado/',
   },
   {
     name: 'Soham Parab',
-    imgSrc: "/assets/team/Soham.jpg", // Reusing existing image path
+    imgSrc: "/assets/team/Soham.jpg",
     position: 'Technical Advisor',
     department: 'BE COMPS B',
     linkedIn: 'https://www.linkedin.com/in/soham-parab-a51a791b7/',
@@ -81,7 +81,7 @@ const Senior2024 = [
   },
   {
     name: 'Bryce Miranda',
-    imgSrc: "/assets/team/Bryce.jpeg", // Reusing existing image path
+    imgSrc: "/assets/team/Bryce.jpeg",
     position: 'Operational Advisor',
     department: 'BE COMPS B',
     linkedIn: 'https://www.linkedin.com/in/bryce-miranda-b7a94a216/',
@@ -89,7 +89,7 @@ const Senior2024 = [
   },
   {
     name: 'Sanket Mane',
-    imgSrc: "/assets/team/sanket3.jpeg", // Reusing existing image path
+    imgSrc: "/assets/team/sanket3.jpeg",
     position: 'Managing Advisor',
     department: 'BE COMPS B',
     linkedIn: 'https://www.linkedin.com/in/sanketmane2323',
@@ -99,91 +99,91 @@ const Senior2024 = [
 const Juniors2024 = [
   {
     name: 'Chris Lopes',
-    imgSrc: "/assets/team/chris_lopes.jpg", // Placeholder path
+    imgSrc: "/assets/team/chris.jpg",
     position: 'Technical Associate',
     department: 'SE COMPS A',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/chrislopes3667',
+    Instagram: 'https://www.instagram.com/_chris_l07_?igsh=cmhuYXBvZHdoOGl2',
   },
   {
     name: 'Vanessa Rodrigues',
-    imgSrc: "/assets/team/vanessa_rodrigues.jpg", // Placeholder path
+    imgSrc: "/assets/team/vanessa.jpg",
     position: 'Technical Associate',
     department: 'SE COMPS B',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'www.linkedin.com/in/vanessa-rodrigues-156vfr',
+    Instagram: 'https://www.instagram.com/vanessar.exe/#',
   },
   {
     name: 'Arshdeep Kaur',
-    imgSrc: "/assets/team/arshdeep_kaur.jpg", // Placeholder path
+    imgSrc: "/assets/team/arshdeep.jpg",
     position: 'Technical Associate',
     department: 'SE COMPS A',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/arshdeep-kaur-6196a3290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    Instagram: 'https://www.instagram.com/arshde.e.p?igsh=MWlubTE3OW9uMTl2bA==',
   },
   {
     name: 'Yash Solanki',
-    imgSrc: "/assets/team/yash_solanki.jpg", // Placeholder path
+    imgSrc: "/assets/team/yash.jpg",
     position: 'GDSC Associate',
     department: 'SE COMPS B',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/yash-solanki-309768306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    Instagram: 'https://www.instagram.com/yash_solanki99?igsh=MWNvcW02dnF4aGRjdw==',
   },
   {
     name: 'Jaden Vaz',
-    imgSrc: "/assets/team/Jaden.jpg", // Placeholder path
+    imgSrc: "/assets/team/Jaden.jpg",
     position: 'GDSC Associate',
     department: 'SE ECS',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/jaden-vaz-48a94528b/',
+    Instagram: 'https://www.instagram.com/jaden_vaz_/?hl=en',
   },
   {
     name: 'Sumeet Pathak',
-    imgSrc: "/assets/team/sumeet_pathak.jpg", // Placeholder path
+    imgSrc: "/assets/team/sumeet.jpg",
     position: 'GDSC Associate',
     department: 'SE COMPS A',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/sumeet-pathak-94295b28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    Instagram: 'https://www.instagram.com/_sumeetpathak_?igsh=MXhjdHp0ZGw0bTgwcA==',
   },
   {
     name: 'Sarah Dayal',
-    imgSrc: "/assets/team/sarah_dayal.jpg", // Placeholder path
+    imgSrc: "/assets/team/sarah.jpg",
     position: 'GDSC Associate',
     department: 'SE COMPS B',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/sarah-rhema-dayal/',
+    Instagram: 'https://www.instagram.com/sarahrhemadayal/',
   },
   {
     name: 'Harshil Sampat',
-    imgSrc: "/assets/team/harshil_sampat.jpg", // Placeholder path
+    imgSrc: "/assets/team/harshil.jpg",
     position: 'GDSC Associate',
     department: 'SE AI/DS',
     linkedIn: '',
-    Instagram: '',
+    Instagram: 'https://www.instagram.com/harshil_s15?igsh=MTJkcjc3N2ZxcGVuMw==',
   },
   {
     name: 'Liza Castelino',
-    imgSrc: "/assets/team/liza_castelino.jpg", // Placeholder path
+    imgSrc: "/assets/team/liza.jpg",
     position: 'Graphic Design Associate',
     department: 'SE COMPS A',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/liza-glanisha-castelino-558802302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    Instagram: 'https://www.instagram.com/liza_glanisha_draws?utm_source=ig_web_button_share_sheet&igsh=ODdmZWVhMTFiMw==',
   },
   {
     name: 'Celene Ciby',
-    imgSrc: "/assets/team/celene_ciby.jpg", // Placeholder path
+    imgSrc: "/assets/team/celene.jpg",
     position: 'Graphic Design Associate',
     department: 'SE ECS',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://in.linkedin.com/in/celene-ciby-231377290',
+    Instagram: 'https://www.instagram.com/captivating.celestial_being?igsh=MWZqMXJxbW80OTNrMQ==',
   },
   {
     name: 'Vadim Rodricks',
-    imgSrc: "/assets/team/vadim_rodricks.jpg", // Placeholder path
+    imgSrc: "/assets/team/vadim.jpg",
     position: 'Graphic Design Associate',
     department: 'SE MECH',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/vadimrodricks-95lightning/',
+    Instagram: 'https://www.instagram.com/vadim.9.5/',
   },
 ];
 const Seniors2023 = [

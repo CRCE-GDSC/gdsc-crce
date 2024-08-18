@@ -14,19 +14,19 @@ let data = [
     img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2024',
     description:
-      'Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged.',
+      '',
   },
   {
     img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2023',
     description:
-      'Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged.',
+      '',
   },
   {
     img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2022',
     description:
-      'Lorem when an unknown printer took a galley of type and scrambled it to make a type specimen book. onic typesetting, remaining essentially unchanged.',
+      '',
   },
 ]
 
