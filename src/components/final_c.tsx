@@ -91,7 +91,6 @@ const Carousel: React.FC = () => {
         className="light:bg-white flex h-auto w-full flex-col items-center justify-center text-gray-900 transition-colors duration-300 dark:bg-inherit dark:text-white"
         id="desktop"
       >
-        <h1 className="bg-transparent text-center"></h1>
         <div className="relative mx-10 flex w-full flex-row items-center justify-center">
           <button
             onClick={() =>
@@ -99,7 +98,7 @@ const Carousel: React.FC = () => {
                 prevPos === 0 ? items.length - 1 : prevPos - 1
               )
             }
-            className="absolute left-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="absolute left-[11%] z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
           >
             <Image src="/gdsc-fl.png" alt="Previous" width={50} height={50} />
           </button>
@@ -138,7 +137,7 @@ const Carousel: React.FC = () => {
                 prevPos === items.length - 1 ? 0 : prevPos + 1
               )
             }
-            className="absolute right-4 z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="absolute right-[11%] z-10 cursor-pointer rounded-full border-none bg-transparent p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
           >
             <Image src="/gdsc-fr.png" alt="Next" width={50} height={50} />
           </button>
