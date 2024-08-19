@@ -61,6 +61,30 @@ const products = [
     thumbnail:
       "/images/4.jpeg",
   },
+  {
+    title: "Pixel fect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail:
+      "/images/6.jpeg",
+  },
+  {
+    title: "Editoriay",
+    link: "https://editorially.org",
+    thumbnail:
+      "/images/4.jpeg",
+  },
+  {
+    title: "Pixel Peect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail:
+      "/images/6.jpeg",
+  },
+  {
+    title: "Editorily",
+    link: "https://editorially.org",
+    thumbnail:
+      "/images/4.jpeg",
+  },
 
 ];
 export default async function Home() {
