@@ -39,12 +39,15 @@ export default function TeamView(props) {
   useEffect(() => {
     if (props.type === 'Team2024') {
       setTeamData(getTeam2024Data(isSeniorVisible))
+      setSelectedMember(getTeam2024Data(isSeniorVisible)[0][0])
 
     }
     if (props.type === 'Team2023') {
       setTeamData(getTeam2023Data(isSeniorVisible))
+      setSelectedMember(getTeam2023Data(isSeniorVisible)[0][0])
     } if (props.type === 'Team2022') {
       setTeamData(getTeam2022Data(isSeniorVisible))
+      setSelectedMember(getTeam2022Data(isSeniorVisible)[0][0])
     }
 
   }, [props.type, isSeniorVisible])
@@ -85,7 +88,7 @@ export default function TeamView(props) {
       <div className="flex items-center justify-center gap-4 mb-6 md:mb-8">
         <AnimatedGradientText>
           <span className={cn(
-            `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-2xl md:text-3xl font-semibold text-transparent transition-colors duration-500 ${isSeniorVisible ? 'text-gray-700' : ''}`
+            `inline animate-gradient hero-text bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-3xl md:text-4xl font-semibold text-transparent transition-colors duration-500 ${isSeniorVisible ? 'text-gray-700' : ''}`
           )}>
             Junior
           </span>
@@ -103,7 +106,7 @@ export default function TeamView(props) {
 
         <AnimatedGradientText>
           <span className={cn(
-            `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-2xl md:text-3xl font-semibold text-transparent transition-colors duration-500 ${isSeniorVisible ? '' : 'text-gray-700'}`
+            `inline animate-gradient hero-text bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-3xl md:text-4xl font-semibold text-transparent transition-colors duration-500 ${isSeniorVisible ? '' : 'text-gray-700'}`
           )}>
             Senior
           </span>
@@ -120,10 +123,10 @@ export default function TeamView(props) {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -100, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="w-full max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl"
+                className="w-full max-w-6xl"
               >
                 <BackgroundGradient className="p-1 rounded-xl">
-                  <div className="w-full rounded-lg bg-[#252525] shadow-xl backdrop-blur-md">
+                  <div className="w-full rounded-lg dark:bg-[#252525] bg-gray-200 shadow-xl backdrop-blur-md">
                     <div className="flex flex-col md:flex-row items-center p-4 md:p-6 lg:p-8">
                       <img
                         className="aspect-square  h-24 w-24 md:h-32 md:w-32 lg:h-36 lg:w-36 rounded-full border-4 border-blue-500 object-cover shadow-lg mb-4 md:mb-0 md:mr-6 lg:mr-8"
@@ -131,10 +134,10 @@ export default function TeamView(props) {
                         alt={`${selectedMember.name} image`}
                       />
                       <div className="flex-grow text-center md:text-left">
-                        <h5 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">
+                        <h5 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-white mb-2">
                           {selectedMember.name}
                         </h5>
-                        <span className="text-lg md:text-xl lg:text-2xl text-blue-300 block mb-4 md:mb-0">
+                        <span className="text-lg md:text-xl lg:text-2xl text-blue-500 dark:text-blue-300 block mb-4 md:mb-0">
                           {selectedMember.position}
                         </span>
                       </div>
@@ -177,7 +180,7 @@ export default function TeamView(props) {
             />
           </div>
           <div className="overflow-x-auto">
-            <div className="flex justify-center">
+            <div className="flex flex-col justify-center">
               {renderDocks()}
             </div>
           </div>

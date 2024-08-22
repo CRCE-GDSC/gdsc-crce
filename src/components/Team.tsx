@@ -15,18 +15,23 @@ let data = [
     title: 'Team 2024',
     description:
       '',
+    date: "2024 - 2025"
+
   },
   {
     img: 'https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2023',
     description:
       '',
+    date: "2023 - 2024"
+
   },
   {
     img: 'https://images.pexels.com/photos/1756665/pexels-photo-1756665.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2022',
     description:
       '',
+    date: "2022 - 2023"
   },
 ]
 
@@ -41,11 +46,11 @@ export function TeamComponent() {
             className="vertical-timeline-element--work"
             contentStyle={{
               background: 'transparent',
-              boxShadow: '0px 0px 20px -2px rgba(0, 0, 0, 0.16)',
+              boxShadow: '0px 0px 0px 0px rgba(0, 0, 0, 0.16)',
             }}
             contentArrowStyle={{ borderRight: '7px solid  #4285F4' }}
             dateClassName="date"
-            date="2023 - present"
+            date={item.date}
             iconStyle={{ background: 'rgb(19, 19, 19)', color: '#fff' }}
             icon={<img src="./gdsc-f.png" />}
           >

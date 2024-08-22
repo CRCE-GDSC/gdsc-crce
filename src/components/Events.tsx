@@ -60,17 +60,18 @@ function ResponsiveCarousel() {
       id="events"
     >
       <div className="my-16">
-        <p className="h3">Events</p>
+        <p className="h3 darkText dark:text-white ta-center hero-text font-semibold">Events</p>
       </div>
       {isMobile ? <VerticalCarousel /> : <Carousel />}
       <button
-        className="mt-4 rounded-xl bg-blue-700 px-4 py-2 font-serif text-xl duration-200 ease-in-out text-white hover:scale-110 hover:bg-blue-500"
+        className="mt-4 rounded-full bg-blue-700 px-4 py-2 font-serif text-xl duration-200 ease-in-out text-white hover:scale-110 hover:bg-blue-500"
         onClick={() =>
           window.open(
             'https://gdsc.community.dev/fr-conceicao-rodrigues-college-of-engineering-mumbai-india/'
           )
         }
       >
+
         Go to All Events
       </button>
     </div>

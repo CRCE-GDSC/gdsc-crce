@@ -25,7 +25,7 @@ export const BackgroundGradient = ({
     },
   };
   return (
-    <div key={key} className={cn("relative max-w-md p-[4px] group", containerClassName)}>
+    <div key={key} className={cn("relative flex justify-center items-center max-w-lg p-[4px] group", containerClassName)}>
       <motion.div
         variants={animate ? variants : undefined}
         initial={animate ? "initial" : undefined}

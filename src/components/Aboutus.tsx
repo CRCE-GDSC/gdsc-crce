@@ -36,8 +36,8 @@ const RenderFeature: React.FC<RenderFeatureProps> = ({
         />
       </div>
       <div className="feature-item-right">
-        <p className="h2 tanText z-10 dark:text-neutral-100">{title}</p>
-        <p className="t2 darkGrey z-10">{description}</p>
+        <p className=" h2 darkText font-semibold hero-text z-10 dark:text-neutral-100">{title}</p>
+        <p className=" text-lg md:text-2xl darkGrey z-10">{description}</p>
       </div>
     </div>
   )
@@ -69,7 +69,7 @@ const featuresInfo: FeatureInfo[] = [
 const AboutUs: React.FC = () => {
   return (
     <div className="min-w-full vn:my-10 mt-10" id='about'>
-      <p className="h3 darkText dark:text-white ta-center font-semibold">About Us</p>
+      <p className="h3 darkText dark:text-white ta-center hero-text font-semibold">About Us</p>
       <div className="featurecontainer mt-10">
         <div className="features">
           {featuresInfo.map((item, index) => (

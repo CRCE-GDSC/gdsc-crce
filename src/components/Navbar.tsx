@@ -49,13 +49,12 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={` w-full fixed left-0 right-0 top-0 z-50 text-center transition-transform duration-300 ease-in-out ${
-          hasScrolled
-            ? visible
-              ? 'translate-y-0'
-              : '-translate-y-full'
+        className={` w-full fixed left-0 right-0 top-0 z-50 text-center transition-transform duration-300 ease-in-out ${hasScrolled
+          ? visible
+            ? 'translate-y-0'
             : '-translate-y-full'
-        }`}
+          : '-translate-y-full'
+          }`}
       >
         <div
           className={`shadow-vn mx-4 my-2 rounded-full border-2 border-gray-200 bg-white transition-all duration-300 ease-in-out hover:shadow-xl dark:border-gray-700 dark:bg-black`}
@@ -91,7 +90,7 @@ const Navbar: React.FC = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`text-vn rounded-md px-3 py-2 text-center font-medium text-black transition-colors duration-200 hover:bg-gray-700 hover:text-white dark:text-white`}
+                      className={`text-vn hero-text rounded-md px-3 py-2 text-center text-black transition-colors duration-200 hover:bg-gray-700 hover:text-white dark:text-white`}
                     >
                       {item.name}
                     </Link>
@@ -160,23 +159,20 @@ const Navbar: React.FC = () => {
 
       {/* Full-screen overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ease-in-out ${
-          isOpen ? 'opacity-50' : 'pointer-events-none opacity-0'
-        }`}
+        className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-50' : 'pointer-events-none opacity-0'
+          }`}
         onClick={() => setIsOpen(false)}
       />
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-x-0 top-24 z-50 transition-all duration-300 ease-in-out ${
-          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
-        }`}
+        className={`fixed inset-x-0 top-24 z-50 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+          }`}
       >
         <div
           className={`mx-4 overflow-hidden rounded-3xl border-2 dark:border-gray-700 dark:bg-black border-gray-200 bg-white
-           shadow-vn transition-all duration-300 ease-in-out ${
-            isOpen ? 'max-h-[calc(100vh-7rem)]' : 'max-h-0'
-          }`}
+           shadow-vn transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[calc(100vh-7rem)]' : 'max-h-0'
+            }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="px-4 pb-4 pt-5 sm:px-6">

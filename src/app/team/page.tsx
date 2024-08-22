@@ -11,8 +11,8 @@ export default async function Home() {
   await delay(1000) // Add a delay of 1 second (adjust as needed)
   return (
     <main className="flex flex-col mt-[120px] gap-2 items-center justify-between p-2 py-6 md:p-12 md:py-0">
-      <h1 className='font-semibold text-3xl md:text-6xl' >GDSC Timeline</h1>
-      <h4 className='text-gray-200 text-2xl mb-8'>2022-2024</h4>
+      <h1 className='font-semibold hero-text text-3xl md:text-6xl' >GDSC Timeline</h1>
+      <h4 className='text-black text-2xl dark:text-white mb-8'>2022 - Present</h4>
       <TeamComponent />
       <DotPattern
         className={cn(

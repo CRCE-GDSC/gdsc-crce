@@ -23,7 +23,7 @@ const TeamIntro: React.FC<TeamIntroProps> = ({ isMobile }) => {
 
   return (
     <TeamIntroContainer className="my-10 bg-transparent">
-      <p className="h2">What We Do</p>
+      <p className="h3 darkText dark:text-white ta-center hero-text font-semibold">What We Do</p>
       <TeamIntroSectionWrapper>
         <TeamTitlesSection>
           <TeamButton

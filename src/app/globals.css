@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: "Montserrat", sans-serif !important;
+  font-weight:500;
+}
+
+.hero-text{
+   font-family: "Oswald", sans-serif !important;
+}
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
@@ -255,24 +264,19 @@
 } */
 
 .h2 {
-  font-family: Google Sans Medium;
   font-size: 45px;
   margin: 0;
   padding: 0;
 }
 
 .h3 {
-  font-family: Google Sans Medium;
   font-size: 50px;
-  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
 
 .t2 {
-  font-family: Google Sans Regular;
   font-size: 30px;
-  letter-spacing: 0.8px;
   margin: 5px 0;
   padding: 0;
 }
