@@ -65,25 +65,25 @@ const products = [
     title: "Pixel fect",
     link: "https://app.pixelperfect.quest",
     thumbnail:
-      "/images/6.jpeg",
+      "/images/3.jpeg",
   },
   {
     title: "Editoriay",
     link: "https://editorially.org",
     thumbnail:
-      "/images/4.jpeg",
+      "/images/2.jpeg",
   },
   {
     title: "Pixel Peect",
     link: "https://app.pixelperfect.quest",
     thumbnail:
-      "/images/6.jpeg",
+      "/images/1.jpeg",
   },
   {
     title: "Editorily",
     link: "https://editorially.org",
     thumbnail:
-      "/images/4.jpeg",
+      "/images/3.jpeg",
   },
 
 ];
