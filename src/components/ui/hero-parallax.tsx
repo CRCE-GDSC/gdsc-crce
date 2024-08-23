@@ -112,15 +112,15 @@ export const Header = () => {
     },
 
     {
-      text: 'Developers',
+      text: 'Developer',
       className: 'text-2xl md:text-7xl font-bold dark:text-white',
     },
     {
-      text: 'Students',
+      text: 'Student',
       className: 'text-2xl md:text-7xl font-bold dark:text-white',
     },
     {
-      text: 'Club.',
+      text: 'Clubs',
       className: 'text-2xl md:text-7xl font-bold dark:text-white',
     },
   ]
