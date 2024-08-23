@@ -14,6 +14,7 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   magnification?: number
   distance?: number
   children: React.ReactNode
+  maxItems?: number
 }
 
 const DEFAULT_MAGNIFICATION = 40
@@ -36,13 +37,15 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   ) => {
     const mouseX = useMotionValue(Infinity)
     const renderChildren = () => {
-      return React.Children.toArray(children).slice(0, maxItems).map((child: any) => {
-        return React.cloneElement(child, {
-          mouseX: mouseX,
-          magnification: magnification,
-          distance: distance,
+      return React.Children.toArray(children)
+        .slice(0, maxItems)
+        .map((child: any) => {
+          return React.cloneElement(child, {
+            mouseX: mouseX,
+            magnification: magnification,
+            distance: distance,
+          })
         })
-      })
     }
     return (
       <motion.div
@@ -56,7 +59,8 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
       </motion.div>
     )
   }
-)Dock.displayName = 'Dock'
+)
+Dock.displayName = 'Dock'
 
 export interface DockIconProps {
   size?: number
@@ -99,10 +103,10 @@ const DockIcon = ({
 
   return (
     <motion.div
-      onClick={() => setSelectedMember(item)}
+      onClick={() => setSelectedMember?.(item)}
       ref={ref}
       style={{ width, height: width }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       className={cn(
         'flex aspect-square cursor-pointer items-center justify-center rounded-full bg-neutral-400/40',
         className
