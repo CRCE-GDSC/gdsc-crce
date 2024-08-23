@@ -7,7 +7,7 @@ import {
   PhoneContainer,
   ScreenContent,
 } from './MLIntro.styled'
-import {Phone} from '@/components/teamIntro/svg'
+import { Phone } from '@/components/teamIntro/svg'
 import { TypingEffect } from '@/components/typography/typingEffect/TypingEffect'
 import TensorFlowLogo from '../tensorflowlogo/TensorFlowLogo'
 
@@ -28,12 +28,24 @@ const MLIntro: React.FC = () => {
             <TensorFlowLogo />
           </LogosWrapper>
           {showTyping && (
-            <TypingEffect interKeyStrokeDurationInMs={20}>
-              The Machine Learning and Android Team at GDSC CRCE is a dynamic
-              and versatile group of developers and data scientists,
-              specializing in the powerful technologies of TensorFlow and
-              Flutter.
-            </TypingEffect>
+            <>
+              <TypingEffect
+                className="hidden md:block"
+                interKeyStrokeDurationInMs={20}
+              >
+                The Machine Learning and Android Team at GDSC CRCE is a dynamic
+                and versatile group of developers and data scientists,
+                specializing in the powerful technologies of TensorFlow and
+                Flutter.
+              </TypingEffect>
+              <TypingEffect
+                className="md:hidden"
+                interKeyStrokeDurationInMs={20}
+              >
+                The ML and Android Team at GDSC CRCE specializes in TensorFlow
+                and Flutter.
+              </TypingEffect>
+            </>
           )}
         </ScreenContent>
       </PhoneContainer>
