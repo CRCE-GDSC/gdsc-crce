@@ -54,7 +54,7 @@ export function TeamComponent() {
             iconStyle={{ background: 'rgb(19, 19, 19)', color: '#fff' }}
             icon={<img src="./gdsc-f.png" />}
           >
-            {' '}
+            
             <BackgroundGradient key={idex}>
               <div
                 key={idex}

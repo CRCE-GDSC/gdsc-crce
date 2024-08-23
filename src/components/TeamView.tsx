@@ -162,12 +162,12 @@ export default function TeamView(props) {
         </div>
 
         <div className="w-full">
-          <div className="flex justify-center items-center gap-4 mb-4 md:mb-6">
+          <div className="flex justify-center items-center text-black dark:text-white gap-4 mb-4 md:mb-6">
             <ChevronLeft
               color="white"
               size={28}
               onClick={() => handleChevronClick(-1)}
-              className="cursor-pointer"
+              className="cursor-pointer dark:invert-0 invert "
             />
             <span className="text-xl md:text-2xl font-semibold">
               {positions[selectedPositionIndex]}
@@ -176,7 +176,7 @@ export default function TeamView(props) {
               color="white"
               size={28}
               onClick={() => handleChevronClick(1)}
-              className="cursor-pointer"
+              className="cursor-pointer dark:invert-0 invert "
             />
           </div>
           <div className="overflow-x-auto">
