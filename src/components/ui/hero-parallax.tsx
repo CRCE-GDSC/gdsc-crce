@@ -9,9 +9,8 @@ import {
 } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { TypewriterEffectSmooth } from './type-effect'
 import { text } from 'stream/consumers'
-
+import TypeComponent from "../typewriter"
 export const HeroParallax = ({
   products,
 }: {
@@ -72,7 +71,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="-translate-y-[120%] mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
+        <motion.div className="-translate-y-[120%] mb-10 md:mb-20 flex flex-row-reverse space-x-10 mb:space-x-20 space-x-reverse">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -81,7 +80,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="-translate-y-[120%] mb-20 flex flex-row space-x-20">
+        <motion.div className="-translate-y-[120%] mb-10 md:mb-20 flex flex-row space-x-10 md:space-x-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -90,7 +89,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="-translate-y-[120%] mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
+        <motion.div className="-translate-y-[120%] mb-10 md:mb-20 flex flex-row-reverse space-x-10 mb:space-x-20 space-x-reverse">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -105,30 +104,12 @@ export const HeroParallax = ({
 }
 
 export const Header = () => {
-  const word = [
-    {
-      text: 'Google',
-      className: 'text-2xl md:text-7xl font-bold dark:text-white',
-    },
 
-    {
-      text: 'Developer',
-      className: 'text-2xl md:text-7xl font-bold dark:text-white',
-    },
-    {
-      text: 'Student',
-      className: 'text-2xl md:text-7xl font-bold dark:text-white',
-    },
-    {
-      text: 'Clubs',
-      className: 'text-2xl md:text-7xl font-bold dark:text-white',
-    },
-  ]
 
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 pt-20 md:py-40">
       <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
-        <TypewriterEffectSmooth words={word} />
+        <TypeComponent />
       </h1>
       <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
         Join a dynamic community at GDSC FRCRCE, where students collaborate,
@@ -157,7 +138,7 @@ export const ProductCard = ({
         x: translate,
       }}
       key={product.title}
-      className="group/product relative h-96 w-[30rem] flex-shrink-0"
+      className="group/product relative h-[15rem] md:h-96 w-[20rem] md:w-[30rem] flex-shrink-0"
     >
       <Image
         src={product.thumbnail}
