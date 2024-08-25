@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 const Footerr = () => {
   return (
-    <div className="pt-20 bg-inherit dark:bg-black">
+    <div className="bg-inherit pt-20 dark:bg-black">
       <div className="flex-grow px-8 pt-14">
         <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           <div className="lg:mt-8">
@@ -24,7 +24,11 @@ const Footerr = () => {
                 <Link href="/#team">Our Team</Link>
               </div>
               <div className="pb-4 text-gray-900 ease-in-out hover:translate-x-1 hover:text-yellow-500 hover:underline dark:text-gray-200 dark:hover:text-yellow-500">
-                <Link href="https://developers.google.com/community-guidelines">
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://developers.google.com/community-guidelines"
+                >
                   Community Guidelines
                 </Link>
               </div>
