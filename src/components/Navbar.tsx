@@ -7,18 +7,18 @@ import { Sun, Moon } from 'lucide-react'
 import { ThemeToggle } from './ToogleButton'
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About Us', href: '#about' },
-  { name: 'What We Do', href: '#services' },
-  { name: 'Events', href: '#events' },
-  { name: 'Our Team', href: '#team' },
-  { name: 'Contact Us', href: '#contact' },
+  { name: 'Home', href: '/#home' },
+  { name: 'About Us', href: '/#about' },
+  { name: 'What We Do', href: '/#services' },
+  { name: 'Events', href: '/#events' },
+  { name: 'Our Team', href: '/#team' },
+  { name: 'Contact Us', href: '/#contact' },
 ]
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [visible, setVisible] = useState(false)
-  const [hasScrolled, setHasScrolled] = useState(false)
+  const [visible, setVisible] = useState(true)
+  const [hasScrolled, setHasScrolled] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
 
 
