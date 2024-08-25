@@ -21,7 +21,6 @@ const Navbar: React.FC = () => {
   const [hasScrolled, setHasScrolled] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
 
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset
@@ -45,16 +44,16 @@ const Navbar: React.FC = () => {
     }
   }, [isOpen])
 
-
   return (
     <>
       <nav
-        className={` w-full fixed left-0 right-0 top-0 z-50 text-center transition-transform duration-300 ease-in-out ${hasScrolled
-          ? visible
-            ? 'translate-y-0'
+        className={`fixed left-0 right-0 top-0 z-50 w-full text-center transition-transform duration-300 ease-in-out ${
+          hasScrolled
+            ? visible
+              ? 'translate-y-0'
+              : '-translate-y-full'
             : '-translate-y-full'
-          : '-translate-y-full'
-          }`}
+        }`}
       >
         <div
           className={`shadow-vn mx-4 my-2 rounded-full border-2 border-gray-200 bg-white transition-all duration-300 ease-in-out hover:shadow-xl dark:border-gray-700 dark:bg-black`}
@@ -64,22 +63,34 @@ const Navbar: React.FC = () => {
               {/* Logo */}
               <div className="flex flex-shrink items-center vn:flex-1">
                 <Link href="/" className="flex justify-center vn:justify-start">
+                  <div className='md:block hidden'>
+                    <Image
+                      src="/gdsc_logo.png"
+                      alt="Google Developer Student Clubs Logo"
+                      width={10000}
+                      height={10000}
+                      className="hidden max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:block"
+                      quality={100}
+                    />
+                    <Image
+                      src="/gdsc_logo_black.png"
+                      alt="Google Developer Student Clubs Logo"
+                      width={10000}
+                      height={10000}
+                      className="max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:hidden"
+                      quality={100}
+                    />
+                  </div>
+                  <div className='md:hidden'>
                   <Image
-                    src="/gdsc_logo.png"
-                    alt="Google Developer Student Clubs Logo"
-                    width={10000}
-                    height={10000}
-                    className="hidden max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:block"
-                    quality={100}
-                  />
-                  <Image
-                    src="/gdsc_logo_black.png"
-                    alt="Google Developer Student Clubs Logo"
-                    width={10000}
-                    height={10000}
-                    className="max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:hidden"
-                    quality={100}
-                  />
+                      src="/GDSC_CRCE_LOGO.png"
+                      alt="Google Developer Student Clubs Logo"
+                      width={10000}
+                      height={10000}
+                      className="  max-w-[85px] translate-y-[2px] dark: "
+                      quality={100}
+                    />
+                  </div>
                 </Link>
               </div>
 
@@ -111,10 +122,7 @@ const Navbar: React.FC = () => {
                 {/* Mobile menu button */}
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className={`inline-flex items-center justify-center rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white 
-                    dark:text-white dark:hover:bg-gray-700
-                      text-black hover:bg-gray-200
-                  `}
+                  className={`inline-flex items-center justify-center rounded-full p-2 text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white dark:text-white dark:hover:bg-gray-700`}
                 >
                   <span className="sr-only">Open main menu</span>
                   {isOpen ? (
@@ -159,20 +167,22 @@ const Navbar: React.FC = () => {
 
       {/* Full-screen overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-50' : 'pointer-events-none opacity-0'
-          }`}
+        className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ease-in-out ${
+          isOpen ? 'opacity-50' : 'pointer-events-none opacity-0'
+        }`}
         onClick={() => setIsOpen(false)}
       />
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-x-0 top-24 z-50 transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
-          }`}
+        className={`fixed inset-x-0 top-24 z-50 transition-all duration-300 ease-in-out ${
+          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
       >
         <div
-          className={`mx-4 overflow-hidden rounded-3xl border-2 dark:border-gray-700 dark:bg-black border-gray-200 bg-white
-           shadow-vn transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[calc(100vh-7rem)]' : 'max-h-0'
-            }`}
+          className={`shadow-vn mx-4 overflow-hidden rounded-3xl border-2 border-gray-200 bg-white transition-all duration-300 ease-in-out dark:border-gray-700 dark:bg-black ${
+            isOpen ? 'max-h-[calc(100vh-7rem)]' : 'max-h-0'
+          }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="px-4 pb-4 pt-5 sm:px-6">
@@ -182,9 +192,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`text-vn rounded-md px-3 py-2 font-medium transition-colors duration-200 hover:bg-gray-700 hover:text-white 
-                      dark:text-white text-black
-                    `}
+                    className={`text-vn rounded-md px-3 py-2 font-medium text-black transition-colors duration-200 hover:bg-gray-700 hover:text-white dark:text-white`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

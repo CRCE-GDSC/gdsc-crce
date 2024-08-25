@@ -71,13 +71,13 @@ const products = [
     title: "Editoriay",
     link: "https://editorially.org",
     thumbnail:
-      "/images/2.jpeg",
+      "/images/1.jpeg",
   },
   {
     title: "Pixel Peect",
     link: "https://app.pixelperfect.quest",
     thumbnail:
-      "/images/1.jpeg",
+      "/images/2.jpeg",
   },
   {
     title: "Editorily",
