@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
                       alt="Google Developer Student Clubs Logo"
                       width={10000}
                       height={10000}
-                      className="hidden max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:block"
+                      className="hidden max-h-[100%] w-full min-w-[180px] max-w-[450px] dark:block"
                       quality={100}
                     />
                     <Image
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
                       alt="Google Developer Student Clubs Logo"
                       width={10000}
                       height={10000}
-                      className="max-h-[50%] w-full min-w-[180px] max-w-[450px] dark:hidden"
+                      className="max-h-[100%] w-full min-w-[180px] max-w-[450px] dark:hidden"
                       quality={100}
                     />
                   </div>
