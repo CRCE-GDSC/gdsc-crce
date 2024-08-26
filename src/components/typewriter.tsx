@@ -9,14 +9,14 @@ function TypeComponent() {
     },
 
     {
-      text: 'Developers',
+      text: 'Developer',
       className: 'text-5xl md:text-7xl font-bold dark:text-white',
     },
   ]
 
   const word2 = [
     {
-      text: 'Students',
+      text: 'Student',
       className: 'text-5xl md:text-7xl font-bold dark:text-white',
     },
     {
