@@ -27,7 +27,7 @@ const Footerr = () => {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://developers.google.com/community-guidelines"
+  p                href="https://developers.google.com/community-guidelines"
                 >
                   Community Guidelines
                 </Link>
