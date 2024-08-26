@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image'
-
 import React from 'react'
 import {
   VerticalTimeline,
@@ -9,86 +8,72 @@ import {
 import { BackgroundGradient } from './ui/background-gradient'
 import 'react-vertical-timeline-component/style.min.css'
 import Link from 'next/link'
+
 let data = [
   {
     img: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2024',
-    description:
-      '',
+    description: 'Our latest team, driving innovation and growth.',
     date: "2024 - 2025"
-
   },
   {
     img: 'https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2023',
-    description:
-      '',
+    description: 'A year of challenges overcome and milestones achieved.',
     date: "2023 - 2024"
-
   },
   {
     img: 'https://images.pexels.com/photos/1756665/pexels-photo-1756665.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Team 2022',
-    description:
-      '',
+    description: 'Where our journey began, setting the foundation for success.',
     date: "2022 - 2023"
   },
 ]
 
 export function TeamComponent() {
   return (
-    <div className="h-full w-full flex-1">
-      <VerticalTimeline lineColor="rgba(100,100,100,0.5)">
-        {data.map((item, idex) => (
+    <div className="w-full min-h-screen py-10">
+      <VerticalTimeline lineColor="rgba(99,100,100,0.5)">
+        {data.map((item, index) => (
           <VerticalTimelineElement
-            key={idex}
+            key={index}
             visible={true}
             className="vertical-timeline-element--work"
             contentStyle={{
               background: 'transparent',
-              boxShadow: '0px 0px 0px 0px rgba(0, 0, 0, 0.16)',
+              boxShadow: 'none',
+              padding: 0,
             }}
-            contentArrowStyle={{ borderRight: '7px solid  #4285F4' }}
-            dateClassName="date"
+            contentArrowStyle={{ borderRight: '7px solid #4285F4' }}
             date={item.date}
             iconStyle={{ background: 'rgb(19, 19, 19)', color: '#fff' }}
-            icon={<img src="./gdsc-f.png" />}
+            icon={<img src="./gdsc-f.png" alt="GDSC Icon" className="w-full h-full object-contain rounded-full" />}
           >
-            
-            <BackgroundGradient key={idex}>
-              <div
-                key={idex}
-                className="max-w-md rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-zinc-900"
-              >
-                <img className="rounded-t-lg" src={item.img} alt="" />
-
-                <div className="p-5">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <BackgroundGradient className="w-full">
+              <div className="flex flex-col md:flex-row bg-white dark:bg-zinc-900 rounded-lg overflow-hidden shadow-lg">
+                <div className="md:w-1/3">
+                  <img className="w-full h-full object-cover" src={item.img} alt={item.title} />
+                </div>
+                <div className="p-6 md:w-2/3">
+                  <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
                     {item.title}
-                  </h5>
-
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
                     {item.description}
                   </p>
                   <Link
                     href={`/team/${item.title}`}
-                    className=" mt-4 inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="inline-flex items-center mt-3 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out"
                   >
                     View Team
                     <svg
-                      className="ms-2 h-3.5 w-3.5 rtl:rotate-180"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
+                      className="ml-2 w-4 h-4"
                       fill="none"
-                      viewBox="0 0 14 10"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                   </Link>
                 </div>
