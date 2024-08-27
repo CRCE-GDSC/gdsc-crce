@@ -16,14 +16,6 @@ export default async function Home({ params }: { params: { slug: string } }) {
         <h4 className='dark:text-gray-200 mt-2 text-black text-2xl'>Meet Our Team</h4>
       </div>
       <TeamView type={params.slug.replace("%20", "")} />
-
-      <DotPattern
-        className={cn(
-          "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
-        )}
-      />
-
-
     </main>
   )
 }

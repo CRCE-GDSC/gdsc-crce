@@ -27,7 +27,7 @@ export default function TeamView(props) {
   }, [props.type, isSeniorVisible])
 
   const renderMemberCard = (member) => (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+    <div className="bg-gray-200 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
       <div className="relative">
         <img src={member.imgSrc} alt={member.name} className="w-full aspect-square object-cover object-top" />
       </div>
