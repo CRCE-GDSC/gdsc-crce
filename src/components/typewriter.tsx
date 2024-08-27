@@ -20,7 +20,7 @@ function TypeComponent() {
       className: 'text-5xl md:text-7xl font-bold dark:text-white',
     },
     {
-      text: 'Club.',
+      text: 'Clubs',
       className: 'text-5xl md:text-7xl font-bold dark:text-white',
     },
   ]

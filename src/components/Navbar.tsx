@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
                     <Image
                       src="/gdsc_logo_black.png"
                       alt="Google Developer Student Clubs Logo"
-                      width={10000}
+                      width={10000}     
                       height={10000}
                       className="max-h-[100%] w-full min-w-[180px] max-w-[450px] dark:hidden"
                       quality={100}
