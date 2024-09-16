@@ -11,7 +11,7 @@ import {
 } from '@/data/Teamdata'
 
 export default function TeamView(props) {
-  const [isSeniorVisible, setIsSeniorVisible] = useState(false)
+  const [isSeniorVisible, setIsSeniorVisible] = useState(true)
   const [teamData, setTeamData] = useState([])
 
   const handleToggle = () => {
@@ -73,9 +73,11 @@ export default function TeamView(props) {
       <h2 className="mb-6 text-center text-2xl font-bold text-gray-800 dark:text-white">
         {title}
       </h2>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="flex flex-wrap justify-center gap-8">
         {teamGroup.map((member, index) => (
-          <div key={index}>{renderMemberCard(member)}</div>
+          <div key={index} className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)]">
+            {renderMemberCard(member)}
+          </div>
         ))}
       </div>
     </div>
@@ -84,16 +86,16 @@ export default function TeamView(props) {
   return (
     <div className="flex min-h-screen w-full flex-col p-4 md:p-6 lg:p-8 xl:p-10">
       <div className="mb-6 flex items-center justify-center gap-4 md:mb-8">
+
         <AnimatedGradientText>
           <span
             className={cn(
-              `hero-text inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-3xl font-semibold text-transparent transition-colors duration-500 md:text-4xl ${isSeniorVisible ? 'text-gray-700' : ''}`
+              `hero-text inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-3xl font-semibold text-transparent transition-colors duration-500 md:text-4xl ${isSeniorVisible ? '' : 'text-gray-700'}`
             )}
           >
-            Junior
+            Senior
           </span>
         </AnimatedGradientText>
-
         <label className="inline-flex cursor-pointer items-center">
           <input
             type="checkbox"
@@ -107,10 +109,10 @@ export default function TeamView(props) {
         <AnimatedGradientText>
           <span
             className={cn(
-              `hero-text inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-3xl font-semibold text-transparent transition-colors duration-500 md:text-4xl ${isSeniorVisible ? '' : 'text-gray-700'}`
+              `hero-text inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-3xl font-semibold text-transparent transition-colors duration-500 md:text-4xl ${isSeniorVisible ? 'text-gray-700' : ''}`
             )}
           >
-            Senior
+            Junior
           </span>
         </AnimatedGradientText>
       </div>
@@ -123,8 +125,8 @@ export default function TeamView(props) {
               isSeniorVisible
                 ? ['Management Team', 'Core Team', 'Advisors'][index]
                 : ['Tech Associates', 'GDSC Associates', 'Graphic Associates'][
-                    index
-                  ]
+                index
+                ]
             )
           )}
         </div>
