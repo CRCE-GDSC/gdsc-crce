@@ -17,13 +17,13 @@ let data = [
     date: "2024 - 2025"
   },
   {
-    img: 'https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: '/24.jpg',
     title: 'Team 2023',
     description: 'A year of challenges overcome and milestones achieved.',
     date: "2023 - 2024"
   },
   {
-    img: 'https://images.pexels.com/photos/1756665/pexels-photo-1756665.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img: '/23.jpg',
     title: 'Team 2022',
     description: 'Where our journey began, setting the foundation for success.',
     date: "2022 - 2023"
@@ -50,11 +50,17 @@ export function TeamComponent() {
             icon={<img src="./gdsc-f.png" alt="GDSC Icon" className="w-full h-full object-contain rounded-full" />}
           >
             <BackgroundGradient className="w-full">
-              <div className="flex flex-col md:flex-row bg-white dark:bg-zinc-900 rounded-lg overflow-hidden shadow-lg">
-                <div className="md:w-1/3">
-                  <img className="w-full h-full object-cover" src={item.img} alt={item.title} />
+              <div className="flex flex-col bg-white dark:bg-zinc-900 rounded-lg overflow-hidden shadow-lg">
+                <div className="relative w-full h-64 md:h-auto md:w-1/3 md:absolute md:top-0 md:bottom-0 md:left-0">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
-                <div className="p-6 md:w-2/3">
+                <div className="p-6 md:w-2/3 md:ml-[33.333333%]">
                   <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
                     {item.title}
                   </h3>
@@ -78,8 +84,7 @@ export function TeamComponent() {
                   </Link>
                 </div>
               </div>
-            </BackgroundGradient>
-          </VerticalTimelineElement>
+            </BackgroundGradient>          </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
     </div>
