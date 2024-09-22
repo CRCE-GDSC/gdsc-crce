@@ -1,216 +1,179 @@
 'use client'
-import React, { useRef, useEffect, useState } from 'react'
-import { cn } from '../lib/utils'
-import { Button } from '@radix-ui/themes'
+
+import React, { useState, useRef, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
-import { useTheme } from 'next-themes'
+import { Button } from '@radix-ui/themes'
 
 interface CarouselItem {
-  className?: string
+  id: string
   title: string
   description: string
   image: string
-  icon?: React.ReactNode
-  href: string
   cta: string
+  href: string
 }
 
-const AceGridCard: React.FC<CarouselItem> = ({
-  className,
+const carouselItems: CarouselItem[] = [
+  {
+    id: '1',
+    title: 'ML Workshop',
+    description: 'A new way to learn and grow in the ML industry',
+    image: '/event_assets/event1.jpeg',
+    cta: 'Learn More',
+    href: '/events/mlworkshop',
+  },
+  {
+    id: '2',
+    title: 'HackOver 3.0',
+    description: 'Annual 24-hour hackathon with exciting challenges',
+    image: '/event_assets/HackOver3.0.jpg',
+    cta: 'Register Now',
+    href: '/events/hackover',
+  },
+  {
+    id: '3',
+    title: 'Ideation Workshop',
+    description: 'Brainstorm and develop your next big tech idea',
+    image: '/event_assets/ideation.jpg',
+    cta: 'Join Session',
+    href: '/events/ideation-workshop',
+  },
+  {
+    id: '4',
+    title: 'Math Day Celebration',
+    description: 'Explore the beauty of mathematics in technology',
+    image: '/event_assets/mathday.jpeg',
+    cta: 'Discover More',
+    href: '/events/math-day',
+  },
+  {
+    id: '5',
+    title: 'Postman Playbook',
+    description: 'Master API development with Postman',
+    image: '/event_assets/postman_event_poster.webp',
+    cta: 'Get Started',
+    href: '/events/postman-playbook',
+  },
+]
 
-  title,
-  description,
-  image,
-  icon,
-  href,
-  cta,
-}) => {
-  const { theme } = useTheme()
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [contentHeight, setContentHeight] = useState(0)
-  const [isTapped, setIsTapped] = useState(false) // New state for tap interaction
-
-  useEffect(() => {
-    if (contentRef.current) {
-      setContentHeight(contentRef.current.offsetHeight)
-    }
-  }, [title, description, cta]) // Recalculate if content changes
-
-  // Toggle tap state
-  const handleTap = () => {
-    setIsTapped(!isTapped)
+const Card: React.FC<{
+  item: CarouselItem
+  isActive: boolean
+}> = ({ item, isActive }) => {
+  var [isClicked, setIsClicked] = useState(true)
+  const handleTranslate = () => {
+    setIsClicked(!isClicked)
   }
-
   return (
-    <div
-      className={cn(
-        'group/bento relative h-full w-[80vw] overflow-hidden rounded-xl mx-[10%] border shadow-none transition duration-200 hover:shadow-xl',
-        theme === 'dark'
-          ? 'border-white/[0.2] bg-inherit'
-          : 'border-gray-200 bg-inherit',
-        className
-      )}
+    <motion.div
+      className={`group/bento relative mx-[10%] h-full w-[80vw] overflow-hidden rounded-xl border shadow-none transition duration-300 ${
+        isActive ? 'shadow-xl' : ''
+      }`}
+      layoutId={item.id}
+      onClick={handleTranslate}
       style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${item.image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundClip: 'border-box',
       }}
-      onClick={handleTap} // Handle tap here
     >
-      <div
-        className="absolute inset-x-0 bottom-0 transform transition-all duration-300"
-        style={{
-          transform: isTapped ? 'translateY(-100%)' : 'translateY(0%)', // Use isTapped to control the transform
-        }}
-      >
-        <div
-          ref={contentRef}
-          className={cn(
-            'absolute inset-0 rounded-lg p-4 transition-transform duration-300',
-            theme === 'dark'
-              ? 'bg-black bg-opacity-60'
-              : 'bg-white bg-opacity-80',
-            isTapped ? 'h-fit translate-y-[-100%]' : 'translate-y-[0%]',
-            '-bottom-10'
-            // Adjust based on isTapped
-          )}
-        >
-          <div className="pb-6">
-            {icon}
-            <div
-              className={cn(
-                'mb-2 font-sans font-bold',
-                theme === 'dark' ? 'text-white' : 'text-black'
-              )}
-            >
-              {title}
+      {isClicked && (
+        <div className="absolute inset-x-0 bottom-0 translate-y-full transform transition-all duration-300 group-hover/bento:translate-y-0">
+          <div className="rounded-t-lg bg-black bg-opacity-80 p-4">
+            <div className="pb-6">
+              <div className="mb-2 font-sans font-bold text-white">
+                {item.title}
+              </div>
+              <div className="font-sans text-xs font-normal text-gray-300">
+                {item.description}
+              </div>
             </div>
-            <div
-              className={cn(
-                'font-sans text-xs font-normal',
-                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-              )}
-            >
-              {description}
-            </div>
-          </div>
-          <div>
             <Button
               variant="soft"
               color="gray"
-              className={cn(
-                'pointer-events-auto flex items-center rounded-full border-none p-2 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700',
-                theme === 'dark' ? 'text-white' : 'text-black'
-              )}
+              className="pointer-events-auto flex items-center rounded-full border-none p-2 text-white transition-colors duration-300 hover:bg-gray-700"
             >
-              <a href={href} className="flex items-center">
-                {cta}
+              <a href={item.href} className="flex items-center">
+                {item.cta}
                 <ArrowRightIcon className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>
         </div>
+      )}
+    </motion.div>
+  )
+}
+const VerticalCarousel: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const carouselRef = useRef<HTMLDivElement>(null)
+
+  let touchStartY = 0
+  let touchMoveTimeout: NodeJS.Timeout | null = null
+
+  const handleTouchStart = (e: TouchEvent) => {
+    if (e.touches && e.touches[0]) {
+      touchStartY = e.touches[0].clientY;
+    }
+  }
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (touchMoveTimeout) {
+      clearTimeout(touchMoveTimeout)
+    }
+    touchMoveTimeout = setTimeout(() => {
+      handleTouchScroll(e)
+    }, 100)
+  }
+
+  const handleTouchScroll = (e: TouchEvent) => {
+    if (carouselRef.current) {
+      const touch = e.touches[0]
+      const itemHeight = carouselRef.current.clientHeight
+      const carouselRect = carouselRef.current.getBoundingClientRect()
+      if (!touch) return;
+      const touchY = touch.clientY - carouselRect.top
+      const newIndex = Math.round(touchY / itemHeight)
+      setActiveIndex(newIndex)
+    }
+  }
+
+  useEffect(() => {
+    const carousel = carouselRef.current
+    if (carousel) {
+      carousel.addEventListener('touchstart', handleTouchStart)
+      carousel.addEventListener('touchmove', handleTouchMove)
+    }
+    return () => {
+      if (carousel) {
+        carousel.removeEventListener('touchstart', handleTouchStart)
+        carousel.removeEventListener('touchmove', handleTouchMove)
+      }
+    }
+  }, [])
+
+  return (
+    <div className="flex h-screen w-full items-center justify-center bg-transparent">
+      <div
+        ref={carouselRef}
+        className="h-[70vh] w-full snap-y snap-mandatory overflow-y-auto"
+        style={{ scrollSnapType: 'y mandatory' }}
+      >
+        {carouselItems.map((item, index) => (
+          <div
+            key={item.id}
+            className="flex h-[70vh] w-full snap-start items-center justify-center"
+            style={{ scrollSnapAlign: 'start' }}
+          >
+            <Card item={item} isActive={index === activeIndex} />
+          </div>
+        ))}
       </div>
     </div>
   )
 }
 
-const VerticalCarousel: React.FC = () => {
-  const carouselItems: CarouselItem[] = [
-    {
-      title: 'The Future Forge',
-      description: 'A new way to learn and grow',
-      image: '/event_assests/GDSC_Future-Forge.jpg',
-      href: '/allevents',
-      cta: 'Learn More',
-    },
-    {
-      title: 'HackOver3.0',
-      description: 'A 24-hour hackathon',
-      image: '/event_assests/HackOver3.0.jpg',
-      href: '/allevents',
-      cta: 'Learn More',
-    },
-    {
-      title: 'Ideation',
-      description: 'A platform to share your ideas',
-      image: '/event_assests/ideation.jpg',
-      href: '/allevents',
-      cta: 'Learn More',
-    },
-    {
-      title: 'mathday',
-      description: 'A day to celebrate math',
-      image: '/event_assests/mathday.jpeg',
-      href: '/allevents',
-      cta: 'Learn More',
-    },
-    {
-      title: ' the Postman playbook',
-      description: 'Learn abiut PostMan, the API development tool',
-      image: '/event_assests/postman_event_poster.webp',
-      href: '/allevents',
-      cta: 'Learn More',
-    },
-
-    // Add more items as needed
-  ]
-
-  return (
-    <>
-      <div className="flex-col items-center justify-center bg-inherit py-8" id='mobile'>
-        <div className="carousel carousel-vertical rounded-box h-[28rem] w-full max-w-md sm:h-[32rem] md:h-[36rem] lg:h-[40rem]">
-          {carouselItems.map((item, index) => (
-            <div key={index} className="carousel-item h-full w-full">
-              <AceGridCard {...item} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
-  )
-}
-
 export default VerticalCarousel
-
-// const carouselItems: CarouselItem[] = [
-//   {
-//     title: 'The Future Forge',
-//     description: 'A new way to learn and grow',
-//     image: '/event_assests/GDSC_Future-Forge.jpg',
-//     href: '/allevents',
-//     cta: 'Learn More',
-//   },
-//   {
-//     title: 'HackOver3.0',
-//     description: 'A 24-hour hackathon',
-//     image: '/event_assests/HackOver3.0.jpg',
-//     href: '/allevents',
-//     cta: 'Learn More',
-//   },
-//   {
-//     title: 'Ideation',
-//     description: 'A platform to share your ideas',
-//     image: '/event_assests/ideation.jpg',
-//     href: '/allevents',
-//     cta: 'Learn More',
-//   },
-//   {
-//     title: 'mathday',
-//     description: 'A day to celebrate math',
-//     image: '/event_assests/mathday.jpeg',
-//     href: '/allevents',
-//     cta: 'Learn More',
-//   },
-//   {
-//     title: ' the Postman playbook',
-//     description: 'Learn abiut PostMan, the API development tool',
-//     image: '/event_assests/postman_event_poster.webp',
-//     href: '/allevents',
-//     cta: 'Learn More',
-//   },
-
-//   // Add more items as needed
-// ]

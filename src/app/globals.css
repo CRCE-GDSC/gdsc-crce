@@ -3,13 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: "Montserrat", sans-serif !important;
-  font-weight:500;
+* {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 500;
 }
 
-.hero-text{
-   font-family: "Oswald", sans-serif !important;
+.hero-text {
+  font-family: 'Oswald', sans-serif !important;
 }
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -194,75 +194,6 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-@media (max-width: 768px) {
-  .body {
-    overflow: hidden;
-  }
-}
-/* css for the mobile caro usel*/
-.carousel {
-  @apply w-screen overflow-y-scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  &-vertical {
-    @apply flex overflow-y-scroll;
-    scroll-snap-type: y mandatory; /* y mandatory  */
-  }
-  &-item {
-    @apply box-content flex flex-none;
-    scroll-snap-align: start;
-  }
-  &-start .carousel-item {
-    scroll-snap-align: start;
-  }
-  &-center .carousel-item {
-    scroll-snap-align: center;
-  }
-  &-end .carousel-item {
-    scroll-snap-align: end;
-  }
-}
-/*  CSS for the mobile carousel
-.carousel {
-  width: 100vw; 
-  overflow-y: scroll; 
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-.carousel-vertical {
-  display: flex;
-  overflow-y: scroll; 
-  scroll-snap-type: y mandatory;
-}
-
-.carousel-item {
-  box-sizing: border-box; 
-  flex: none; 
-  width: 100%; 
-  height: 100vh; 
-  scroll-snap-align: start;
-}
-
-.carousel-start .carousel-item {
-  scroll-snap-align: start;
-}
-
-.carousel-center .carousel-item {
-  scroll-snap-align: center;
-}
-
-.carousel-end .carousel-item {
-  scroll-snap-align: end;
-} */
-
-/* css for about us */
-/* :root {
-    --tanText : #434343;
-    --darkGrey: #878787;
-    --darkText : #2a2b2b;
-} */
-
 .h2 {
   font-size: 45px;
   margin: 0;
