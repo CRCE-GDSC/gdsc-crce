@@ -44,7 +44,7 @@ const Senior2024 = [
     imgSrc: "/assets/team/sharian.jpg",
     position: 'Technical Co Lead',
     department: 'TE COMPS A',
-    linkedIn: '',
+    linkedIn: 'www.linkedin.com/in/sharian-dabre-318471228/',
     Instagram: '',
   },
   {
@@ -52,8 +52,8 @@ const Senior2024 = [
     imgSrc: "/assets/team/snowy.jpg",
     position: 'Public Relations Lead',
     department: 'TE COMPS B',
-    linkedIn: '',
-    Instagram: '',
+    linkedIn: 'https://www.linkedin.com/in/snowy-fernandes-b59195244/',
+    Instagram: 'https://www.instagram.com/snowy_fernz/',
   },
   {
     name: 'Siddhant Jadhav',
