@@ -134,7 +134,7 @@ const Juniors2024 = [
   },
   {
     name: 'Yash Solanki',
-    imgSrc: '/assets/team/yash.jpg',
+    imgSrc: '/assets/team/yash.jpeg',
     position: 'GDSC Associate',
     department: 'SE COMPS B',
     linkedIn:
